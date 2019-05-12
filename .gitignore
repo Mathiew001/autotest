@@ -4,12 +4,12 @@
 .settings/
 
 eclipse.bat
-log/*
-nlb-api-test.iml
+/log/*
+/nlb-api-test.iml
 
 pom.xml.bak
 
-target/
-test-output/
+/test-output/
 /src/test/resources/tester/yaml/
-.DS_Store
+/.DS_Store
+/target/
