@@ -1,0 +1,266 @@
+sessionStickyNormalPrepare004: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: sessionStickyNormalPrepare004}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: session sticky normal test of mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: targetGroup
+      value: |-
+        [{
+            "Instances":[
+                {
+                    "Address":"10.0.32.79",
+                    "Port":80,
+                    "Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+                    "TopAz":"cn-east-p1a",
+                    "Weight":100,
+                    "Name":"instance0"
+                },
+                {
+                    "Address":"10.0.32.60",
+                    "Port":80,
+                    "Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd",
+                    "TopAz":"cn-east-p1a",
+                    "Weight":100,
+                    "Name":"instance1"
+                }
+            ],
+            "Monitor":{
+                "Timeout":5000,
+                "Rstatus":"2xx,3xx",
+                "Period":5000,
+                "Fall":5,
+                "Protocol":"http",
+                "Url":"/index.html",
+                "Rise":5
+            },
+            "UseSamePort":0,
+            "Name":"tg-test-01"
+        }]
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: listener
+      value: |-
+        {
+            "InstanceId": "instanceId",
+            "Name": "testln1",
+            "ListenPort": 80,
+            "ForwardPort": 1,
+            "TraceVip": 1,
+            "Protocol": "http",
+            "Balance": "roundrobin",
+            "Clusters": [
+             {
+        "ServerName": "*",
+                    "Path": "/",
+                    "TargetGroupId": "targetGroupId",
+                    "Policy": {
+                        "Mode": "rewrite",
+                        "CookieName": "testcookie"
+                    }
+             }],
+            "Gzip": 1
+        }
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        [
+                {
+                    "Name":"testln1",
+                    "ListenPort":80,
+                    "Protocol":"http",
+                    "TraceVip":1,
+                    "Balance":"roundrobin",
+                    "Gzip":1,
+                    "ForwardPort":1,
+                    "Clusters":[
+                        {
+                            "Name":"tg-test-01",
+                            "ServerName":"*",
+                            "Path":"/",
+                            "Monitor":{
+                                "Protocol":"http",
+                                "Rise":5,
+                                "Fall":5,
+                                "Url":"/index.html",
+                                "Timeout":5000,
+                                "Period":5000,
+                                "Rstatus":"2xx,3xx"
+                            },
+                            "Policy":{
+                                "Mode":"rewrite",
+                                "CookieName": "testcookie"
+                            },
+                            "Status":"UP",
+                            "Instances":[
+                                {
+                                    "Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+                                    "Name":"instance0",
+                                    "Address":"10.0.32.79",
+                                    "Port":80,
+                                    "Status":"UP",
+                                    "Weight":100,
+                                    "Backup":0
+                                },
+                                {
+                                    "Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd",
+                                    "Name":"instance1",
+                                    "Address":"10.0.32.60",
+                                    "Port":80,
+                                    "Status":"UP",
+                                    "Weight":100,
+                                    "Backup":0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+  etcdExpectData: null
+  etcdPrepareData: null
+sessionStickyNormalPrepare003: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: sessionStickyNormalPrepare003}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: session sticky normal test of vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: targetGroup
+      value: |-
+        [{
+            "Instances":[
+                {
+                    "Address":"10.0.32.79",
+                    "Port":80,
+                    "Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+                    "TopAz":"cn-east-p1a",
+                    "Weight":100,
+                    "Name":"instance0"
+                },
+                {
+                    "Address":"10.0.32.60",
+                    "Port":80,
+                    "Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd",
+                    "TopAz":"cn-east-p1a",
+                    "Weight":100,
+                    "Name":"instance1"
+                }
+            ],
+            "Monitor":{
+                "Timeout":5000,
+                "Rstatus":"2xx,3xx",
+                "Period":5000,
+                "Fall":5,
+                "Protocol":"http",
+                "Url":"/index.html",
+                "Rise":5
+            },
+            "UseSamePort":0,
+            "Name":"tg-test-01"
+        }]
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: listener
+      value: |-
+        {
+            "InstanceId": "instanceId",
+            "Name": "testln1",
+            "ListenPort": 80,
+            "ForwardPort": 1,
+            "TraceVip": 1,
+            "Protocol": "http",
+            "Balance": "roundrobin",
+            "Clusters": [
+             {
+        "ServerName": "*",
+                    "Path": "/",
+                    "TargetGroupId": "targetGroupId",
+                    "Policy": {
+                        "Mode": "insert",
+                        "Expire": "5"
+                    }
+             }],
+            "Gzip": 1
+        }
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        [
+                {
+                    "Name":"testln1",
+                    "ListenPort":80,
+                    "Protocol":"http",
+                    "TraceVip":1,
+                    "Balance":"roundrobin",
+                    "Gzip":1,
+                    "ForwardPort":1,
+                    "Clusters":[
+                        {
+                            "Name":"tg-test-01",
+                            "ServerName":"*",
+                            "Path":"/",
+                            "Monitor":{
+                                "Protocol":"http",
+                                "Rise":5,
+                                "Fall":5,
+                                "Url":"/index.html",
+                                "Timeout":5000,
+                                "Period":5000,
+                                "Rstatus":"2xx,3xx"
+                            },
+                            "Policy":{
+                                "Mode":"insert",
+                                "Expire": 5
+                            },
+                            "Status":"UP",
+                            "Instances":[
+                                {
+                                    "Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+                                    "Name":"instance0",
+                                    "Address":"10.0.32.79",
+                                    "Port":80,
+                                    "Status":"UP",
+                                    "Weight":100,
+                                    "Backup":0
+                                },
+                                {
+                                    "Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd",
+                                    "Name":"instance1",
+                                    "Address":"10.0.32.60",
+                                    "Port":80,
+                                    "Status":"UP",
+                                    "Weight":100,
+                                    "Backup":0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+  etcdExpectData: null
+  etcdPrepareData: null

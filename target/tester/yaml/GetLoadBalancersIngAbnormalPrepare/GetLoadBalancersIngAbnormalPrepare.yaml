@@ -1,0 +1,34 @@
+getLoadBalancersIngAbnormal002: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getLoadBalancersIngAbnormal002}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'get lb list, offset=-1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: limit, value: ''}
+    - {clazz: class java.lang.String, description: null, flag: N, name: offset, value: '-1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "BadRequest","Message": "Bad request with Offset or Limit"}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+getLoadBalancersIngAbnormal001: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getLoadBalancersIngAbnormal001}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'get lb list, limit=-1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: limit, value: '-1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: offset, value: ''}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "BadRequest","Message": "Bad request with Offset or Limit"}'}
+  etcdExpectData: null
+  etcdPrepareData: null

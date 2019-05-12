@@ -1,0 +1,13 @@
+getCertificatesNormal001: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getCertificatesNormal001}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: get certs list}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 34493fd33b874583ac7b24c1f60138fd}
+  etcdExpectData: null
+  etcdPrepareData: null

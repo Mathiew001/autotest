@@ -1,0 +1,94 @@
+updateLoadBalancerAbnormal001: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerNormal001}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update description of mix ing, namespace illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 34493fd33b874583ac7b24c1f60138fd}
+    - {clazz: class java.lang.String, description: null, flag: N, name: namespace,
+      value: abcd}
+    - {clazz: class java.lang.String, description: null, flag: N, name: name, value: abcd}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest","Message":"Namspace
+        not found."}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal001}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerAbnormal002: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerNormal002}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update description of mix ing, name illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 34493fd33b874583ac7b24c1f60138fd}
+    - {clazz: class java.lang.String, description: null, flag: N, name: namespace,
+      value: chen-nlbyq01}
+    - {clazz: class java.lang.String, description: null, flag: N, name: name, value: abcdabcd}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "NotFound",
+            "Message": "No found resource."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal001}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerAbnormal003: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerAbnormal003}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update description of mix ing, namespace illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 34493fd33b874583ac7b24c1f60138fd}
+    - {clazz: class java.lang.String, description: null, flag: N, name: namespace,
+      value: abcd}
+    - {clazz: class java.lang.String, description: null, flag: N, name: name, value: abcd}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest","Message":"Namspace
+        not found."}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerAbnormal004: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerNormal004}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update description of mix ing, name illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 34493fd33b874583ac7b24c1f60138fd}
+    - {clazz: class java.lang.String, description: null, flag: N, name: namespace,
+      value: chen-nlbyq01}
+    - {clazz: class java.lang.String, description: null, flag: N, name: name, value: abcdabcd}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "NotFound",
+            "Message": "No found resource."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+  etcdExpectData: null
+  etcdPrepareData: null

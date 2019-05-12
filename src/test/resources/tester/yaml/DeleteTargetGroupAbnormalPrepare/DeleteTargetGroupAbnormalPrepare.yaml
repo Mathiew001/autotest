@@ -1,0 +1,148 @@
+deleteTargetGroupNormal010: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteTargetGroupNormal010}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'delete target group, illegal targetGroupId'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"targetGroupId":"abcd"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "NotFound", "Message":"Target group does not exist!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteTargetGroupNormal011: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteTargetGroupNormal011}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'delete target group, targetGroupId empty'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"targetGroupId":""}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "NotFound", "Message":"Target group does not exist!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteTargetGroupNormal012: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteTargetGroupNormal012}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'delete target group, illegal instanceId'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"InstanceId":"",
+        "targetGroupId":"abcd"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "BadRequest", "Message":"vipId not specified!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteTargetGroupNormal006: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteTargetGroupNormal006}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'delete target group, illegal targetGroupId'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"targetGroupId":"abcd"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "NotFound", "Message":"Target group does not exist!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteTargetGroupNormal007: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteTargetGroupNormal007}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'delete target group, targetGroupId empty'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"targetGroupId":""}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "NotFound", "Message":"Target group does not exist!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteTargetGroupNormal008: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteTargetGroupNormal008}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'delete target group, illegal instanceId'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"InstanceId":"",
+        "targetGroupId":"abcd"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "BadRequest", "Message":"vipId not specified!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteTargetGroupNormal009: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteTargetGroupNormal009}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'delete target group, illegal instanceId'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"InstanceId":"abcd",
+        "targetGroupId":"abcd"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "NotFound", "Message":" Load balancer does not exist.!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteTargetGroupNormal005: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteTargetGroupNormal005}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'delete target group, illegal instanceId'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"InstanceId":"abcd",
+        "targetGroupId":"abcd"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "NotFound", "Message":" Load balancer does not exist.!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+  etcdExpectData: null
+  etcdPrepareData: null

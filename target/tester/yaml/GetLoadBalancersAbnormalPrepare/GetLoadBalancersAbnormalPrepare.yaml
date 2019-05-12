@@ -1,0 +1,72 @@
+getLoadBalancersAbnormal002: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getLoadBalancersAbnormal002}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'get lb list, limit=-1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: type, value: mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: limit, value: '-1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: offset, value: ''}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "BadRequest","Message": "Bad request with Offset or Limit"}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+getLoadBalancersAbnormal001: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getLoadBalancersAbnormal001}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'get lb list, type=abcd'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: type, value: abcd}
+    - {clazz: class java.lang.String, description: null, flag: N, name: limit, value: ''}
+    - {clazz: class java.lang.String, description: null, flag: N, name: offset, value: ''}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "BadRequest","Message": "Bad request with type!"}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+getLoadBalancersAbnormal004: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getLoadBalancersAbnormal004}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'get lb list, illegal tenantId'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: abcd}
+    - {clazz: class java.lang.String, description: null, flag: N, name: type, value: ''}
+    - {clazz: class java.lang.String, description: null, flag: N, name: limit, value: ''}
+    - {clazz: class java.lang.String, description: null, flag: N, name: offset, value: ''}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest","Message":"Tenant
+        initialization failed"}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+getLoadBalancersAbnormal003: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getLoadBalancersAbnormal003}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'get lb list, offset=-1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: type, value: mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: limit, value: ''}
+    - {clazz: class java.lang.String, description: null, flag: N, name: offset, value: '-1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "BadRequest","Message": "Bad request with Offset or Limit"}'}
+  etcdExpectData: null
+  etcdPrepareData: null

@@ -1,0 +1,194 @@
+getLoadBalancerNormal002: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getLoadBalancerNormal002}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: get vpc_mix ing detail}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 8887,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"leastconn\",\n    \"Clusters\": [\n      \
+        \  {\n            \"ServerName\": \"test.com\",\n            \"Path\": \"\
+        /a\",\n            \"ServiceName\": \"service1\",\n            \"ServicePort\"\
+        : 80,\n            \"Policy\": {\n                \"Mode\": \"insert\",\n\
+        \                \"Expire\": 30000\n            },\n            \"Monitor\"\
+        : {\n              \"Period\": 6000,\n              \"Timeout\": 6000,\n \
+        \             \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"tcp\"\n            }\n        },\n        {\n            \"ServerName\"\
+        : \"test.com\",\n            \"Path\": \"/b\",\n            \"ServiceName\"\
+        : \"service2\",\n            \"ServicePort\": 80,\n            \"Policy\"\
+        : {\n                \"Mode\": \"rewrite\",\n                \"CookieName\"\
+        : \"asfsd\"\n            },\n            \"Monitor\": {\n              \"\
+        Period\": 5000,\n              \"Timeout\": 5000,\n              \"Rise\"\
+        : 5,\n              \"Fall\": 5,\n              \"Protocol\": \"http\",\n\
+        \              \"Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\"\
+        \n            }\n        }\n    ],\n    \"Gzip\": 1,\n    \"ForwardPort\"\
+        : 1,\n    \"TraceVip\": 1\n}, \n{\n    \"Name\": \"testln2\",\n    \"ListenPort\"\
+        : 8888,\n    \"Protocol\": \"http\",\n    \"Balance\": \"leastconn\",\n  \
+        \  \"Clusters\": [\n        {\n            \"ServerName\": \"test.com\",\n\
+        \            \"Path\": \"/a\",\n            \"ServiceName\": \"service1\"\
+        ,\n            \"ServicePort\": 80,\n            \"Policy\": {\n         \
+        \       \"Mode\": \"insert\",\n                \"Expire\": 30000\n       \
+        \     },\n            \"Monitor\": {\n              \"Period\": 6000,\n  \
+        \            \"Timeout\": 6000,\n              \"Rise\": 6,\n            \
+        \  \"Fall\": 6,\n              \"Protocol\": \"tcp\"\n            }\n    \
+        \    },\n        {\n            \"ServerName\": \"test.com\",\n          \
+        \  \"Path\": \"/b\",\n            \"ServiceName\": \"service2\",\n       \
+        \     \"ServicePort\": 80,\n            \"Policy\": {\n                \"\
+        Mode\": \"rewrite\",\n                \"CookieName\": \"asfsd\"\n        \
+        \    },\n            \"Monitor\": {\n              \"Period\": 5000,\n   \
+        \           \"Timeout\": 5000,\n              \"Rise\": 5,\n             \
+        \ \"Fall\": 5,\n              \"Protocol\": \"http\",\n              \"Url\"\
+        : \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\"\n            }\n\
+        \        }\n    ],\n    \"Gzip\": 1\n}]\n"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |+
+        {
+            "Status":"WORKING",
+            "SubStatus":"WORKING",
+            "Description":"test cty",
+            "Type":"vpc_mix",
+            "Namespace":"nlbtest-cldnlb01",
+            "VpcId":"dff050d2-8a91-436b-8765-739f14cec762",
+            "SecurityGroups":[
+                "4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+                "5a2777ee-b15f-41f1-8353-25c3592a14f4"
+            ],
+            "TopAzInfos":[
+                {
+                    "TopAz":"cn-east-p1a",
+                    "SubNetId":"1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"
+                }
+            ],
+            "Limit":{
+                "ListenerLimit":10,
+                "TGroupLimit":20,
+                "TGroupInstanceLimit":50,
+                "PathLimit":30,
+                "DomainLimit":5
+            },
+            "Network":"public",
+            "Listeners":[
+                {
+                    "Name":"testln2",
+                    "ListenPort":8888,
+                    "Protocol":"http",
+                    "TraceVip":0,
+                    "Balance":"leastconn",
+                    "Gzip":1,
+                    "Timeout":0,
+                    "ForwardPort":0,
+                    "Clusters":[
+                        {
+                            "Monitor":{
+                                "Rise":6,
+                                "Fall":6,
+                                "Period":6000,
+                                "Timeout":6000,
+                                "Protocol":"tcp"
+                            },
+                            "Path":"/a",
+                            "Policy":{
+                                "Mode":"insert",
+                                "Expire":30000,
+                                "CookieName":""
+                            },
+                            "ServerName":"test.com",
+                            "ServiceName":"service1",
+                            "ServicePort":80,
+                        },
+                        {
+                            "Monitor":{
+                                "Rise":5,
+                                "Fall":5,
+                                "Period":5000,
+                                "Timeout":5000,
+                                "Url":"/index.html",
+                                "Protocol":"http",
+                                "Rstatus":"2xx,3xx"
+                            },
+                            "Path":"/b",
+                            "Policy":{
+                                "Mode":"rewrite",
+                                "Expire":30000,
+                                "CookieName":"asfsd"
+                            },
+                            "ServerName":"test.com",
+                            "ServiceName":"service2",
+                            "ServicePort":80,
+                        }
+                    ]
+                },
+                {
+                    "Name":"testln1",
+                    "ListenPort":8887,
+                    "Protocol":"http",
+                    "TraceVip":1,
+                    "Balance":"leastconn",
+                    "Gzip":1,
+                    "ForwardPort":1,
+                    "Clusters":[
+                        {
+                            "Monitor":{
+                                "Rise":6,
+                                "Fall":6,
+                                "Period":6000,
+                                "Timeout":6000,
+                                "Protocol":"tcp"
+                            },
+                            "Path":"/a",
+                            "Policy":{
+                                "Mode":"insert",
+                                "Expire":30000,
+                                "CookieName":""
+                            },
+                            "ServerName":"test.com",
+                            "ServiceName":"service1",
+                            "ServicePort":80,
+                        },
+                        {
+                            "Monitor":{
+                                "Rise":5,
+                                "Fall":5,
+                                "Period":5000,
+                                "Timeout":5000,
+                                "Url":"/index.html",
+                                "Protocol":"http",
+                                "Rstatus":"2xx,3xx"
+                            },
+                            "Path":"/b",
+                            "Policy":{
+                                "Mode":"rewrite",
+                                "Expire":30000,
+                                "CookieName":"asfsd"
+                            },
+                            "ServerName":"test.com",
+                            "ServiceName":"service2",
+                            "ServicePort":80,
+                        }
+                    ]
+                }
+            ],
+            "Standard":{
+                "ChargeMode":"netflow",
+                "ChargeType":"AMOUNT",
+                "BandwidthLimit":1,
+                "Size":"nlb.s1.micro",
+                "AutoRenewPeriod":0
+            }
+        }
+
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+  etcdExpectData: null
+  etcdPrepareData: null

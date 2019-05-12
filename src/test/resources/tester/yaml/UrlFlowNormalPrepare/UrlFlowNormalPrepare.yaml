@@ -1,0 +1,253 @@
+urlFlowNormalPrepare003: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: urlFlowNormalPrepare003}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: url flow normal test of vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: targetGroup
+      value: |-
+        [{
+            "Instances":[
+                {
+                    "Address":"10.0.32.79",
+                    "Port":80,
+                    "Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+                    "TopAz":"cn-east-p1a",
+                    "Weight":100,
+                    "Name":"instance0"
+                }
+            ],
+            "Monitor":{
+                "Timeout":5000,
+                "Rstatus":"2xx,3xx",
+                "Period":5000,
+                "Fall":5,
+                "Protocol":"http",
+                "Url":"/index.html",
+                "Rise":5
+            },
+            "UseSamePort":0,
+            "Name":"tg-test-01"
+        }, {
+            "Instances":[
+                {
+                    "Address":"10.0.32.79",
+                    "Port":81,
+                    "Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+                    "TopAz":"cn-east-p1a",
+                    "Weight":100,
+                    "Name":"instance0"
+                }
+            ],
+            "Monitor":{
+                "Timeout":5000,
+                "Rstatus":"2xx,3xx",
+                "Period":5000,
+                "Fall":5,
+                "Protocol":"http",
+                "Url":"/index.html",
+                "Rise":5
+            },
+            "UseSamePort":0,
+            "Name":"tg-test-02"
+        }, {
+            "Instances":[
+                {
+                    "Address":"10.0.32.79",
+                    "Port":82,
+                    "Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+                    "TopAz":"cn-east-p1a",
+                    "Weight":100,
+                    "Name":"instance0"
+                }
+            ],
+            "Monitor":{
+                "Timeout":5000,
+                "Rstatus":"2xx,3xx",
+                "Period":5000,
+                "Fall":5,
+                "Protocol":"http",
+                "Url":"/index.html",
+                "Rise":5
+            },
+            "UseSamePort":0,
+            "Name":"tg-test-03"
+        }]
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: listener
+      value: "{\n    \"InstanceId\": \"instanceId\",\n    \"Name\": \"testln1\",\n\
+        \    \"ListenPort\": 80,\n    \"ForwardPort\": 1,\n    \"TraceVip\": 1,\n\
+        \    \"Protocol\": \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\"\
+        : [\n     {\n\"ServerName\": \"test.com\",\n            \"Path\": \"/a /b\
+        \ /c /m /n /q /p\",\n            \"TargetGroupId\": \"targetGroupId\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"rewrite\",\n      \
+        \          \"CookieName\": \"asfsd\"\n            },\n            \"Monitor\"\
+        : {\n              \"Period\": 6000,\n              \"Timeout\": 6000,\n \
+        \             \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"http\",\n              \"Url\": \"/index.html\",\n              \"Rstatus\"\
+        : \"2xx,3xx\" \n            }\n     },      {\n\"ServerName\": \"test.com\"\
+        ,\n            \"Path\": \"/\",\n            \"TargetGroupId\": \"targetGroupId\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\"\n            },\n            \"Monitor\"\
+        : {\n              \"Period\": 6000,\n              \"Timeout\": 6000,\n \
+        \             \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"http\",\n              \"Url\": \"/index.html\",\n              \"Rstatus\"\
+        : \"2xx,3xx\" \n            }\n     },      {\n\"ServerName\": \"test.com\"\
+        ,\n            \"Path\": \"/abcd /efg /vpc/abcd\",\n            \"TargetGroupId\"\
+        : \"targetGroupId\",\n            \"Policy\": {\n                \"Mode\"\
+        : \"rewrite\",\n                \"CookieName\": \"asfsd\"\n            },\n\
+        \            \"Monitor\": {\n              \"Period\": 6000,\n           \
+        \   \"Timeout\": 6000,\n              \"Rise\": 6,\n              \"Fall\"\
+        : 6,\n              \"Protocol\": \"http\",\n              \"Url\": \"/index.html\"\
+        ,\n              \"Rstatus\": \"2xx,3xx\" \n            }\n     }],\n    \"\
+        Gzip\": 1,\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: urlCheckList
+      value: |-
+        [
+            {
+                "lisenerName": "testnl1",
+                "listenPort": 80,
+                "check": [
+                  {
+                      "serverName": "test.com",
+                      "port": 80,
+                      "path": "/a /b /c /m /n /q /p"          },
+                  {
+                      "serverName": "test.com",
+                      "port": 81,
+                      "path": "/"          },
+                  {
+                      "serverName": "test.com",
+                      "port": 82,
+                      "path": "/abcd /efg /vpc/abcd"
+                  }
+                ]
+            }
+        ]
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        [
+                {
+                    "Name":"testln1",
+                    "ListenPort":80,
+                    "Protocol":"http",
+                    "TraceVip":1,
+                    "Balance":"roundrobin",
+                    "Gzip":1,
+                    "ForwardPort":1,
+                    "Clusters":[
+                        {
+                            "Name":"tg-test-02",
+                            "ServerName":"test.com",
+                            "Path":"/",
+                            "Monitor":{
+                                "Protocol":"http",
+                                "Rise":6,
+                                "Fall":6,
+                                "Url":"/index.html",
+                                "Timeout":6000,
+                                "Period":6000,
+                                "Rstatus":"2xx,3xx"
+                            },
+                            "Policy":{
+                                "Mode":"rewrite",
+                                "CookieName":"asfsd",
+                                "Expire":30000
+                            },
+                            "Instances":[
+                                {
+                                    "Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+                                    "Name":"instance0",
+                                    "Address":"10.0.32.79",
+                                    "Port":81,
+                                    "Status":"UP",
+                                    "Weight":100,
+                                    "Backup":0
+                                }
+                            ]
+                        },
+                        {
+                            "Name":"tg-test-01",
+                            "ServerName":"test.com",
+                            "Path":"/a /b /c /m /n /q /p",
+                            "Monitor":{
+                                "Protocol":"http",
+                                "Rise":6,
+                                "Fall":6,
+                                "Url":"/index.html",
+                                "Timeout":6000,
+                                "Period":6000,
+                                "Rstatus":"2xx,3xx"
+                            },
+                            "Policy":{
+                                "Mode":"rewrite",
+                                "CookieName":"asfsd",
+                                "Expire":30000
+                            },
+                            "Status":"UP",
+                            "Instances":[
+                                {
+                                    "Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+                                    "Name":"instance0",
+                                    "Address":"10.0.32.79",
+                                    "Port":80,
+                                    "Status":"UP",
+                                    "Weight":100,
+                                    "Backup":0
+                                }
+                            ]
+                        },
+                        {
+                            "Name":"tg-test-03",
+                            "ServerName":"test.com",
+                            "Path":"/abcd /efg /vpc/abcd",
+                            "Monitor":{
+                                "Protocol":"http",
+                                "Rise":6,
+                                "Fall":6,
+                                "Url":"/index.html",
+                                "Timeout":6000,
+                                "Period":6000,
+                                "Rstatus":"2xx,3xx"
+                            },
+                            "Policy":{
+                                "Mode":"rewrite",
+                                "CookieName":"asfsd",
+                                "Expire":30000
+                            },
+                            "Status":"UP",
+                            "Instances":[
+                                {
+                                    "Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+                                    "Name":"instance0",
+                                    "Address":"10.0.32.79",
+                                    "Port":82,
+                                    "Status":"UP",
+                                    "Weight":100,
+                                    "Backup":0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+  etcdExpectData: null
+  etcdPrepareData: null

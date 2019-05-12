@@ -1,0 +1,76 @@
+renewOrderAbnormal009: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: renewOrderAbnormal009}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'Reneworder, period illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: period, value: '10'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "BadRequest", "Message": "{\"Code\":\"InvalidParameterValue\",\"Message\":\"The
+        parameter Period cannot accept value 10.\"}"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal006}
+  etcdExpectData: null
+  etcdPrepareData: null
+renewOrderAbnormal010: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: renewOrderAbnormal010}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'Reneworder, period illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: period, value: '0'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "BadRequest", "Message": "{\"Code\":\"InvalidParameterValue\",\"Message\":\"The
+        parameter Period cannot accept value 0.\"}"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal006}
+  etcdExpectData: null
+  etcdPrepareData: null
+renewOrderAbnormal003: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: renewOrderAbnormal003}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: Reneworder of netflow ing}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: period, value: '2'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "BadRequest", "Message": "{\"Code\":\"InstanceChargeStateError\",\"Message\":\"The
+        instance charge state is illegal\"}"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+  etcdExpectData: null
+  etcdPrepareData: null
+renewOrderAbnormal004: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: renewOrderAbnormal004}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: Reneworder of bandwidth ing}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: period, value: '2'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "BadRequest", "Message": "{\"Code\":\"InstanceChargeStateError\",\"Message\":\"The
+        instance charge state is illegal\"}"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal005}
+  etcdExpectData: null
+  etcdPrepareData: null

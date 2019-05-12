@@ -1,0 +1,68 @@
+getIpsNormalPrepare003: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getIpsNormalPrepare003}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: get ips with limit}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: status, value: USED}
+    - {clazz: class java.lang.String, description: null, flag: N, name: groupId, value: '1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: limit, value: '1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: offset, value: ''}
+  etcdExpectData: null
+  etcdPrepareData: null
+getIpsNormalPrepare002: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getIpsNormalPrepare002}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: get ips used}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: status, value: USED}
+    - {clazz: class java.lang.String, description: null, flag: N, name: groupId, value: '1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: limit, value: ''}
+    - {clazz: class java.lang.String, description: null, flag: N, name: offset, value: ''}
+  etcdExpectData: null
+  etcdPrepareData: null
+getIpsNormalPrepare004: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getIpsNormalPrepare003}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: get ips with limit}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: status, value: USED}
+    - {clazz: class java.lang.String, description: null, flag: N, name: groupId, value: '1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: limit, value: '20'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: offset, value: '1'}
+  etcdExpectData: null
+  etcdPrepareData: null
+getIpsNormalPrepare001: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getIpsNormalPrepare001}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: get ips free}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: status, value: FREE}
+    - {clazz: class java.lang.String, description: null, flag: N, name: groupId, value: '1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: limit, value: ''}
+    - {clazz: class java.lang.String, description: null, flag: N, name: offset, value: ''}
+  etcdExpectData: null
+  etcdPrepareData: null

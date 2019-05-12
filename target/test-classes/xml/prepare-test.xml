@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="nlb" verbose="1">
+	<!--<parameter name="env" value="ci"/>-->
+    <test name="ci-test">
+            <packages>
+                <package name="com.netease.cloudqa.nlb.api.test.prepare.classicalopenapi.loadbalancer.*"/>
+                <package name="com.netease.cloudqa.nlb.api.test.prepare.classicalopenapi.listener.*"/>
+                <package name="com.netease.cloudqa.nlb.api.test.prepare.classicalopenapi.targetgroup.*"/>
+                <package name="com.netease.cloudqa.nlb.api.test.prepare.ingressopenapi.loadbalancer.*"/>
+                <package name="com.netease.cloudqa.nlb.api.test.prepare.ingressopenapi.listener.*"/>
+                <package name="com.netease.cloudqa.nlb.api.test.prepare.classicalopenapi.ssl.*"/>
+                <package name="com.netease.cloudqa.nlb.api.test.prepare.slighttest.*"/>
+                <package name="com.netease.cloudqa.nlb.api.test.prepare.classicaladminapi.*"/>
+                <package name="com.netease.cloudqa.nlb.api.test.prepare.ingressadminapi.*"/>
+            </packages>
+    </test>
+</suite>

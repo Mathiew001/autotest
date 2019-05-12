@@ -1,0 +1,26 @@
+deleteProtectionNormalPrepare001: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteProtectionNormalPrepare001}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: delete protection of instances}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |-
+        {
+            "Attr": "deletionProtectionEnabled",
+            "Value":true
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"Forbidden","Message":"deletionProtectionEnabled
+        is true not allow delete"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer010}
+  etcdExpectData: null
+  etcdPrepareData: null

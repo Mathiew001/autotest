@@ -1,0 +1,90 @@
+getLoadBalancersNormal001: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getLoadBalancersNormal001}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'get lb list, mix limit=1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: type, value: mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: limit, value: '1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: offset, value: ''}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Type":"mix",
+        "Limit":"1", "Offset":""}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+getLoadBalancersNormal003: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getLoadBalancersNormal003}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'get lb list, vpc_mix limit=1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: type, value: http}
+    - {clazz: class java.lang.String, description: null, flag: N, name: limit, value: '1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: offset, value: ''}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Type":"http",
+        "Limit":"1", "Offset":""}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+getLoadBalancersNormal002: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getLoadBalancersNormal002}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'get lb list, vpc_mix limit=1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: type, value: vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: limit, value: '1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: offset, value: ''}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Type":"vpc_mix",
+        "Limit":"1", "Offset":""}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+getLoadBalancersNormal005: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getLoadBalancersNormal005}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'get lb list, mix limit=2 offset=1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: type, value: vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: limit, value: '2'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: offset, value: '1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Type":"vpc_mix",
+        "Limit":"2", "Offset":"1"}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+getLoadBalancersNormal004: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getLoadBalancersNormal004}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'get lb list, vpc_mix limit=1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: type, value: tcp}
+    - {clazz: class java.lang.String, description: null, flag: N, name: limit, value: '1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: offset, value: ''}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Type":"tcp",
+        "Limit":"1", "Offset":""}'}
+  etcdExpectData: null
+  etcdPrepareData: null

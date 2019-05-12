@@ -1,0 +1,471 @@
+checkLoadBalancerParamsAbnormal009: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsAbnormal009}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'Check ing params, bandwidth illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareBody,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |-
+        {
+            "Name": "qa-temp-1550169909447",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test description",
+            "Type": "mix",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "hour",
+              "BandwidthLimit": 1001,
+              "ChargeMode": "bandwidth"
+            }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: cleanMethod,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid bandwidthLimit. 1001, maxBandwidth:1000"
+        }
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsAbnormal008: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsAbnormal008}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'Check ing params, bandwidth illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareBody,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |-
+        {
+            "Name": "qa-temp-1550169909427",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test description",
+            "Type": "mix",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "hour",
+              "BandwidthLimit": -1,
+              "ChargeMode": "bandwidth"
+            }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: cleanMethod,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid bandwidthLimit. -1, maxBandwidth:1000"
+        }
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsAbnormal007: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsAbnormal007}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'Check ing params, chargeType illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareBody,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |-
+        {
+            "Name": "qa-temp-1550169909402",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test description",
+            "Type": "mix",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "hour",
+              "BandwidthLimit": 1,
+              "ChargeMode": "abcd"
+            }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: cleanMethod,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid chargeMode."
+        }
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsAbnormal006: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsAbnormal006}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'Check ing params, chargeType illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareBody,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |-
+        {
+            "Name": "qa-temp-1550169909381",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test description",
+            "Type": "mix",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "abcd",
+              "BandwidthLimit": 1,
+              "ChargeMode": "bandwidth"
+            }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: cleanMethod,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"Invalid chargeType: abcd"}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsAbnormal005: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsAbnormal005}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'Check ing params, network illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareBody,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |-
+        {
+            "Name": "qa-temp-1550169909357",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test description",
+            "Type": "mix",
+            "Network": "abcd",
+            "Standard": {
+              "ChargeType": "hour",
+              "BandwidthLimit": 1,
+              "ChargeMode": "bandwidth"
+            }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: cleanMethod,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest","Message":"Invalid
+        network: abcd"}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsAbnormal004: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsAbnormal004}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'Check ing params, type illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareBody,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |-
+        {
+            "Name": "qa-temp-1550169909335",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test description",
+            "Type": "abcd",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "hour",
+              "BandwidthLimit": 1,
+              "ChargeMode": "bandwidth"
+            }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: cleanMethod,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest","Message":"Invalid
+        type: abcd"}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsAbnormal014: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsAbnormal014}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'Check ing params, vpcId illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareBody,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |-
+        {
+            "Name": "qa-temp-1550169909511",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test description",
+            "Type": "vpc_mix",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "month",
+              "BandwidthLimit": 1,
+              "ChargeMode": "bandwidth",
+              "Period": 1
+            },
+            "VpcId": "abcd",
+            "TopAzInfos": [
+                {
+                    "TopAz": "1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0",
+                    "SubNetId": "1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"
+                }
+            ]
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: cleanMethod,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"NotFound",
+        "Message":"no found service security group"}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsAbnormal002: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsAbnormal002}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'Check ing params, name > 100'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareBody,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |-
+        {
+            "Name": "abcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxya",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test description",
+            "Type": "mix",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "hour",
+              "BandwidthLimit": 1,
+              "ChargeMode": "bandwidth"
+            }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: cleanMethod,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid lbName."
+        }
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsAbnormal001: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsAbnormal001}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'Check ing params, empty name'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareBody,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |-
+        {
+            "Name": "",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test description",
+            "Type": "mix",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "hour",
+              "BandwidthLimit": 1,
+              "ChargeMode": "bandwidth"
+            }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: cleanMethod,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid lbName."
+        }
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsAbnormal012: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsAbnormal012}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'Check ing params, autorenewPeriod illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareBody,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |-
+        {
+            "Name": "qa-temp-1550169909488",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test description",
+            "Type": "mix",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "month",
+              "BandwidthLimit": 1,
+              "ChargeMode": "bandwidth",
+              "Period": 10,
+              "AutoRenewPeriod": -1,
+            }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: cleanMethod,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid autoRenewPeriod! autoRenewPeriod should be greater than
+        0 !"}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsAbnormal010: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsAbnormal010}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'Check ing params, description illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareBody,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |-
+        {
+            "Name": "qa-temp-1550169909468",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "abcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxya",
+            "Type": "mix",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "hour",
+              "BandwidthLimit": 1,
+              "ChargeMode": "bandwidth"
+            }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: cleanMethod,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid description."
+        }
+  etcdExpectData: null
+  etcdPrepareData: null

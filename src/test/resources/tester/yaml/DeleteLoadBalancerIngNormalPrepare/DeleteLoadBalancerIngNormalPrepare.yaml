@@ -1,0 +1,160 @@
+deleteLoadBalancerNormal004: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteLoadBalancerNormal004}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: Delete ing of bandwidth vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: prepareBody
+      value: |-
+        {
+            "Name": "qa-temp-1550169908586",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test description",
+            "Type": "vpc_mix",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "hour",
+              "BandwidthLimit": 1,
+              "ChargeMode": "bandwidth",
+              "Period": 1
+            },
+            "VpcId": "dff050d2-8a91-436b-8765-739f14cec762",
+            "TopAzInfos": [
+                {
+                    "TopAz": "cn-east-p1a",
+                    "SubNetId": "1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"
+                }
+            ]
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: executeBody,
+      value: '{}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: PrepareMethodInvokerUtils.prepareIngress}
+    - {clazz: class java.lang.String, description: null, flag: N, name: cleanMethod,
+      value: null}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteLoadBalancerNormal003: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteLoadBalancerNormal003}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: Delete ing of netflow vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: prepareBody
+      value: |-
+        {
+            "Name": "qa-temp-1550169908564",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test description",
+            "Type": "vpc_mix",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "hour",
+              "BandwidthLimit": 1,
+              "ChargeMode": "netflow",
+              "Period": 1
+            },
+            "VpcId": "dff050d2-8a91-436b-8765-739f14cec762",
+            "TopAzInfos": [
+                {
+                    "TopAz": "cn-east-p1a",
+                    "SubNetId": "1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"
+                }
+            ]
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: executeBody,
+      value: '{}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: PrepareMethodInvokerUtils.prepareIngress}
+    - {clazz: class java.lang.String, description: null, flag: N, name: cleanMethod,
+      value: null}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteLoadBalancerNormal002: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteLoadBalancerNormal002}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: Delete ing of bandwidth mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: prepareBody
+      value: |-
+        {
+            "Name": "qa-temp-1550169908541",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test description",
+            "Type": "mix",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "hour",
+              "BandwidthLimit": 1,
+              "ChargeMode": "bandwidth",
+            }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: executeBody,
+      value: '{}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: PrepareMethodInvokerUtils.prepareIngress}
+    - {clazz: class java.lang.String, description: null, flag: N, name: cleanMethod,
+      value: null}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteLoadBalancerNormal001: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteLoadBalancerNormal001}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: Delete ing of netflow mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: prepareBody
+      value: |-
+        {
+            "Name": "qa-temp-1550169908518",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test description",
+            "Type": "mix",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "hour",
+              "BandwidthLimit": 1,
+              "ChargeMode": "netflow",
+            }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: executeBody,
+      value: '{}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: PrepareMethodInvokerUtils.prepareIngress}
+    - {clazz: class java.lang.String, description: null, flag: N, name: cleanMethod,
+      value: null}
+  etcdExpectData: null
+  etcdPrepareData: null

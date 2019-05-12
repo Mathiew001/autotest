@@ -1,0 +1,208 @@
+redirectNormalPrepare001: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: redirectNormalPrepare001}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: redirect of vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: targetGroup
+      value: |-
+        [{
+            "Instances":[
+                {
+                    "Address":"10.0.32.79",
+                    "Port":80,
+                    "Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+                    "TopAz":"cn-east-p1a",
+                    "Weight":100,
+                    "Name":"instance0"
+                }
+            ],
+            "Monitor":{
+                "Timeout":5000,
+                "Rstatus":"2xx,3xx",
+                "Period":5000,
+                "Fall":5,
+                "Protocol":"http",
+                "Url":"/index.html",
+                "Rise":5
+            },
+            "UseSamePort":0,
+            "Name":"tg-test-01"
+        }, {
+            "Instances":[
+                {
+                    "Address":"10.0.32.60",
+                    "Port":80,
+                    "Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd",
+                    "TopAz":"cn-east-p1a",
+                    "Weight":100,
+                    "Name":"instance1"
+                }
+            ],
+            "Monitor":{
+                "Timeout":5000,
+                "Rstatus":"2xx,3xx",
+                "Period":5000,
+                "Fall":5,
+                "Protocol":"http",
+                "Url":"/index.html",
+                "Rise":5
+            },
+            "UseSamePort":0,
+            "Name":"tg-test-02"
+        },{
+            "Instances":[
+                {
+                    "Address":"10.0.32.79",
+                    "Port":81,
+                    "Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+                    "TopAz":"cn-east-p1a",
+                    "Weight":100,
+                    "Name":"instance0"
+                }
+            ],
+            "Monitor":{
+                "Timeout":5000,
+                "Rstatus":"2xx,3xx",
+                "Period":5000,
+                "Fall":5,
+                "Protocol":"http",
+                "Url":"/index.html",
+                "Rise":5
+            },
+            "UseSamePort":0,
+            "Name":"tg-test-03"
+        },{
+            "Instances":[
+                {
+                    "Address":"10.0.32.60",
+                    "Port":81,
+                    "Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd",
+                    "TopAz":"cn-east-p1a",
+                    "Weight":100,
+                    "Name":"instance1"
+                }
+            ],
+            "Monitor":{
+                "Timeout":5000,
+                "Rstatus":"2xx,3xx",
+                "Period":5000,
+                "Fall":5,
+                "Protocol":"http",
+                "Url":"/index.html",
+                "Rise":5
+            },
+            "UseSamePort":0,
+            "Name":"tg-test-04"
+        }]
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: listener
+      value: |-
+        [{
+            "InstanceId": "instanceId",
+            "Name": "testln1",
+            "ListenPort": 80,
+            "ForwardPort": 1,
+            "TraceVip": 1,
+            "Protocol": "http",
+            "Balance": "roundrobin",
+            "Clusters": [
+             {
+        "ServerName": "test1.com",
+                    "Path": "/a",
+                    "TargetGroupId": "targetGroupId"
+             },     {
+        "ServerName": "test2.com",
+                    "Path": "/b",
+                    "TargetGroupId": "targetGroupId"
+             },     {
+        "ServerName": "*",
+                    "Path": "/",
+                    "TargetGroupId": "targetGroupId"
+             }],
+            "Gzip": 1
+        }, {
+            "InstanceId": "instanceId",
+            "Name": "testln2",
+            "ListenPort": 443,
+            "ForwardPort": 1,
+            "TraceVip": 1,
+            "Protocol": "https",
+            "Balance": "roundrobin",
+            "Clusters": [
+             {
+        "ServerName": "test1.com",
+                    "Path": "/a",
+                    "CertId": "9cd0b588-8f4c-4ce8-89bc-5b6823689bf2",
+                    "TargetGroupId": "targetGroupId"
+             },     {
+        "ServerName": "test2.com",
+                    "Path": "/b",
+                    "CertId": "9cd0b588-8f4c-4ce8-89bc-5b6823689bf2",
+                    "TargetGroupId": "targetGroupId"
+             },     {
+        "ServerName": "*",
+                    "Path": "/",
+                    "CertId": "9cd0b588-8f4c-4ce8-89bc-5b6823689bf2",
+                    "TargetGroupId": "targetGroupId"
+             }],
+            "CipherSuiteId": "749cb683-048e-4b76-ba62-7ba9a01a739c",
+            "Gzip": 1
+        }]
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: update
+      value: |-
+        {
+            "InstanceId": "instanceId",
+            "ForwardPort": 1,
+            "TraceVip": 1,
+            "RedirectRules":[
+             {
+        "sourceDomain": "test1.com",
+                    "sourcePath": "/a",
+                    "targetDomain": "test2.com",
+                    "targetPath": "/b",
+                    "targetPort": 443,
+                    "protocol": "https"
+             },     {
+        "sourceDomain": "test2.com",
+                    "targetDomain": "test1.com",
+                    "targetPath": "/a",
+                    "targetPort": 443,
+                    "protocol": "https"
+             },     {
+                    "targetPort": 443,
+                    "protocol": "https"
+             }],
+            "Clusters": [
+             {
+        "ServerName": "test1.com",
+                    "Path": "/a",
+                    "TargetGroupId": "targetGroupId"
+             },     {
+        "ServerName": "test2.com",
+                    "Path": "/b",
+                    "TargetGroupId": "targetGroupId"
+             },     {
+        "ServerName": "*",
+                    "Path": "/",
+                    "TargetGroupId": "targetGroupId"
+             }],
+            "Gzip": 1
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: ''}
+    - {clazz: class java.lang.String, description: null, flag: N, name: vipId, value: null}
+  etcdExpectData: null
+  etcdPrepareData: null

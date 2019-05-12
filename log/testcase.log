@@ -1,0 +1,155 @@
+[INFO ]20:58:13,694, [CaseId], [Class]ConfigLoader, [Method]loadConfig, ConfigrationImpl[dbConfigs=[DBConfig[dsName=ds1,driverClass=com.mysql.jdbc.Driver,url=jdbc:mysql://10.185.0.120:4311/dns_test?useUnicode=true&characterEncoding=UTF-8,userName=dns_test,passWord=dns_test,tables=[dns_hosted_zone_vpc, dns_domain_zone, dns_line, dns_resource_record, dns_resource_record_set_history, dns_service, dns_white_list, dns_resource_record_set, dns_domain_zone_history, dns_hosted_zone_quota, dns_resource_record_history]]],testConfig=TestConfig[appName=<null>,testEnv=online_jd_pri,testPort=<null>,httpUrl=http://localhost:18080,checkDb=false,importDb=false,httpUrlIngress=http://localhost:18888,httpAdmin=http://localhost:18081,httpAdminIngress=http://localhost:18889,appKey=<null>,appSecret=<null>,httpLine=g0_v2],extConfig=java.util.Properties$EntrySet@5170bcf4,labelConfig=java.util.Properties$EntrySet@2812b107]
+[INFO ]20:58:13,975, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]20:58:13,976, [CaseId], [Class]BasePrepare, [Method]executePrepare, [GetLoadBalancerAbnormalPrepare] 加载用例个数:2
+[INFO ]20:58:13,976, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]20:58:14,983, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]20:58:14,984, [CaseId], [Class]BasePrepare, [Method]executePrepare, [CreateLbListenerNormalPrepare] 加载用例个数:29
+[INFO ]20:58:14,984, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]20:58:15,481, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]20:58:15,481, [CaseId], [Class]BasePrepare, [Method]executePrepare, [UpdateTargetGroupNormalPrepare] 加载用例个数:20
+[INFO ]20:58:15,482, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]20:58:15,573, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]20:58:15,574, [CaseId], [Class]BasePrepare, [Method]executePrepare, [GetLoadBalancersIngNormalPrepare] 加载用例个数:4
+[INFO ]20:58:15,574, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]20:58:15,684, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]20:58:15,685, [CaseId], [Class]BasePrepare, [Method]executePrepare, [DeleteLbListenerIngNormalPrepare] 加载用例个数:4
+[INFO ]20:58:15,686, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]20:58:15,717, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]20:58:15,718, [CaseId], [Class]BasePrepare, [Method]executePrepare, [GetCertificatesNormalPrepare] 加载用例个数:1
+[INFO ]20:58:15,718, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]20:58:15,772, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]20:58:15,772, [CaseId], [Class]BasePrepare, [Method]executePrepare, [OldNlbNormalPrepare] 加载用例个数:2
+[INFO ]20:58:15,773, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]20:58:15,867, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]20:58:15,868, [CaseId], [Class]BasePrepare, [Method]executePrepare, [SearchIpNormalPrepare] 加载用例个数:4
+[INFO ]20:58:15,868, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]20:58:15,895, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]20:58:15,896, [CaseId], [Class]BasePrepare, [Method]executePrepare, [LBLogPrepare] 加载用例个数:1
+[INFO ]20:58:15,896, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]20:58:16,016, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]20:58:16,016, [CaseId], [Class]BasePrepare, [Method]executePrepare, [GetLoadBalancerNormalPrepare] 加载用例个数:4
+[INFO ]20:58:16,016, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]20:59:46,559, [CaseId], [Class]ConfigLoader, [Method]loadConfig, ConfigrationImpl[dbConfigs=[DBConfig[dsName=ds1,driverClass=com.mysql.jdbc.Driver,url=jdbc:mysql://10.185.0.120:4311/dns_test?useUnicode=true&characterEncoding=UTF-8,userName=dns_test,passWord=dns_test,tables=[dns_hosted_zone_vpc, dns_domain_zone, dns_line, dns_resource_record, dns_resource_record_set_history, dns_service, dns_white_list, dns_resource_record_set, dns_domain_zone_history, dns_hosted_zone_quota, dns_resource_record_history]]],testConfig=TestConfig[appName=<null>,testEnv=online_jd_pri,testPort=<null>,httpUrl=http://localhost:18080,checkDb=false,importDb=false,httpUrlIngress=http://localhost:18888,httpAdmin=http://localhost:18081,httpAdminIngress=http://localhost:18889,appKey=<null>,appSecret=<null>,httpLine=g0_v2],extConfig=java.util.Properties$EntrySet@5170bcf4,labelConfig=java.util.Properties$EntrySet@2812b107]
+[INFO ]20:59:46,937, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]20:59:46,938, [CaseId], [Class]BasePrepare, [Method]executePrepare, [GetLoadBalancerAbnormalPrepare] 加载用例个数:2
+[INFO ]20:59:46,939, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:00:34,428, [CaseId], [Class]ConfigLoader, [Method]loadConfig, ConfigrationImpl[dbConfigs=[DBConfig[dsName=ds1,driverClass=com.mysql.jdbc.Driver,url=jdbc:mysql://10.185.0.120:4311/dns_test?useUnicode=true&characterEncoding=UTF-8,userName=dns_test,passWord=dns_test,tables=[dns_hosted_zone_vpc, dns_domain_zone, dns_line, dns_resource_record, dns_resource_record_set_history, dns_service, dns_white_list, dns_resource_record_set, dns_domain_zone_history, dns_hosted_zone_quota, dns_resource_record_history]]],testConfig=TestConfig[appName=<null>,testEnv=online_jd_pri,testPort=<null>,httpUrl=http://localhost:18080,checkDb=false,importDb=false,httpUrlIngress=http://localhost:18888,httpAdmin=http://localhost:18081,httpAdminIngress=http://localhost:18889,appKey=<null>,appSecret=<null>,httpLine=g0_v2],extConfig=java.util.Properties$EntrySet@5170bcf4,labelConfig=java.util.Properties$EntrySet@2812b107]
+[INFO ]21:00:34,809, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:00:34,810, [CaseId], [Class]BasePrepare, [Method]executePrepare, [GetLoadBalancerAbnormalPrepare] 加载用例个数:2
+[INFO ]21:00:34,810, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:00:43,983, [CaseId], [Class]ConfigLoader, [Method]loadConfig, ConfigrationImpl[dbConfigs=[DBConfig[dsName=ds1,driverClass=com.mysql.jdbc.Driver,url=jdbc:mysql://10.185.0.120:4311/dns_test?useUnicode=true&characterEncoding=UTF-8,userName=dns_test,passWord=dns_test,tables=[dns_hosted_zone_vpc, dns_domain_zone, dns_line, dns_resource_record, dns_resource_record_set_history, dns_service, dns_white_list, dns_resource_record_set, dns_domain_zone_history, dns_hosted_zone_quota, dns_resource_record_history]]],testConfig=TestConfig[appName=<null>,testEnv=online_jd_pri,testPort=<null>,httpUrl=http://localhost:18080,checkDb=false,importDb=false,httpUrlIngress=http://localhost:18888,httpAdmin=http://localhost:18081,httpAdminIngress=http://localhost:18889,appKey=<null>,appSecret=<null>,httpLine=g0_v2],extConfig=java.util.Properties$EntrySet@5170bcf4,labelConfig=java.util.Properties$EntrySet@2812b107]
+[INFO ]21:00:44,397, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:00:44,398, [CaseId], [Class]BasePrepare, [Method]executePrepare, [GetLoadBalancerAbnormalPrepare] 加载用例个数:2
+[INFO ]21:00:44,399, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:00:45,365, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:00:45,365, [CaseId], [Class]BasePrepare, [Method]executePrepare, [CreateLbListenerNormalPrepare] 加载用例个数:29
+[INFO ]21:00:45,366, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:00:45,854, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:00:45,854, [CaseId], [Class]BasePrepare, [Method]executePrepare, [UpdateTargetGroupNormalPrepare] 加载用例个数:20
+[INFO ]21:00:45,854, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:00:45,953, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:00:45,953, [CaseId], [Class]BasePrepare, [Method]executePrepare, [GetLoadBalancersIngNormalPrepare] 加载用例个数:4
+[INFO ]21:00:45,953, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:00:46,055, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:00:46,055, [CaseId], [Class]BasePrepare, [Method]executePrepare, [DeleteLbListenerIngNormalPrepare] 加载用例个数:4
+[INFO ]21:00:46,056, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:00:46,084, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:00:46,085, [CaseId], [Class]BasePrepare, [Method]executePrepare, [GetCertificatesNormalPrepare] 加载用例个数:1
+[INFO ]21:00:46,085, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:00:46,145, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:00:46,146, [CaseId], [Class]BasePrepare, [Method]executePrepare, [OldNlbNormalPrepare] 加载用例个数:2
+[INFO ]21:00:46,146, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:00:46,246, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:00:46,247, [CaseId], [Class]BasePrepare, [Method]executePrepare, [SearchIpNormalPrepare] 加载用例个数:4
+[INFO ]21:00:46,247, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:00:46,275, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:00:46,279, [CaseId], [Class]BasePrepare, [Method]executePrepare, [LBLogPrepare] 加载用例个数:1
+[INFO ]21:00:46,279, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:00:46,394, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:00:46,395, [CaseId], [Class]BasePrepare, [Method]executePrepare, [GetLoadBalancerNormalPrepare] 加载用例个数:4
+[INFO ]21:00:46,395, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:01:08,882, [CaseId], [Class]ConfigLoader, [Method]loadConfig, ConfigrationImpl[dbConfigs=[DBConfig[dsName=ds1,driverClass=com.mysql.jdbc.Driver,url=jdbc:mysql://10.185.0.120:4311/dns_test?useUnicode=true&characterEncoding=UTF-8,userName=dns_test,passWord=dns_test,tables=[dns_hosted_zone_vpc, dns_domain_zone, dns_line, dns_resource_record, dns_resource_record_set_history, dns_service, dns_white_list, dns_resource_record_set, dns_domain_zone_history, dns_hosted_zone_quota, dns_resource_record_history]]],testConfig=TestConfig[appName=<null>,testEnv=online_jd_pri,testPort=<null>,httpUrl=http://localhost:18080,checkDb=false,importDb=false,httpUrlIngress=http://localhost:18888,httpAdmin=http://localhost:18081,httpAdminIngress=http://localhost:18889,appKey=<null>,appSecret=<null>,httpLine=g0_v2],extConfig=java.util.Properties$EntrySet@5170bcf4,labelConfig=java.util.Properties$EntrySet@2812b107]
+[INFO ]21:01:09,225, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:01:09,226, [CaseId], [Class]BasePrepare, [Method]executePrepare, [GetLoadBalancerAbnormalPrepare] 加载用例个数:2
+[INFO ]21:01:09,228, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:17:49,697, [CaseId], [Class]ConfigLoader, [Method]loadConfig, ConfigrationImpl[dbConfigs=[DBConfig[dsName=ds1,driverClass=com.mysql.jdbc.Driver,url=jdbc:mysql://10.185.0.120:4311/dns_test?useUnicode=true&characterEncoding=UTF-8,userName=dns_test,passWord=dns_test,tables=[dns_hosted_zone_vpc, dns_domain_zone, dns_line, dns_resource_record, dns_resource_record_set_history, dns_service, dns_white_list, dns_resource_record_set, dns_domain_zone_history, dns_hosted_zone_quota, dns_resource_record_history]]],testConfig=TestConfig[appName=<null>,testEnv=online_jd_pri,testPort=<null>,httpUrl=http://localhost:18080,checkDb=false,importDb=false,httpUrlIngress=http://localhost:18888,httpAdmin=http://localhost:18081,httpAdminIngress=http://localhost:18889,appKey=<null>,appSecret=<null>,httpLine=g0_v2],extConfig=java.util.Properties$EntrySet@5fa07e12,labelConfig=java.util.Properties$EntrySet@55b53d44]
+[INFO ]21:17:50,702, [CaseId], [Class]TestCaseTemplateImpl, [Method]process, .......caseId:[createLoadBalancer010] start.......
+[INFO ]21:17:50,703, [CaseId]createLoadBalancer010, [Class]FrameWorkDriver, [Method]beforeTest, =================================================================
+[INFO ]21:17:50,703, [CaseId]createLoadBalancer010, [Class]FrameWorkDriver, [Method]beforeTest, ===            create public default securitygroups vpc_mix lb
+[INFO ]21:17:50,704, [CaseId]createLoadBalancer010, [Class]FrameWorkDriver, [Method]beforeTest, =================================================================
+[INFO ]21:17:50,764, [CaseId]createLoadBalancer010, [Class]FrameWorkDriver, [Method]sendJsonReq, createLb Request Body: {"Type":"vpc_mix","TopAzInfos":[{"SubNetId":"1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0","TopAz":"cn-east-p1a"}],"Description":"test cty","VpcId":"dff050d2-8a91-436b-8765-739f14cec762","Network":"public","Standard":{"ChargeMode":"netflow","ChargeType":"hour","BandwidthLimit":1},"Name":"qa-temp-1550169909616"}
+[INFO ]21:17:52,376, [CaseId]createLoadBalancer010, [Class]FrameWorkDriver, [Method]sendJsonReq, createLb Response Body: {"InstanceId":"38a3c363-19e8-478c-bf11-ad47e8b2b24c","TenantId":"0b2cc5a931a444438c19e3e80b77468d","Name":"qa-temp-1550169909616","Network":"public","Description":"test cty","Status":"CREATING","SubStatus":"WORKING","InstanceStatus":"UNKNOWN","CreateAt":"2019-03-25T13:17:52.262Z","UpdateAt":"2019-03-25T13:17:52.262Z","Address":"59.111.243.5","Type":"vpc_mix","VpcId":"dff050d2-8a91-436b-8765-739f14cec762","VpcIps":[],"Attrs":{"DeletionProtectionEnabled":false,"UseSSLAcc":-1,"Version":"2018-12-06","StopTimeout":null},"Listeners":[],"Standard":{"ChargeMode":"netflow","ChargeType":"AMOUNT","BandwidthLimit":1,"Size":"nlb.s1.micro","AutoRenewPeriod":0},"Limit":{"ListenerLimit":10,"TGroupLimit":20,"TGroupInstanceLimit":50,"DomainLimit":5,"PathLimit":30,"MaxBandwidth":1000},"TargetGroups":[],"TopAzInfos":[{"TopAz":"cn-east-p1a","SubNetId":"1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"}],"SecurityGroups":["d5ec7189-84b3-499e-b82b-c9021ad91042"]}
+[INFO ]21:17:58,380, [CaseId]createLoadBalancer010, [Class]FrameWorkDriver, [Method]sendReq, getLbDetail Request Url: https://open.cn-east-p1.netease.com/nlb?Action=GetLoadBalancer&Version=2017-12-05&InstanceId=38a3c363-19e8-478c-bf11-ad47e8b2b24c
+[INFO ]21:17:58,449, [CaseId]createLoadBalancer010, [Class]FrameWorkDriver, [Method]sendReq, getLbDetail Response Body: {"InstanceId":"38a3c363-19e8-478c-bf11-ad47e8b2b24c","TenantId":"0b2cc5a931a444438c19e3e80b77468d","Name":"qa-temp-1550169909616","Network":"public","Description":"test cty","Status":"CREATING","SubStatus":"WORKING","InstanceStatus":"UNKNOWN","CreateAt":"2019-03-25T13:17:52.262Z","UpdateAt":"2019-03-25T13:17:52.262Z","Address":"59.111.243.5","Type":"vpc_mix","VpcId":"dff050d2-8a91-436b-8765-739f14cec762","VpcIps":["10.0.5.173"],"Attrs":{"DeletionProtectionEnabled":false,"UseSSLAcc":-1,"Version":"2018-12-06","StopTimeout":null},"Listeners":[],"Standard":{"ChargeMode":"netflow","ChargeType":"AMOUNT","BandwidthLimit":1,"Size":"nlb.s1.micro","AutoRenewPeriod":0},"Limit":{"ListenerLimit":10,"TGroupLimit":20,"TGroupInstanceLimit":50,"DomainLimit":5,"PathLimit":30,"MaxBandwidth":1000},"TargetGroups":[],"TopAzInfos":[{"TopAz":"cn-east-p1a","SubNetId":"1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"}],"SecurityGroups":["d5ec7189-84b3-499e-b82b-c9021ad91042"]}
+[INFO ]21:17:58,449, [CaseId]createLoadBalancer010, [Class]CommonApi, [Method]waitLb, LoadBalancer is creating...
+[INFO ]21:19:50,323, [CaseId], [Class]ConfigLoader, [Method]loadConfig, ConfigrationImpl[dbConfigs=[DBConfig[dsName=ds1,driverClass=com.mysql.jdbc.Driver,url=jdbc:mysql://10.185.9.5:3306/pubenv_nlb?useUnicode=true&characterEncoding=UTF-8,userName=pubnlb,passWord=aj823rvis,tables=[lb_agent_status, lb_cert, lb_top_az, lb_vip, lb_lvs_netflow_status, lb_op_log, lb_cookie_stickness_policy, lb_tengine_load, lb_user_servers, lb_user_servers_group, lb_vip_block_ip, lb_ports, lb_whitelist, lb_tengine_status, lb_address_deny_port, lb_tengine_netflow_status, lb_vip_cns, lb_tengine_error_logs, lb_tgroup, lb_tgroup_monitor, lb_cmd, lb_listeners, lb_tengine_netstats, lb_lvs_group, lb_tls_ticket_key, lb_dns_zone, lb_user, lb_lvs, lb_tengine_access_stats_by_ip, lb_security_group, lb_address_port, lb_dns_rrset, lb_tengine_user_server_status, lb_tengine, lb_vip_config, lb_lvs_netstats, lb_ingress_charge, lb_listener_attrs, lb_tengine_access_stats_by_url, lb_req_log, lb_health_checker, lb_task, lb_cipher_suite, lb_method_gray, lb_virtual_server, lb_tgroup_server, lb_system_config, lb_lvs_instance, lb_cloud_server, lb_address, lb_vip_attrs, lb_monitor]]],testConfig=TestConfig[appName=<null>,testEnv=ci,testPort=<null>,httpUrl=http://115.238.125.85:4444,checkDb=true,importDb=true,httpUrlIngress=http://115.238.125.85:1414,httpAdmin=http://115.238.125.85:4445,httpAdminIngress=http://115.238.125.85:1415,appKey=<null>,appSecret=<null>,httpLine=normal],extConfig=java.util.Properties$EntrySet@2812b107,labelConfig=java.util.Properties$EntrySet@df6620a]
+[INFO ]21:19:50,720, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:50,720, [CaseId], [Class]BasePrepare, [Method]executePrepare, [GetLoadBalancerAbnormalPrepare] 加载用例个数:2
+[INFO ]21:19:50,721, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:51,967, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:51,967, [CaseId], [Class]BasePrepare, [Method]executePrepare, [CreateLbListenerNormalPrepare] 加载用例个数:38
+[INFO ]21:19:51,968, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:52,442, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:52,443, [CaseId], [Class]BasePrepare, [Method]executePrepare, [UpdateTargetGroupNormalPrepare] 加载用例个数:20
+[INFO ]21:19:52,444, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:52,543, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:52,544, [CaseId], [Class]BasePrepare, [Method]executePrepare, [GetLoadBalancersIngNormalPrepare] 加载用例个数:4
+[INFO ]21:19:52,544, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:52,642, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:52,643, [CaseId], [Class]BasePrepare, [Method]executePrepare, [DeleteLbListenerIngNormalPrepare] 加载用例个数:4
+[INFO ]21:19:52,643, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:52,670, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:52,671, [CaseId], [Class]BasePrepare, [Method]executePrepare, [GetCertificatesNormalPrepare] 加载用例个数:1
+[INFO ]21:19:52,672, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:52,754, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:52,755, [CaseId], [Class]BasePrepare, [Method]executePrepare, [OldNlbNormalPrepare] 加载用例个数:3
+[INFO ]21:19:52,756, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:52,856, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:52,856, [CaseId], [Class]BasePrepare, [Method]executePrepare, [SearchIpNormalPrepare] 加载用例个数:4
+[INFO ]21:19:52,857, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:52,911, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:52,912, [CaseId], [Class]BasePrepare, [Method]executePrepare, [LBLogPrepare] 加载用例个数:2
+[INFO ]21:19:52,912, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:53,017, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:53,017, [CaseId], [Class]BasePrepare, [Method]executePrepare, [GetLoadBalancerNormalPrepare] 加载用例个数:4
+[INFO ]21:19:53,017, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:56,034, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:56,035, [CaseId], [Class]BasePrepare, [Method]executePrepare, [CreateLbListenerAbnormalPrepare] 加载用例个数:127
+[INFO ]21:19:56,035, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:56,231, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:56,231, [CaseId], [Class]BasePrepare, [Method]executePrepare, [RegistTGInstanceNormalPrepare] 加载用例个数:8
+[INFO ]21:19:56,231, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:56,330, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:19:56,330, [CaseId], [Class]BasePrepare, [Method]executePrepare, [UpdateLoadBalancerIngAbnormalPrepare] 加载用例个数:4
+[INFO ]21:19:56,330, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:20:52,949, [CaseId], [Class]ConfigLoader, [Method]loadConfig, ConfigrationImpl[dbConfigs=[DBConfig[dsName=ds1,driverClass=com.mysql.jdbc.Driver,url=jdbc:mysql://10.185.9.5:3306/pubenv_nlb?useUnicode=true&characterEncoding=UTF-8,userName=pubnlb,passWord=aj823rvis,tables=[lb_agent_status, lb_cert, lb_top_az, lb_vip, lb_lvs_netflow_status, lb_op_log, lb_cookie_stickness_policy, lb_tengine_load, lb_user_servers, lb_user_servers_group, lb_vip_block_ip, lb_ports, lb_whitelist, lb_tengine_status, lb_address_deny_port, lb_tengine_netflow_status, lb_vip_cns, lb_tengine_error_logs, lb_tgroup, lb_tgroup_monitor, lb_cmd, lb_listeners, lb_tengine_netstats, lb_lvs_group, lb_tls_ticket_key, lb_dns_zone, lb_user, lb_lvs, lb_tengine_access_stats_by_ip, lb_security_group, lb_address_port, lb_dns_rrset, lb_tengine_user_server_status, lb_tengine, lb_vip_config, lb_lvs_netstats, lb_ingress_charge, lb_listener_attrs, lb_tengine_access_stats_by_url, lb_req_log, lb_health_checker, lb_task, lb_cipher_suite, lb_method_gray, lb_virtual_server, lb_tgroup_server, lb_system_config, lb_lvs_instance, lb_cloud_server, lb_address, lb_vip_attrs, lb_monitor]]],testConfig=TestConfig[appName=<null>,testEnv=ci,testPort=<null>,httpUrl=http://115.238.125.85:4444,checkDb=true,importDb=true,httpUrlIngress=http://115.238.125.85:1414,httpAdmin=http://115.238.125.85:4445,httpAdminIngress=http://115.238.125.85:1415,appKey=<null>,appSecret=<null>,httpLine=normal],extConfig=java.util.Properties$EntrySet@4032d386,labelConfig=java.util.Properties$EntrySet@28d18df5]
+[INFO ]21:20:53,295, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:20:53,295, [CaseId], [Class]BasePrepare, [Method]executePrepare, [GetLoadBalancerAbnormalPrepare] 加载用例个数:2
+[INFO ]21:20:53,296, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:20:54,519, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:20:54,519, [CaseId], [Class]BasePrepare, [Method]executePrepare, [CreateLbListenerNormalPrepare] 加载用例个数:38
+[INFO ]21:20:54,519, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:20:55,001, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:20:55,001, [CaseId], [Class]BasePrepare, [Method]executePrepare, [UpdateTargetGroupNormalPrepare] 加载用例个数:20
+[INFO ]21:20:55,001, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:20:55,101, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:20:55,101, [CaseId], [Class]BasePrepare, [Method]executePrepare, [GetLoadBalancersIngNormalPrepare] 加载用例个数:4
+[INFO ]21:20:55,102, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:20:55,196, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:20:55,197, [CaseId], [Class]BasePrepare, [Method]executePrepare, [DeleteLbListenerIngNormalPrepare] 加载用例个数:4
+[INFO ]21:20:55,197, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:20:55,223, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:20:55,224, [CaseId], [Class]BasePrepare, [Method]executePrepare, [GetCertificatesNormalPrepare] 加载用例个数:1
+[INFO ]21:20:55,224, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:20:55,298, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:20:55,298, [CaseId], [Class]BasePrepare, [Method]executePrepare, [OldNlbNormalPrepare] 加载用例个数:3
+[INFO ]21:20:55,299, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:20:55,396, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:20:55,397, [CaseId], [Class]BasePrepare, [Method]executePrepare, [SearchIpNormalPrepare] 加载用例个数:4
+[INFO ]21:20:55,397, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:20:55,452, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:20:55,453, [CaseId], [Class]BasePrepare, [Method]executePrepare, [LBLogPrepare] 加载用例个数:2
+[INFO ]21:20:55,454, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:20:55,560, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================
+[INFO ]21:20:55,560, [CaseId], [Class]BasePrepare, [Method]executePrepare, [GetLoadBalancerNormalPrepare] 加载用例个数:4
+[INFO ]21:20:55,560, [CaseId], [Class]BasePrepare, [Method]executePrepare, ======================================================================

@@ -1,0 +1,25 @@
+updateUserQuotaNormal001: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateUserQuotaNormal001}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update user quota}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: limit, value: '1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: type, value: '{"type":["vpc_mix",
+        "mix", "tcp", "http"]}'}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: createBody
+      value: "{\n    \"Type\":\"mix\",\n    \"Description\":\"abcd\",\n    \"Network\"\
+        :\"public\",\n    \"Standard\":{\n        \"ChargeMode\":\"netflow\",\n  \
+        \      \"ChargeType\":\"hour\",\n        \"BandwidthLimit\":1,\n        \"\
+        Size\":\"nlb.s1.micro\",\n    \n    },\n    \"Name\":\"qa-temp-1550169904783\"\
+        \n}"
+  etcdExpectData: null
+  etcdPrepareData: null

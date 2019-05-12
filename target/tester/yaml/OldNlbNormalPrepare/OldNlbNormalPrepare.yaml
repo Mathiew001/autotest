@@ -1,0 +1,399 @@
+oldNlbNormalPrepare002: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: oldNlbNormalPrepare002}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: old lb test of mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 34493fd33b874583ac7b24c1f60138fd}
+    - {clazz: class java.lang.String, description: null, flag: N, name: instanceId,
+      value: 12e1ac86-e9cf-4efa-9130-0cdb70f4516b}
+    - {clazz: class java.lang.String, description: null, flag: N, name: createTargetGroupBody,
+      value: '{"Name":"tg-test", "InstanceId":"12e1ac86-e9cf-4efa-9130-0cdb70f4516b",
+        "Instances":[{"Id":"5cf23f08-ec08-4a57-bf91-ebac86e1bb41", "Name":"qainstance1",
+        "Port":80, "TopAz":"cn-east-1b", "Weight":100, "Address": "192.168.15.43"},
+        {"Id":"145ed5cc-0d45-4654-9025-ce7b4016fd6a", "Name":"qainstance2", "Port":81,
+        "TopAz":"cn-east-1b", "Weight":80, "Address":"192.168.2.222"}], "UseSamePort":0}'}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: createListenerBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"InstanceId\": \"12e1ac86-e9cf-4efa-9130-0cdb70f4516b\"\
+        ,\n    \"ListenPort\": 80,\n    \"Protocol\": \"http\",\n    \"Balance\":\
+        \ \"roundrobin\",\n    \"Clusters\": [\n        {\n            \"ServerName\"\
+        : \"*\",\n            \"Path\": \"/a\",\n            \"Policy\": {\n     \
+        \           \"Mode\": \"rewrite\",\n                \"CookieName\": \"asfsd\"\
+        ,\n                \"Expire\": 30000\n            },\n            \"Monitor\"\
+        : {\n              \"Period\": 6000,\n              \"Timeout\": 6000,\n \
+        \             \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"http\",\n              \"Url\": \"/index.html\",\n              \"Rstatus\"\
+        : \"2xx,3xx\" \n            }\n        }\n    ],\n    \"Gzip\": 1,\n    \"\
+        TraceVip\": 1,\n    \"ForwardPort\": 1\n}, {\n    \"Name\": \"testln2\",\n\
+        \    \"InstanceId\": \"12e1ac86-e9cf-4efa-9130-0cdb70f4516b\",\n    \"ListenPort\"\
+        : 443,\n    \"Protocol\": \"https\",\n    \"Balance\": \"leastconn\",\n  \
+        \  \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n      \
+        \      \"Path\": \"/a\",\n            \"CertId\": \"0cc5dd00-2b72-11e8-84a3-353db519f4c6\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }\n    ],\n    \"CipherSuiteId\": \"3a3b018b-4c05-4ef9-ab7c-d4bf644e3f69\"\
+        ,\n    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: "{\n    \"InstanceId\":\"12e1ac86-e9cf-4efa-9130-0cdb70f4516b\",\n  \
+        \  \"VpcId\":\"d9541266-de4d-4eb0-9fe3-8af4708b10b0\",\n    \"Name\":\"qanotdelete-vpc\"\
+        ,\n    \"Network\":\"public\",\n    \"Description\":null,\n    \"Status\"\
+        :\"WORKING\",\n    \"SubStatus\":\"WORKING\",\n    \"Type\":\"vpc_mix\",\n\
+        \    \"InstanceNum\":2,\n    \"Listeners\":[\n        {\n            \"Name\"\
+        :\"testln1\",\n            \"ListenPort\":80,\n            \"Protocol\":\"\
+        http\",\n            \"TraceVip\":1,\n            \"Balance\":\"roundrobin\"\
+        ,\n            \"Gzip\":1,\n            \"Status\":\"ON\",\n            \"\
+        ForwardPort\":1,\n            \"Clusters\":[\n                {\n        \
+        \            \"Name\":\"tg-test\",\n                    \"ServerName\":\"\
+        *\",\n                    \"Path\":\"/a\",\n                    \"Monitor\"\
+        :{\n                        \"Protocol\":\"http\",\n                     \
+        \   \"Rise\":6,\n                        \"Fall\":6,\n                   \
+        \     \"Url\":\"/index.html\",\n                        \"Timeout\":6000,\n\
+        \                        \"Period\":6000,\n                        \"Rstatus\"\
+        :\"2xx,3xx\"\n                    },\n                    \"Policy\":{\n \
+        \                       \"Mode\":\"rewrite\",\n                        \"\
+        CookieName\":\"asfsd\",\n                        \"Expire\":30000\n      \
+        \              },\n                    \"Instances\":[\n                 \
+        \       {\n                            \"Id\":\"5cf23f08-ec08-4a57-bf91-ebac86e1bb41\"\
+        ,\n                            \"Name\":\"qainstance1\",\n               \
+        \             \"Address\":\"192.168.15.43\",\n                           \
+        \ \"Port\":80,\n                            \"Weight\":100,\n            \
+        \                \"Backup\":0\n                        },\n              \
+        \          {\n                            \"Id\":\"145ed5cc-0d45-4654-9025-ce7b4016fd6a\"\
+        ,\n                            \"Name\":\"qainstance2\",\n               \
+        \             \"Address\":\"192.168.2.222\",\n                           \
+        \ \"Port\":81,\n                            \"Weight\":80,\n             \
+        \               \"Backup\":0\n                        }\n                \
+        \    ]\n                }\n            ]\n        },\n        {\n        \
+        \    \"Name\":\"testln2\",\n            \"ListenPort\":443,\n            \"\
+        Protocol\":\"https\",\n            \"TraceVip\":0,\n            \"Balance\"\
+        :\"leastconn\",\n            \"Gzip\":0,\n            \"Status\":\"ON\",\n\
+        \            \"ForwardPort\":0,\n            \"Clusters\":[\n            \
+        \    {\n                    \"Name\":\"tg-test\",\n                    \"\
+        CertId\": \"0cc5dd00-2b72-11e8-84a3-353db519f4c6\",\n                    \"\
+        ServerName\":\"*\",\n                    \"Path\":\"/a\",\n              \
+        \      \"Monitor\":{\n                        \"Protocol\":\"http\",\n   \
+        \                     \"Rise\":6,\n                        \"Fall\":6,\n \
+        \                       \"Url\":\"/index.html\",\n                       \
+        \ \"Timeout\":6000,\n                        \"Period\":6000,\n          \
+        \              \"Rstatus\":\"2xx,3xx\"\n                    },\n         \
+        \           \"Policy\":{\n                        \"Mode\":\"rewrite\",\n\
+        \                        \"CookieName\":\"asfsd\",\n                     \
+        \   \"Expire\":30000\n                    },\n                    \"Instances\"\
+        :[\n                        {\n                            \"Id\":\"5cf23f08-ec08-4a57-bf91-ebac86e1bb41\"\
+        ,\n                            \"Name\":\"qainstance1\",\n               \
+        \             \"Address\":\"192.168.15.43\",\n                           \
+        \ \"Port\":80,\n                            \"Weight\":100,\n            \
+        \                \"Backup\":0\n                        },\n              \
+        \          {\n                            \"Id\":\"145ed5cc-0d45-4654-9025-ce7b4016fd6a\"\
+        ,\n                            \"Name\":\"qainstance2\",\n               \
+        \             \"Address\":\"192.168.2.222\",\n                           \
+        \ \"Port\":81,\n                            \"Weight\":80,\n             \
+        \               \"Backup\":0\n                        }\n                \
+        \    ]\n                }\n            ],\n            \"CipherSuiteId\":\
+        \ \"3a3b018b-4c05-4ef9-ab7c-d4bf644e3f69\"\n        }\n    ],\n    \"Standard\"\
+        :{\n        \"ChargeMode\":\"bandwidth\",\n        \"ChargeType\":\"AMOUNT\"\
+        ,\n        \"BandwidthLimit\":1,\n        \"Size\":\"nlb.s1.micro\",\n   \
+        \     \"AutoRenewPeriod\":0\n    },\n    \"Limit\":{\n        \"ListenerLimit\"\
+        :10,\n        \"TGroupLimit\":20,\n        \"TGroupInstanceLimit\":50,\n \
+        \       \"DomainLimit\":5,\n        \"PathLimit\":30\n    },\n    \"TargetGroups\"\
+        :[\n        {\n            \"Name\":\"tg-test\",\n            \"UseSamePort\"\
+        :0,\n                    \"Instances\":[\n                        {\n    \
+        \                        \"Id\":\"5cf23f08-ec08-4a57-bf91-ebac86e1bb41\",\n\
+        \                            \"Name\":\"qainstance1\",\n                 \
+        \           \"Address\":\"192.168.15.43\",\n                            \"\
+        Port\":80,\n                            \"Weight\":100,\n                \
+        \            \"Backup\":0\n                        },\n                  \
+        \      {\n                            \"Id\":\"145ed5cc-0d45-4654-9025-ce7b4016fd6a\"\
+        ,\n                            \"Name\":\"qainstance2\",\n               \
+        \             \"Address\":\"192.168.2.222\",\n                           \
+        \ \"Port\":81,\n                            \"Weight\":80,\n             \
+        \               \"Backup\":0\n                        }\n                \
+        \    ], \n            \"Monitor\":{\n                \"Protocol\":\"tcp\"\
+        ,\n                \"Rise\":2,\n                \"Fall\":3,\n            \
+        \    \"Url\":\"/\",\n                \"Timeout\":2000,\n                \"\
+        Period\":5000\n            }\n        }\n    ],    \"TopAzInfos\":[\n    \
+        \    {\n            \"TopAz\":\"cn-east-1b\",\n            \"SubNetId\":\"\
+        98316cec-30ab-4e87-bed7-ab16966e2092\"\n        }\n    ],\n    \"SecurityGroups\"\
+        :[\n        \"214af444-6ab5-4188-b82b-53ba5a4cc4aa\",\n        \"3ab65826-471c-4022-97b4-5aeb3ff2dc6e\"\
+        ,\n        \"a5758098-c2ae-434b-b5a8-2a8c7e106fef\"\n    ]\n}\n\n"
+  etcdExpectData: null
+  etcdPrepareData: null
+oldNlbNormalPrepare001: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: oldNlbNormalPrepare001}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: old lb test of mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 34493fd33b874583ac7b24c1f60138fd}
+    - {clazz: class java.lang.String, description: null, flag: N, name: instanceId,
+      value: b6a7978c-b9c4-4476-a29e-4690bfb7cd53}
+    - {clazz: class java.lang.String, description: null, flag: N, name: createTargetGroupBody,
+      value: '{"Name":"tg-test", "InstanceId":"b6a7978c-b9c4-4476-a29e-4690bfb7cd53",
+        "Instances":[{"Id":"052f5a83-cc94-4082-8eb0-3a3d3817e2ae", "Name":"qainstance-A",
+        "Port":80, "TopAz":"cn-east-1a", "Weight":100, "Address": "10.18.201.88"},
+        {"Id":"428cd592-56b3-4022-81e3-ffbb592f0c10", "Name":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "Port":81, "TopAz":"cn-east-1a", "Weight":80, "Address":"10.18.201.87"}],
+        "UseSamePort":0}'}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: createListenerBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"InstanceId\": \"b6a7978c-b9c4-4476-a29e-4690bfb7cd53\"\
+        ,\n    \"ListenPort\": 80,\n    \"Protocol\": \"http\",\n    \"Balance\":\
+        \ \"roundrobin\",\n    \"Clusters\": [\n        {\n            \"ServerName\"\
+        : \"*\",\n            \"Path\": \"/a\",\n            \"Policy\": {\n     \
+        \           \"Mode\": \"rewrite\",\n                \"CookieName\": \"asfsd\"\
+        ,\n                \"Expire\": 30000\n            },\n            \"Monitor\"\
+        : {\n              \"Period\": 6000,\n              \"Timeout\": 6000,\n \
+        \             \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"http\",\n              \"Url\": \"/index.html\",\n              \"Rstatus\"\
+        : \"2xx,3xx\" \n            }\n        }\n    ],\n    \"Gzip\": 1,\n    \"\
+        TraceVip\": 1,\n    \"ForwardPort\": 1\n}, {\n    \"Name\": \"testln2\",\n\
+        \    \"InstanceId\": \"b6a7978c-b9c4-4476-a29e-4690bfb7cd53\",\n    \"ListenPort\"\
+        : 443,\n    \"Protocol\": \"https\",\n    \"Balance\": \"leastconn\",\n  \
+        \  \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n      \
+        \      \"Path\": \"/a\",\n            \"CertId\": \"0cc5dd00-2b72-11e8-84a3-353db519f4c6\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }\n    ],\n    \"CipherSuiteId\": \"3a3b018b-4c05-4ef9-ab7c-d4bf644e3f69\"\
+        ,\n    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: "{\n    \"InstanceId\":\"b6a7978c-b9c4-4476-a29e-4690bfb7cd53\",\n  \
+        \  \"Name\":\"qanotdelete\",\n    \"Network\":\"public\",\n    \"Description\"\
+        :null,\n    \"Status\":\"WORKING\",\n    \"SubStatus\":\"WORKING\",\n    \"\
+        InstanceStatus\":\"UP\",\n    \"Type\":\"mix\",\n    \"InstanceNum\":2,\n\
+        \    \"Listeners\":[\n        {\n            \"Name\":\"testln1\",\n     \
+        \       \"ListenPort\":80,\n            \"Protocol\":\"http\",\n         \
+        \   \"TraceVip\":1,\n            \"Balance\":\"roundrobin\",\n           \
+        \ \"Gzip\":1,\n            \"Status\":\"ON\",\n            \"ForwardPort\"\
+        :1,\n            \"Clusters\":[\n                {\n                    \"\
+        Name\":\"tg-test\",\n                    \"ServerName\":\"*\",\n         \
+        \           \"Path\":\"/a\",\n                    \"Monitor\":{\n        \
+        \                \"Protocol\":\"http\",\n                        \"Rise\"\
+        :6,\n                        \"Fall\":6,\n                        \"Url\"\
+        :\"/index.html\",\n                        \"Timeout\":6000,\n           \
+        \             \"Period\":6000,\n                        \"Rstatus\":\"2xx,3xx\"\
+        \n                    },\n                    \"Policy\":{\n             \
+        \           \"Mode\":\"rewrite\",\n                        \"CookieName\"\
+        :\"asfsd\",\n                        \"Expire\":30000\n                  \
+        \  },\n                    \"Instances\":[\n                        {\n  \
+        \                          \"Id\":\"052f5a83-cc94-4082-8eb0-3a3d3817e2ae\"\
+        ,\n                            \"Name\":\"qainstance-A\",\n              \
+        \              \"Address\":\"10.18.201.88\",\n                           \
+        \ \"Port\":80,\n                            \"Weight\":100,\n            \
+        \                \"Backup\":0\n                        },\n              \
+        \          {\n                            \"Id\":\"428cd592-56b3-4022-81e3-ffbb592f0c10\"\
+        ,\n                            \"Name\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"\
+        ,\n                            \"Address\":\"10.18.201.87\",\n           \
+        \                 \"Port\":81,\n                            \"Weight\":80,\n\
+        \                            \"Backup\":0\n                        }\n   \
+        \                 ]\n                }\n            ]\n        },\n      \
+        \  {\n            \"Name\":\"testln2\",\n            \"ListenPort\":443,\n\
+        \            \"Protocol\":\"https\",\n            \"TraceVip\":0,\n      \
+        \      \"Balance\":\"leastconn\",\n            \"Gzip\":0,\n            \"\
+        Status\":\"ON\",\n            \"ForwardPort\":0,\n            \"Clusters\"\
+        :[\n                {\n                    \"Name\":\"tg-test\",\n       \
+        \             \"CertId\": \"0cc5dd00-2b72-11e8-84a3-353db519f4c6\",\n    \
+        \                \"ServerName\":\"*\",\n                    \"Path\":\"/a\"\
+        ,\n                    \"Monitor\":{\n                        \"Protocol\"\
+        :\"http\",\n                        \"Rise\":6,\n                        \"\
+        Fall\":6,\n                        \"Url\":\"/index.html\",\n            \
+        \            \"Timeout\":6000,\n                        \"Period\":6000,\n\
+        \                        \"Rstatus\":\"2xx,3xx\"\n                    },\n\
+        \                    \"Policy\":{\n                        \"Mode\":\"rewrite\"\
+        ,\n                        \"CookieName\":\"asfsd\",\n                   \
+        \     \"Expire\":30000\n                    },\n                    \"Instances\"\
+        :[\n                        {\n                            \"Id\":\"052f5a83-cc94-4082-8eb0-3a3d3817e2ae\"\
+        ,\n                            \"Name\":\"qainstance-A\",\n              \
+        \              \"Address\":\"10.18.201.88\",\n                           \
+        \ \"Port\":80,\n                            \"Weight\":100,\n            \
+        \                \"Backup\":0\n                        },\n              \
+        \          {\n                            \"Id\":\"428cd592-56b3-4022-81e3-ffbb592f0c10\"\
+        ,\n                            \"Name\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"\
+        ,\n                            \"Address\":\"10.18.201.87\",\n           \
+        \                 \"Port\":81,\n                            \"Weight\":80,\n\
+        \                            \"Backup\":0\n                        }\n   \
+        \                 ]\n                }\n            ],\n            \"CipherSuiteId\"\
+        : \"3a3b018b-4c05-4ef9-ab7c-d4bf644e3f69\"\n        }\n    ],\n    \"Standard\"\
+        :{\n        \"ChargeMode\":\"bandwidth\",\n        \"ChargeType\":\"AMOUNT\"\
+        ,\n        \"BandwidthLimit\":1,\n        \"Size\":\"nlb.s1.micro\",\n   \
+        \     \"AutoRenewPeriod\":0\n    },\n    \"Limit\":{\n        \"ListenerLimit\"\
+        :10,\n        \"TGroupLimit\":20,\n        \"TGroupInstanceLimit\":50,\n \
+        \       \"DomainLimit\":5,\n        \"PathLimit\":30\n    },\n    \"TargetGroups\"\
+        :[\n        {\n            \"Name\":\"tg-test\",\n            \"UseSamePort\"\
+        :0,\n                    \"Instances\":[\n                        {\n    \
+        \                        \"Id\":\"052f5a83-cc94-4082-8eb0-3a3d3817e2ae\",\n\
+        \                            \"Name\":\"qainstance-A\",\n                \
+        \            \"Address\":\"10.18.201.88\",\n                            \"\
+        Port\":80,\n                            \"Weight\":100,\n                \
+        \            \"Backup\":0\n                        },\n                  \
+        \      {\n                            \"Id\":\"428cd592-56b3-4022-81e3-ffbb592f0c10\"\
+        ,\n                            \"Name\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"\
+        ,\n                            \"Address\":\"10.18.201.87\",\n           \
+        \                 \"Port\":81 ,\n                            \"Weight\":80,\n\
+        \                            \"Backup\":0\n                        }\n   \
+        \                 ], \n            \"Monitor\":{\n                \"Protocol\"\
+        :\"tcp\",\n                \"Rise\":2,\n                \"Fall\":3,\n    \
+        \            \"Url\":\"/\",\n                \"Timeout\":2000,\n         \
+        \       \"Period\":5000\n            }\n        }\n    ]\n}\n\n"
+  etcdExpectData: null
+  etcdPrepareData: null
+oldNlbNormalPrepare003: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: oldNlbNormalPrepare003}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: old lb test of dns}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 34493fd33b874583ac7b24c1f60138fd}
+    - {clazz: class java.lang.String, description: null, flag: N, name: instanceId,
+      value: 4d6768c3-b5f3-401b-a449-dc02a739f863}
+    - {clazz: class java.lang.String, description: null, flag: N, name: createTargetGroupBody,
+      value: '{"Name":"tg-test", "InstanceId":"4d6768c3-b5f3-401b-a449-dc02a739f863",
+        "Instances":[{"Id":"5cf23f08-ec08-4a57-bf91-ebac86e1bb41", "Name":"qainstance1",
+        "Port":80, "TopAz":"cn-east-1b", "Weight":100, "Address": "192.168.15.43"},
+        {"Id":"145ed5cc-0d45-4654-9025-ce7b4016fd6a", "Name":"qainstance2", "Port":81,
+        "TopAz":"cn-east-1b", "Weight":80, "Address":"192.168.2.222"}], "UseSamePort":0}'}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: createListenerBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"InstanceId\": \"4d6768c3-b5f3-401b-a449-dc02a739f863\"\
+        ,\n    \"ListenPort\": 80,\n    \"Protocol\": \"http\",\n    \"Balance\":\
+        \ \"roundrobin\",\n    \"Clusters\": [\n        {\n            \"ServerName\"\
+        : \"*\",\n            \"Path\": \"/a\",\n            \"Policy\": {\n     \
+        \           \"Mode\": \"rewrite\",\n                \"CookieName\": \"asfsd\"\
+        ,\n                \"Expire\": 30000\n            },\n            \"Monitor\"\
+        : {\n              \"Period\": 6000,\n              \"Timeout\": 6000,\n \
+        \             \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"http\",\n              \"Url\": \"/index.html\",\n              \"Rstatus\"\
+        : \"2xx,3xx\" \n            }\n        }\n    ],\n    \"Gzip\": 1,\n    \"\
+        TraceVip\": 1,\n    \"ForwardPort\": 1\n}, {\n    \"Name\": \"testln2\",\n\
+        \    \"InstanceId\": \"4d6768c3-b5f3-401b-a449-dc02a739f863\",\n    \"ListenPort\"\
+        : 443,\n    \"Protocol\": \"https\",\n    \"Balance\": \"leastconn\",\n  \
+        \  \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n      \
+        \      \"Path\": \"/a\",\n            \"CertId\": \"0cc5dd00-2b72-11e8-84a3-353db519f4c6\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }\n    ],\n    \"CipherSuiteId\": \"3a3b018b-4c05-4ef9-ab7c-d4bf644e3f69\"\
+        ,\n    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: "{\n    \"InstanceId\":\"4d6768c3-b5f3-401b-a449-dc02a739f863\",\n  \
+        \  \"VpcId\":\"d9541266-de4d-4eb0-9fe3-8af4708b10b0\",\n    \"Name\":\"qanotdelete-dns\"\
+        ,\n    \"Network\":\"public\",\n    \"Description\":null,\n    \"Status\"\
+        :\"WORKING\",\n    \"SubStatus\":\"WORKING\",\n    \"Type\":\"vpc_mix\",\n\
+        \    \"InstanceNum\":2,\n    \"Listeners\":[\n        {\n            \"Name\"\
+        :\"testln1\",\n            \"ListenPort\":80,\n            \"Protocol\":\"\
+        http\",\n            \"TraceVip\":1,\n            \"Balance\":\"roundrobin\"\
+        ,\n            \"Gzip\":1,\n            \"Status\":\"ON\",\n            \"\
+        ForwardPort\":1,\n            \"Clusters\":[\n                {\n        \
+        \            \"Name\":\"tg-test\",\n                    \"ServerName\":\"\
+        *\",\n                    \"Path\":\"/a\",\n                    \"Monitor\"\
+        :{\n                        \"Protocol\":\"http\",\n                     \
+        \   \"Rise\":6,\n                        \"Fall\":6,\n                   \
+        \     \"Url\":\"/index.html\",\n                        \"Timeout\":6000,\n\
+        \                        \"Period\":6000,\n                        \"Rstatus\"\
+        :\"2xx,3xx\"\n                    },\n                    \"Policy\":{\n \
+        \                       \"Mode\":\"rewrite\",\n                        \"\
+        CookieName\":\"asfsd\",\n                        \"Expire\":30000\n      \
+        \              },\n                    \"Instances\":[\n                 \
+        \       {\n                            \"Id\":\"5cf23f08-ec08-4a57-bf91-ebac86e1bb41\"\
+        ,\n                            \"Name\":\"qainstance1\",\n               \
+        \             \"Address\":\"192.168.15.43\",\n                           \
+        \ \"Port\":80,\n                            \"Weight\":100,\n            \
+        \                \"Backup\":0\n                        },\n              \
+        \          {\n                            \"Id\":\"145ed5cc-0d45-4654-9025-ce7b4016fd6a\"\
+        ,\n                            \"Name\":\"qainstance2\",\n               \
+        \             \"Address\":\"192.168.2.222\",\n                           \
+        \ \"Port\":81,\n                            \"Weight\":80,\n             \
+        \               \"Backup\":0\n                        }\n                \
+        \    ]\n                }\n            ]\n        },\n        {\n        \
+        \    \"Name\":\"testln2\",\n            \"ListenPort\":443,\n            \"\
+        Protocol\":\"https\",\n            \"TraceVip\":0,\n            \"Balance\"\
+        :\"leastconn\",\n            \"Gzip\":0,\n            \"Status\":\"ON\",\n\
+        \            \"ForwardPort\":0,\n            \"Clusters\":[\n            \
+        \    {\n                    \"Name\":\"tg-test\",\n                    \"\
+        CertId\": \"0cc5dd00-2b72-11e8-84a3-353db519f4c6\",\n                    \"\
+        ServerName\":\"*\",\n                    \"Path\":\"/a\",\n              \
+        \      \"Monitor\":{\n                        \"Protocol\":\"http\",\n   \
+        \                     \"Rise\":6,\n                        \"Fall\":6,\n \
+        \                       \"Url\":\"/index.html\",\n                       \
+        \ \"Timeout\":6000,\n                        \"Period\":6000,\n          \
+        \              \"Rstatus\":\"2xx,3xx\"\n                    },\n         \
+        \           \"Policy\":{\n                        \"Mode\":\"rewrite\",\n\
+        \                        \"CookieName\":\"asfsd\",\n                     \
+        \   \"Expire\":30000\n                    },\n                    \"Instances\"\
+        :[\n                        {\n                            \"Id\":\"5cf23f08-ec08-4a57-bf91-ebac86e1bb41\"\
+        ,\n                            \"Name\":\"qainstance1\",\n               \
+        \             \"Address\":\"192.168.15.43\",\n                           \
+        \ \"Port\":80,\n                            \"Weight\":100,\n            \
+        \                \"Backup\":0\n                        },\n              \
+        \          {\n                            \"Id\":\"145ed5cc-0d45-4654-9025-ce7b4016fd6a\"\
+        ,\n                            \"Name\":\"qainstance2\",\n               \
+        \             \"Address\":\"192.168.2.222\",\n                           \
+        \ \"Port\":81,\n                            \"Weight\":80,\n             \
+        \               \"Backup\":0\n                        }\n                \
+        \    ]\n                }\n            ],\n            \"CipherSuiteId\":\
+        \ \"3a3b018b-4c05-4ef9-ab7c-d4bf644e3f69\"\n        }\n    ],\n    \"Standard\"\
+        :{\n        \"ChargeMode\":\"bandwidth\",\n        \"ChargeType\":\"AMOUNT\"\
+        ,\n        \"BandwidthLimit\":1,\n        \"Size\":\"nlb.s1.micro\",\n   \
+        \     \"AutoRenewPeriod\":0\n    },\n    \"Limit\":{\n        \"ListenerLimit\"\
+        :10,\n        \"TGroupLimit\":20,\n        \"TGroupInstanceLimit\":50,\n \
+        \       \"DomainLimit\":5,\n        \"PathLimit\":30\n    },\n    \"TargetGroups\"\
+        :[\n        {\n            \"Name\":\"tg-test\",\n            \"UseSamePort\"\
+        :0,\n                    \"Instances\":[\n                        {\n    \
+        \                        \"Id\":\"5cf23f08-ec08-4a57-bf91-ebac86e1bb41\",\n\
+        \                            \"Name\":\"qainstance1\",\n                 \
+        \           \"Address\":\"192.168.15.43\",\n                            \"\
+        Port\":80,\n                            \"Weight\":100,\n                \
+        \            \"Backup\":0\n                        },\n                  \
+        \      {\n                            \"Id\":\"145ed5cc-0d45-4654-9025-ce7b4016fd6a\"\
+        ,\n                            \"Name\":\"qainstance2\",\n               \
+        \             \"Address\":\"192.168.2.222\",\n                           \
+        \ \"Port\":81,\n                            \"Weight\":80,\n             \
+        \               \"Backup\":0\n                        }\n                \
+        \    ], \n            \"Monitor\":{\n                \"Protocol\":\"tcp\"\
+        ,\n                \"Rise\":2,\n                \"Fall\":3,\n            \
+        \    \"Url\":\"/\",\n                \"Timeout\":2000,\n                \"\
+        Period\":5000\n            }\n        }\n    ],    \"TopAzInfos\":[\n    \
+        \    {\n            \"TopAz\":\"cn-east-1b\",\n            \"SubNetId\":\"\
+        98316cec-30ab-4e87-bed7-ab16966e2092\"\n        }\n    ],\n    \"SecurityGroups\"\
+        :[\n        \"214af444-6ab5-4188-b82b-53ba5a4cc4aa\",\n        \"3ab65826-471c-4022-97b4-5aeb3ff2dc6e\"\
+        ,\n        \"a5758098-c2ae-434b-b5a8-2a8c7e106fef\"\n    ]\n}\n\n"
+  etcdExpectData: null
+  etcdPrepareData: null

@@ -1,0 +1,17 @@
+getLoadBalancerCountsNormal001: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getLoadBalancerCountsNormal001}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: get lb count}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: type, value: '{"type":["public_http_ordinary",
+        "public_mix_ordinary", "public_vpcmix_ordinary", "public_tcp_ordinary","private_tcp_ordinary",
+        "idc_mix_ordinary", "private_vpcmix_ordinary", "idc_tcp_ordinary", "public_http_ingress",
+        "public_mix_ingress", "public_vpcmix_ingress"]}'}
+  etcdExpectData: null
+  etcdPrepareData: null

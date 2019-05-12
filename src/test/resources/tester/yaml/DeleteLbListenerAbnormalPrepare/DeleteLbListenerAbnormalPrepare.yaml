@@ -1,0 +1,216 @@
+deleteLbListenerAbnormal003: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteLbListenerAbnormal003}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'delete lb listener, illegal listenerId'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: executeBody,
+      value: '{"ListenerId":"abcd"}'}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "NotFound",
+            "Message": "listener is not exist!"
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteLbListenerAbnormal004: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteLbListenerAbnormal004}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'delete lb listener, illegal instanceId'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: executeBody,
+      value: '{"InstanceId":"abcd", "ListenerId":"abcd"}'}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "NotFound",
+            "Message": " Load balancer does not exist.!"
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteLbListenerAbnormal010: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteLbListenerAbnormal010}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'delete lb listener, illegal instanceId'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: executeBody,
+      value: '{"InstanceId":"abcd", "ListenerId":"abcd"}'}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "NotFound",
+            "Message": " Load balancer does not exist.!"
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteLbListenerAbnormal009: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteLbListenerAbnormal009}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'delete lb listener, illegal listenerId'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: executeBody,
+      value: '{"ListenerId":"abcd"}'}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "NotFound",
+            "Message": "listener is not exist!"
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteLbListenerAbnormal005: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: idc_vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteLbListenerAbnormal005}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'delete lb listener, illegal listenerId'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: executeBody,
+      value: '{"ListenerId":"abcd"}'}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "NotFound",
+            "Message": "listener is not exist!"
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer021}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteLbListenerAbnormal006: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: idc_vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteLbListenerAbnormal006}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'delete lb listener, illegal instanceId'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: executeBody,
+      value: '{"InstanceId":"abcd", "ListenerId":"abcd"}'}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "NotFound",
+            "Message": " Load balancer does not exist.!"
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer021}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteLbListenerAbnormal007: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteLbListenerAbnormal007}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'delete lb listener, illegal listenerId'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: executeBody,
+      value: '{"ListenerId":"abcd"}'}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "NotFound",
+            "Message": "listener is not exist!"
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteLbListenerAbnormal008: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteLbListenerAbnormal008}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'delete lb listener, illegal instanceId'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: executeBody,
+      value: '{"InstanceId":"abcd", "ListenerId":"abcd"}'}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "NotFound",
+            "Message": " Load balancer does not exist.!"
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null

@@ -1,0 +1,228 @@
+ksslNormalPrepare002: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: ha1.8vpc
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: ksslNormalPrepare002}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create lb https listener of vpc_mix with kssl}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: createLnBody
+      value: "[{\n    \"InstanceId\": \"instanceId\",\n    \"Name\": \"testln1\",\n\
+        \    \"ListenPort\": 1025,\n    \"Protocol\": \"https\",\n    \"Balance\"\
+        : \"roundrobin\",\n    \"Clusters\": [\n     {\n\"ServerName\": \"test.com\"\
+        ,\n            \"Path\": \"/a\",\n            \"TargetGroupId\": \"targetGroupId\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\"\n            },\n            \"Monitor\"\
+        : {\n              \"Period\": 6000,\n              \"Timeout\": 6000,\n \
+        \             \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"http\",\n              \"Url\": \"/index.html\",\n              \"Rstatus\"\
+        : \"2xx,3xx\" \n            }\n     }],\n    \"Gzip\": 1,\n    \"TraceVip\"\
+        : 1,\n    \"ForwardPort\": 1,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"Name\": \"testln2\",\n    \"ListenPort\": 1026,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \  {\n            \"ServerName\": \"nimei.com\",\n            \"Path\": \"\
+        /b\",\n            \"TargetGroupId\": \"targetGroupId\",\n            \"CertId\"\
+        : \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n            \"Policy\": {\n \
+        \               \"Mode\": \"insert\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"tcp\"\n            }\n  \
+        \    }\n    ],\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        ,\n    \"Gzip\": 0\n},{\n    \"Name\": \"testln3\",\n    \"ListenPort\": 1027,\n\
+        \    \"ForwardPort\": 1,\n    \"Protocol\": \"https\",\n    \"Balance\": \"\
+        roundrobin\",\n    \"Clusters\": [\n      {\n            \"ServerName\": \"\
+        cty.com\",\n            \"Path\": \"/c\",\n            \"TargetGroupId\":\
+        \ \"targetGroupId\",\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"insert\",\n    \
+        \            \"Expire\": 30000\n            },\n            \"Monitor\": {\n\
+        \              \"Period\": 6000,\n              \"Timeout\": 6000,\n     \
+        \         \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"tcp\"\n            }\n      }\n    ],\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        ,\n    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: updateLnBody
+      value: |-
+        {
+            "InstanceId": "instanceId",
+            "Balance": "roundrobin",
+            "Clusters": [
+             {
+        "ServerName": "test.com",
+                    "Path": "/a",
+                    "TargetGroupId": "targetGroupId",
+                    "CertId": "95256db0-2dec-11e8-a507-45c57f13bb1c",
+                    "Policy": {
+                        "Mode": "rewrite",
+                        "CookieName": "asfsd"
+                    }
+             }],
+            "Gzip": 1,
+            "TraceVip": 1,
+            "ForwardPort": 1,
+            "CipherSuiteId": "749cb683-048e-4b76-ba62-7ba9a01a739c"
+        }
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: updateLbBody
+      value: |-
+        {
+            "InstanceId": "instanceId",
+            "Attrs": {
+                "StopTimeout": 12345,
+                "UseSSLAcc": -1,
+            }
+        }
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        [
+                {
+                    "Name":"testln1",
+                    "ListenPort":1025,
+                    "ForwardPort":1,
+                    "Protocol":"https",
+                    "TraceVip":1,
+                    "Balance":"roundrobin",
+                    "Gzip":1,
+                    "CipherSuiteId":"749cb683-048e-4b76-ba62-7ba9a01a739c",
+                    "Clusters":[
+                        {
+                            "Name":"tg-test-01",
+                            "ServerName":"test.com",
+                            "Path":"/a",
+                        "Instances":[
+                            {
+                                "Address":"10.0.32.79",
+                                "Port":80,
+                                "Backup":0,
+                                "Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+                                "Weight":100,
+                                "Name":"instance0"
+                            }
+                        ],
+                            "CertId":"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2",
+                            "Monitor":{
+                                "Protocol":"http",
+                                "Rise":6,
+                                "Fall":6,
+                                "Url":"/index.html",
+                                "Timeout":6000,
+                                "Period":6000,
+                                "Rstatus":"2xx,3xx"
+                            },
+                            "Policy":{
+                                "Mode":"rewrite",
+                                "CookieName":"asfsd",
+                                "Expire":30000
+                            },
+                        }
+                    ]
+                },
+                {
+                    "Name":"testln2",
+                    "ListenPort":1026,
+                    "ForwardPort":0,
+                    "Protocol":"https",
+                    "TraceVip":0,
+                    "Balance":"roundrobin",
+                    "Gzip":0,
+                    "CipherSuiteId":"749cb683-048e-4b76-ba62-7ba9a01a739c",
+                    "Clusters":[
+                        {
+                            "Name":"tg-test-02",
+                            "ServerName":"nimei.com",
+                            "Path":"/b",
+                        "Instances":[
+                            {
+                                "Address":"10.0.32.60",
+                                "Port":80,
+                                "Backup":0,
+                                "Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd",
+                                "Weight":100,
+                                "Name":"instance1"
+                            }
+                        ],
+                            "CertId":"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2",
+                            "Monitor":{
+                                "Protocol":"tcp",
+                                "Rise":6,
+                                "Fall":6,
+                                "Url":"",
+                                "Timeout":6000,
+                                "Period":6000
+                            },
+                            "Policy":{
+                                "Mode":"insert",
+                                "Expire":30000
+                            },
+                        }
+                    ]
+                },
+                {
+                    "Name":"testln3",
+                    "ListenPort":1027,
+                    "ForwardPort":1,
+                    "Protocol":"https",
+                    "TraceVip":0,
+                    "Balance":"roundrobin",
+                    "Gzip":0,
+                    "CipherSuiteId":"749cb683-048e-4b76-ba62-7ba9a01a739c",
+                    "Clusters":[
+                        {
+                            "Name":"tg-test-03",
+                            "ServerName":"cty.com",
+                            "Path":"/c",
+                        "Instances":[
+                            {
+                                "Address":"10.0.32.79",
+                                "Port":80,
+                                "Backup":0,
+                                "Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+                                "Weight":100,
+                                "Name":"instance0"
+                            },
+                            {
+                                "Address":"10.0.32.60",
+                                "Port":80,
+                                "Backup":0,
+                                "Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd",
+                                "Weight":100,
+                                "Name":"instance1"
+                            }
+                        ],
+                            "CertId":"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2",
+                            "Monitor":{
+                                "Protocol":"tcp",
+                                "Rise":6,
+                                "Fall":6,
+                                "Url":"",
+                                "Timeout":6000,
+                                "Period":6000
+                            },
+                            "Policy":{
+                                "Mode":"insert",
+                                "Expire":30000
+                            },
+                        }
+                    ]
+                }
+            ]
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer101}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+    - {clazz: class java.lang.String, description: null, flag: N, name: certId, value: 9cd0b588-8f4c-4ce8-89bc-5b6823689bf2}
+    - {clazz: class java.lang.String, description: null, flag: N, name: certId2, value: 95256db0-2dec-11e8-a507-45c57f13bb1c}
+  etcdExpectData: null
+  etcdPrepareData: null

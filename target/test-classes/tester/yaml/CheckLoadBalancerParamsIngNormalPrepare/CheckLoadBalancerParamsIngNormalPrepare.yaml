@@ -1,0 +1,284 @@
+checkLoadBalancerParamsNormal008: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: idc_vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsNormal008}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: check idc_vpc_mix ing}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareBody,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |-
+        {
+            "Name": "qa-temp-1550169909883",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test description",
+            "Type": "vpc_mix",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "hour",
+              "BandwidthLimit": 1,
+              "ChargeMode": "bandwidth"
+            },
+            "VpcId": "dff050d2-8a91-436b-8765-739f14cec762",
+            "TopAzInfos": [
+                {
+                    "TopAz": "cn-east-p1a",
+                    "SubNetId": "1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"
+                }
+            ],
+            "SecurityGroups": [
+                "4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+                "c83230c7-da65-4364-9013-006ea8312c99"
+            ]
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: cleanMethod,
+      value: null}
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsNormal007: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: idc_vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsNormal007}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: check idc_vpc_mix ing}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareBody,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |-
+        {
+            "Name": "qa-temp-1550169909858",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test description",
+            "Type": "vpc_mix",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "hour",
+              "BandwidthLimit": 1,
+              "ChargeMode": "netflow"
+            },
+            "VpcId": "dff050d2-8a91-436b-8765-739f14cec762",
+            "TopAzInfos": [
+                {
+                    "TopAz": "cn-east-p1a",
+                    "SubNetId": "1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"
+                }
+            ],
+            "SecurityGroups": [
+                "4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+                "c83230c7-da65-4364-9013-006ea8312c99"
+            ]
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: cleanMethod,
+      value: null}
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsNormal006: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsNormal006}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: check vpc_mix ing}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareBody,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |-
+        {
+            "Name": "qa-temp-1550169909835",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test description",
+            "Type": "vpc_mix",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "month",
+              "BandwidthLimit": 1,
+              "ChargeMode": "bandwidth",
+              "Period": 1
+            },
+            "VpcId": "dff050d2-8a91-436b-8765-739f14cec762",
+            "TopAzInfos": [
+                {
+                    "TopAz": "cn-east-p1a",
+                    "SubNetId": "1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"
+                }
+            ],
+            "SecurityGroups": [
+                "4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+                "c83230c7-da65-4364-9013-006ea8312c99"
+            ]
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: cleanMethod,
+      value: null}
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsNormal005: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsNormal005}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: check vpc_mix ing}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareBody,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |-
+        {
+            "Name": "qa-temp-1550169909814",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test description",
+            "Type": "vpc_mix",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "hour",
+              "BandwidthLimit": 1,
+              "ChargeMode": "bandwidth"
+            },
+            "VpcId": "dff050d2-8a91-436b-8765-739f14cec762",
+            "TopAzInfos": [
+                {
+                    "TopAz": "cn-east-p1a",
+                    "SubNetId": "1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"
+                }
+            ],
+            "SecurityGroups": [
+                "4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+                "c83230c7-da65-4364-9013-006ea8312c99"
+            ]
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: cleanMethod,
+      value: null}
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsNormal004: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsNormal004}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: check vpc_mix ing}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareBody,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |-
+        {
+            "Name": "qa-temp-1550169909794",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test description",
+            "Type": "vpc_mix",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "hour",
+              "BandwidthLimit": 1,
+              "ChargeMode": "netflow"
+            },
+            "VpcId": "dff050d2-8a91-436b-8765-739f14cec762",
+            "TopAzInfos": [
+                {
+                    "TopAz": "cn-east-p1a",
+                    "SubNetId": "1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"
+                }
+            ],
+            "SecurityGroups": [
+                "4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+                "c83230c7-da65-4364-9013-006ea8312c99"
+            ]
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: cleanMethod,
+      value: null}
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsNormal009: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: idc_vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsNormal009}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: check idc_vpc_mix ing}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareBody,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |-
+        {
+            "Name": "qa-temp-1550169909908",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test description",
+            "Type": "vpc_mix",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "month",
+              "BandwidthLimit": 1,
+              "ChargeMode": "bandwidth",
+              "Period": 1
+            },
+            "VpcId": "dff050d2-8a91-436b-8765-739f14cec762",
+            "TopAzInfos": [
+                {
+                    "TopAz": "cn-east-p1a",
+                    "SubNetId": "1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"
+                }
+            ],
+            "SecurityGroups": [
+                "4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+                "c83230c7-da65-4364-9013-006ea8312c99"
+            ]
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: cleanMethod,
+      value: null}
+  etcdExpectData: null
+  etcdPrepareData: null

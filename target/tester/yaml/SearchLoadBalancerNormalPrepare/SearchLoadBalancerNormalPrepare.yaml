@@ -1,0 +1,85 @@
+searchLoadBalancerNormalPrepare002: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: searchLoadBalancerNormalPrepare002}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: search lb by address}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: key, value: Address}
+    - {clazz: class java.lang.String, description: null, flag: N, name: value, value: 115.238.125.94}
+    - {clazz: class java.lang.String, description: null, flag: N, name: isAccurate,
+      value: 'true'}
+  etcdExpectData: null
+  etcdPrepareData: null
+searchLoadBalancerNormalPrepare003: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: searchLoadBalancerNormalPrepare003}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: search lb by vipId}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: key, value: Id}
+    - {clazz: class java.lang.String, description: null, flag: N, name: value, value: dcf575a9-dbd1-4918-8de6-33942b0ad82f}
+    - {clazz: class java.lang.String, description: null, flag: N, name: isAccurate,
+      value: 'true'}
+  etcdExpectData: null
+  etcdPrepareData: null
+searchLoadBalancerNormalPrepare001: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: searchLoadBalancerNormalPrepare001}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: search lb by name}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: key, value: Name}
+    - {clazz: class java.lang.String, description: null, flag: N, name: value, value: qanotdelete-vpc}
+    - {clazz: class java.lang.String, description: null, flag: N, name: isAccurate,
+      value: 'true'}
+  etcdExpectData: null
+  etcdPrepareData: null
+searchLoadBalancerNormalPrepare006: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: searchLoadBalancerNormalPrepare006}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: search lb by tenantId}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: key, value: TenantId}
+    - {clazz: class java.lang.String, description: null, flag: N, name: value, value: 34493fd33b8}
+    - {clazz: class java.lang.String, description: null, flag: N, name: isAccurate,
+      value: 'false'}
+  etcdExpectData: null
+  etcdPrepareData: null
+searchLoadBalancerNormalPrepare004: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: searchLoadBalancerNormalPrepare004}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: search lb by tenantId}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: key, value: TenantId}
+    - {clazz: class java.lang.String, description: null, flag: N, name: value, value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: isAccurate,
+      value: 'true'}
+  etcdExpectData: null
+  etcdPrepareData: null

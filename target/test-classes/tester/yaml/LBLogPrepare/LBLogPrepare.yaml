@@ -1,0 +1,85 @@
+lbLog002: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: lbLog002}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: test for lb log mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 34493fd33b874583ac7b24c1f60138fd}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: "{\n    \"Type\":\"mix\",\n    \"Description\":\"abcd\",\n    \"Network\"\
+        :\"public\",\n    \"Standard\":{\n        \"ChargeMode\":\"netflow\",\n  \
+        \      \"ChargeType\":\"hour\",\n        \"BandwidthLimit\":1,\n        \"\
+        Size\":\"nlb.s1.micro\"\n    \n    },\n    \"Name\":\"qa-temp-1553519992884-lbLog002\"\
+        \n}"
+    - {clazz: class java.lang.String, description: null, flag: N, name: realServer1,
+      value: 052f5a83-cc94-4082-8eb0-3a3d3817e2ae}
+    - {clazz: class java.lang.String, description: null, flag: N, name: rsName1, value: qainstance-A}
+    - {clazz: class java.lang.String, description: null, flag: N, name: rsAddress1,
+      value: 10.18.201.88}
+    - {clazz: class java.lang.String, description: null, flag: N, name: realServer2,
+      value: 428cd592-56b3-4022-81e3-ffbb592f0c10}
+    - {clazz: class java.lang.String, description: null, flag: N, name: rsName2, value: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa}
+    - {clazz: class java.lang.String, description: null, flag: N, name: rsAddress2,
+      value: 10.18.201.87}
+    - {clazz: class java.lang.String, description: null, flag: N, name: topAz, value: cn-east-1a}
+  etcdExpectData: null
+  etcdPrepareData: null
+lbLog001: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: lbLog001}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: test for lb log vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 34493fd33b874583ac7b24c1f60138fd}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {
+            "SecurityGroups":[
+                "214af444-6ab5-4188-b82b-53ba5a4cc4aa",
+                "3ab65826-471c-4022-97b4-5aeb3ff2dc6e"
+            ],
+            "Type":"vpc_mix",
+            "TopAzInfos":[
+                {
+                    "SubNetId":"98316cec-30ab-4e87-bed7-ab16966e2092",
+                    "TopAz":"cn-east-1b"
+                }
+            ],
+            "Description":"abcd",
+            "VpcId":"d9541266-de4d-4eb0-9fe3-8af4708b10b0",
+            "Network":"public",
+            "Standard":{
+                "ChargeMode":"netflow",
+                "ChargeType":"hour",
+                "Size":"nlb.s1.micro",
+                "BandwidthLimit":1
+            },
+            "Name":"qa-temp-1553519992909-lbLog001"
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: realServer1,
+      value: 5cf23f08-ec08-4a57-bf91-ebac86e1bb41}
+    - {clazz: class java.lang.String, description: null, flag: N, name: rsName1, value: qainstance1}
+    - {clazz: class java.lang.String, description: null, flag: N, name: rsAddress1,
+      value: 192.168.15.43}
+    - {clazz: class java.lang.String, description: null, flag: N, name: realServer2,
+      value: 145ed5cc-0d45-4654-9025-ce7b4016fd6a}
+    - {clazz: class java.lang.String, description: null, flag: N, name: rsName2, value: qainstance2}
+    - {clazz: class java.lang.String, description: null, flag: N, name: rsAddress2,
+      value: 192.168.2.222}
+    - {clazz: class java.lang.String, description: null, flag: N, name: topAz, value: cn-east-1b}
+  etcdExpectData: null
+  etcdPrepareData: null

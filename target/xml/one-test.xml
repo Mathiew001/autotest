@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="nlb" verbose="1">
+	<!--<parameter name="env" value="ci"/>-->
+    <test name="ci-prepare">
+        <classes>
+            <class name="com.netease.cloudqa.nlb.api.test.prepare.slighttest.KsslNormalPrepare"/>
+        </classes>
+    </test>
+    <test name="ci-nlb-test">
+    	<classes>
+            <class name="com.netease.cloudqa.nlb.api.test.slighttest.KsslNormalTest" />
+    	</classes>
+    </test>
+</suite>

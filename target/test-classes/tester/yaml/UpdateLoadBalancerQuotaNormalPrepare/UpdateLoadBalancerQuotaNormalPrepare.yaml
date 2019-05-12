@@ -1,0 +1,27 @@
+updateLoadBalancerQuotaNormal001: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerQuotaNormal001}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update lb quota}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: listenerLimit,
+      value: '1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tGroupLimit,
+      value: '1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tGroupInstanceLimit,
+      value: '1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: pathLimit,
+      value: '1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: domainLimit,
+      value: '1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: maxBandwidth,
+      value: '1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer010}
+  etcdExpectData: null
+  etcdPrepareData: null

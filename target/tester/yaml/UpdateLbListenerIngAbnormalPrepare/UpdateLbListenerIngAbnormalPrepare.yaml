@@ -1,0 +1,1373 @@
+updateLbListenerAbnormal043: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal043}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, TraceVip illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n \
+        \           },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": 1,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }\n    ],\n    \"Gzip\": 1,\n    \"TraceVip\": 2,\n    \"\
+        CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid traceVip, traceVip 0 or 1."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal044: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal044}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, monitor illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n \
+        \           },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": 1,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 4999,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }\n    ],\n    \"Gzip\": 1,\n    \"TraceVip\": 1,\n    \"\
+        CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal045: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal045}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, monitor illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n \
+        \           },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": 1,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 1999,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }\n    ],\n    \"Gzip\": 1,\n    \"TraceVip\": 1,\n    \"\
+        CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal046: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal046}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, monitor illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n \
+        \           },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": 1,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 1,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }\n    ],\n    \"Gzip\": 1,\n    \"TraceVip\": 1,\n    \"\
+        CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal040: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal040}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, Gzip illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n \
+        \           },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": 1,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }\n    ],\n    \"Gzip\": -1,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid gzip, gzip 0 or 1."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal041: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal041}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, Gzip illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n \
+        \           },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": 1,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }\n    ],\n    \"Gzip\": 2,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid gzip, gzip 0 or 1."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal042: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal042}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, Gzip illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n \
+        \           },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": 1,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }\n    ],\n    \"Gzip\": 1,\n    \"TraceVip\": -1,\n    \"\
+        CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid traceVip, traceVip 0 or 1."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal029: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal029}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, listenerId illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"abcd\",\n    \"Balance\": \"leastconn\",\n    \"\
+        Clusters\": [\n        {\n            \"ServerName\": \"test.com\",\n    \
+        \        \"ServicePort\": 80,\n            \"ServiceName\": \"null\",\n  \
+        \          \"Path\": \"/b\",\n            \"Policy\": {\n                \"\
+        Mode\": \"insert\",\n                \"Expire\": 50000\n            },\n \
+        \           \"Monitor\": {\n              \"Period\": 7000,\n            \
+        \  \"Timeout\": 7000,\n              \"Rise\": 7,\n              \"Fall\"\
+        : 7,\n              \"Protocol\": \"http\",\n              \"Url\": \"/index1.html\"\
+        ,\n              \"Rstatus\": \"2xx,3xx\" \n            }\n        }\n   \
+        \ ],\n    \"Gzip\": 1\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "NotFound",
+            "Message": "No such listener."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal047: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal047}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, monitor illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n \
+        \           },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": 1,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 2,\n          \
+        \    \"Fall\": 1,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }\n    ],\n    \"Gzip\": 1,\n    \"TraceVip\": 1,\n    \"\
+        CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal048: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal048}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, monitor illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n \
+        \           },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": 1,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 2,\n          \
+        \    \"Fall\": 2,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,abcd\" \n      \
+        \      }\n        }\n    ],\n    \"Gzip\": 1,\n    \"TraceVip\": 1,\n    \"\
+        CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal049: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal049}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, monitor illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n \
+        \           },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": 1,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 2,\n          \
+        \    \"Fall\": 2,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"abcd\" \n          \
+        \  }\n        }\n    ],\n    \"Gzip\": 1,\n    \"TraceVip\": 1,\n    \"CipherSuiteId\"\
+        : \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal028: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal028}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, instanceId illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"abcd\",\n    \"InstanceId\": \"abcd\",\n    \"Balance\"\
+        : \"leastconn\",\n    \"Clusters\": [\n        {\n            \"ServerName\"\
+        : \"test.com\",\n            \"ServicePort\": 80,\n            \"ServiceName\"\
+        : \"null\",\n            \"Path\": \"/b\",\n            \"Policy\": {\n  \
+        \              \"Mode\": \"insert\",\n                \"Expire\": 50000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 7000,\n\
+        \              \"Timeout\": 7000,\n              \"Rise\": 7,\n          \
+        \    \"Fall\": 7,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index1.html\",\n              \"Rstatus\": \"2xx,3xx\" \n      \
+        \      }\n        }\n    ],\n    \"Gzip\": 1\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "NotFound",
+            "Message": "not found this ingressId"
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal032: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal032}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, forwardPort illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n \
+        \           },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": 2,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"CertId\": \"abcd\",\n      \
+        \      \"Policy\": {\n                \"Mode\": \"rewrite\",\n           \
+        \     \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n    \
+        \        },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }\n    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid forwardPort."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal054: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal054}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, monitor illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n \
+        \           },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": 1,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"abcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxy1\"\
+        ,\n            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 2,\n          \
+        \    \"Fall\": 2,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }\n    ],\n    \"Gzip\": 1,\n    \"TraceVip\": 1,\n    \"\
+        CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid policy."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal034: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal034}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, monitor illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n \
+        \           },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": 1,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 300001,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }\n    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal035: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal035}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, monitor illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n \
+        \           },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": 1,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 60001,\n              \"Rise\": 6,\n         \
+        \     \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }\n    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal050: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal050}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, monitor illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n \
+        \           },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": 1,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"insert\",\n    \
+        \            \"Expire\": -1\n            },\n            \"Monitor\": {\n\
+        \              \"Period\": 6000,\n              \"Timeout\": 6000,\n     \
+        \         \"Rise\": 2,\n              \"Fall\": 2,\n              \"Protocol\"\
+        : \"http\",\n              \"Url\": \"/index.html\",\n              \"Rstatus\"\
+        : \"2xx,3xx\" \n            }\n        }\n    ],\n    \"Gzip\": 1,\n    \"\
+        TraceVip\": 1,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid policy expire."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal051: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal051}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, monitor illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n \
+        \           },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": 1,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"insert\",\n    \
+        \            \"Expire\": 86401\n            },\n            \"Monitor\": {\n\
+        \              \"Period\": 6000,\n              \"Timeout\": 6000,\n     \
+        \         \"Rise\": 2,\n              \"Fall\": 2,\n              \"Protocol\"\
+        : \"http\",\n              \"Url\": \"/index.html\",\n              \"Rstatus\"\
+        : \"2xx,3xx\" \n            }\n        }\n    ],\n    \"Gzip\": 1,\n    \"\
+        TraceVip\": 1,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid policy expire."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal030: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal030}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, certId illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"Path\": \"/a\",\n\
+        \            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n     \
+        \       \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Policy\": {\n                \"Mode\": \"rewrite\",\n     \
+        \           \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"abcd\",\n            \"Policy\": {\n        \
+        \        \"Mode\": \"rewrite\",\n                \"CookieName\": \"asfsd\"\
+        ,\n                \"Expire\": 30000\n            },\n            \"Monitor\"\
+        : {\n              \"Period\": 6000,\n              \"Timeout\": 6000,\n \
+        \             \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"http\",\n              \"Url\": \"/index.html\",\n              \"Rstatus\"\
+        : \"2xx,3xx\" \n            }\n        }\n    ],\n    \"Gzip\": 0,\n    \"\
+        CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "NotFound",
+            "Message": "No such cert."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal052: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal052}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, monitor illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n \
+        \           },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": 1,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"abcd\",\n      \
+        \          \"Expire\": 86400\n            },\n            \"Monitor\": {\n\
+        \              \"Period\": 6000,\n              \"Timeout\": 6000,\n     \
+        \         \"Rise\": 2,\n              \"Fall\": 2,\n              \"Protocol\"\
+        : \"http\",\n              \"Url\": \"/index.html\",\n              \"Rstatus\"\
+        : \"2xx,3xx\" \n            }\n        }\n    ],\n    \"Gzip\": 1,\n    \"\
+        TraceVip\": 1,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid policy."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal031: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal031}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, forwardPort illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n \
+        \           },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": -1,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"CertId\": \"abcd\",\n      \
+        \      \"Policy\": {\n                \"Mode\": \"rewrite\",\n           \
+        \     \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n    \
+        \        },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }\n    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid forwardPort."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal053: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal053}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, monitor illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n \
+        \           },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": 1,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"/asdg$123\",\n            },\n           \
+        \ \"Monitor\": {\n              \"Period\": 6000,\n              \"Timeout\"\
+        : 6000,\n              \"Rise\": 2,\n              \"Fall\": 2,\n        \
+        \      \"Protocol\": \"http\",\n              \"Url\": \"/index.html\",\n\
+        \              \"Rstatus\": \"2xx,3xx\" \n            }\n        }\n    ],\n\
+        \    \"Gzip\": 1,\n    \"TraceVip\": 1,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid cookieName."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal036: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal036}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, monitor illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        null\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\",\n\
+        \            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n     \
+        \       \"Policy\": {\n                \"Mode\": \"rewrite\",\n          \
+        \      \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n   \
+        \         },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": 1,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"null\",\n            \"ServicePort\": 80,\n  \
+        \          \"Path\": \"/a\",\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 11,\n         \
+        \     \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }\n    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal037: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal037}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, monitor illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n \
+        \           },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": 1,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 11,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }\n    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal038: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal038}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, monitor illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n \
+        \           },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": 1,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"abcd\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }\n    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLbListenerAbnormal039: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLbListenerAbnormal039}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb listener, monitor illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        service1\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\"\
+        ,\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n   \
+        \         \"Policy\": {\n                \"Mode\": \"rewrite\",\n        \
+        \        \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n \
+        \           },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        }    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}, {\n    \"ListenPort\": 1025,\n    \"Name\": \"testln1\",\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"ForwardPort\": 1,\n\
+        \    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"service1\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n        \
+        \    }\n        }\n    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: false}
+  etcdExpectData: null
+  etcdPrepareData: null

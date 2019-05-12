@@ -1,0 +1,104 @@
+updateLoadBalancerNormal003: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerNormal003}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update description of dns lb}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: udpateBody
+      value: "{\n\t\"InstanceId\": \"instanceId\",\n\t\"Description\": \"test cty\"\
+        \n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: "{\n\t\"Description\": \"test cty\"\n}"
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerNormal002: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerNormal002}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update description of vpc_mix lb}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: udpateBody
+      value: "{\n\t\"InstanceId\": \"instanceId\",\n\t\"Description\": \"test cty\"\
+        \n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: "{\n\t\"Description\": \"test cty\"\n}"
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerNormal005: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerNormal005}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update description of vpc_l4 lb}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: udpateBody
+      value: "{\n\t\"InstanceId\": \"instanceId\",\n\t\"Description\": \"test cty\"\
+        \n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: "{\n\t\"Description\": \"test cty\"\n}"
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerNormal004: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: idc_vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerNormal004}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update description of idc_vpc_mix lb}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: udpateBody
+      value: "{\n\t\"InstanceId\": \"instanceId\",\n\t\"Description\": \"test cty\"\
+        \n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: "{\n\t\"Description\": \"test cty\"\n}"
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer021}
+  etcdExpectData: null
+  etcdPrepareData: null

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ing" verbose="1">
+    <!--<parameter name="env" value="ci"/>-->
+    <test name="ingressAdmin-prepare">
+        <packages>
+            <package name="com.netease.cloudqa.nlb.api.test.prepare.ingressadminapi"/>
+            <package name="com.netease.cloudqa.nlb.api.test.prepare.ingressopenapi.loadbalancer.*"/>
+            <!--<package name="com.netease.cloudqa.nlb.api.test.prepare.ingressopenapi.listener.*"/>-->
+        </packages>
+    </test>
+    <test name="ci-ingressAdmin-test">
+        <classes>
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.ingressopenapi.loadbalancer.CreateLoadBalancerIngNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.ingressadminapi.GetLoadBalancersByVPCIngNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.ingressadminapi.SearchLoadBalancerIngNormalTest" />
+            <!--<class name="com.netease.cloudqa.nlb.api.test.adminapitest.ingressadminapi.UpdateArrearageStatusIngNormalTest" />-->
+        </classes>
+    </test>
+
+</suite>
+

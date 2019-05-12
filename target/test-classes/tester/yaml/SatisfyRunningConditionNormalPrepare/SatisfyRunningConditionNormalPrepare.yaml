@@ -1,0 +1,98 @@
+updateArrearageStatus002: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateArrearageStatus002}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update lb status of vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: prepareBody
+      value: "[{\n    \"InstanceId\": \"instanceId\",\n    \"Name\": \"testln1\",\n\
+        \    \"ListenPort\": 1025,\n    \"Protocol\": \"http\",\n    \"Balance\":\
+        \ \"roundrobin\",\n    \"Clusters\": [\n     {\n\"ServerName\": \"test.com\"\
+        ,\n            \"Path\": \"/a\",\n            \"TargetGroupId\": \"targetGroupId\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\"\n            },\n            \"Monitor\"\
+        : {\n              \"Period\": 6000,\n              \"Timeout\": 6000,\n \
+        \             \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"http\",\n              \"Url\": \"/index.html\",\n              \"Rstatus\"\
+        : \"2xx,3xx\" \n            }\n     }],\n    \"Gzip\": 0,\n}, {\n    \"Name\"\
+        : \"testln2\",\n    \"ListenPort\": 1026,\n    \"Protocol\": \"http\",\n \
+        \   \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n      {\n         \
+        \   \"ServerName\": \"nimei.com\",\n            \"Path\": \"/b\",\n      \
+        \      \"TargetGroupId\": \"targetGroupId\",\n            \"Policy\": {\n\
+        \                \"Mode\": \"insert\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"tcp\"\n            }\n  \
+        \    }\n    ],\n    \"Gzip\": 0\n},{\n    \"Name\": \"testln3\",\n    \"ListenPort\"\
+        : 1027,\n    \"ForwardPort\": 1,\n    \"Protocol\": \"http\",\n    \"Balance\"\
+        : \"roundrobin\",\n    \"Clusters\": [\n      {\n            \"ServerName\"\
+        : \"cty.com\",\n            \"Path\": \"/c\",\n            \"TargetGroupId\"\
+        : \"targetGroupId\",\n            \"Policy\": {\n                \"Mode\"\
+        : \"insert\",\n                \"Expire\": 30000\n            },\n       \
+        \     \"Monitor\": {\n              \"Period\": 6000,\n              \"Timeout\"\
+        : 6000,\n              \"Rise\": 6,\n              \"Fall\": 6,\n        \
+        \      \"Protocol\": \"tcp\"\n            }\n      }\n    ],\n    \"Gzip\"\
+        : 0\n}]"
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: ''}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateArrearageStatus003: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateArrearageStatus003}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update lb status of dns}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: prepareBody
+      value: "[{\n    \"InstanceId\": \"instanceId\",\n    \"Name\": \"testln1\",\n\
+        \    \"ListenPort\": 1025,\n    \"Protocol\": \"http\",\n    \"Balance\":\
+        \ \"roundrobin\",\n    \"Clusters\": [\n     {\n\"ServerName\": \"test.com\"\
+        ,\n            \"Path\": \"/a\",\n            \"TargetGroupId\": \"targetGroupId\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\"\n            },\n            \"Monitor\"\
+        : {\n              \"Period\": 6000,\n              \"Timeout\": 6000,\n \
+        \             \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"http\",\n              \"Url\": \"/index.html\",\n              \"Rstatus\"\
+        : \"2xx,3xx\" \n            }\n     }],\n    \"Gzip\": 0,\n}, {\n    \"Name\"\
+        : \"testln2\",\n    \"ListenPort\": 1026,\n    \"Protocol\": \"http\",\n \
+        \   \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n      {\n         \
+        \   \"ServerName\": \"nimei.com\",\n            \"Path\": \"/b\",\n      \
+        \      \"TargetGroupId\": \"targetGroupId\",\n            \"Policy\": {\n\
+        \                \"Mode\": \"insert\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"tcp\"\n            }\n  \
+        \    }\n    ],\n    \"Gzip\": 0\n},{\n    \"Name\": \"testln3\",\n    \"ListenPort\"\
+        : 1027,\n    \"ForwardPort\": 1,\n    \"Protocol\": \"http\",\n    \"Balance\"\
+        : \"roundrobin\",\n    \"Clusters\": [\n      {\n            \"ServerName\"\
+        : \"cty.com\",\n            \"Path\": \"/c\",\n            \"TargetGroupId\"\
+        : \"targetGroupId\",\n            \"Policy\": {\n                \"Mode\"\
+        : \"insert\",\n                \"Expire\": 30000\n            },\n       \
+        \     \"Monitor\": {\n              \"Period\": 6000,\n              \"Timeout\"\
+        : 6000,\n              \"Rise\": 6,\n              \"Fall\": 6,\n        \
+        \      \"Protocol\": \"tcp\"\n            }\n      }\n    ],\n    \"Gzip\"\
+        : 0\n}]"
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: ''}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null

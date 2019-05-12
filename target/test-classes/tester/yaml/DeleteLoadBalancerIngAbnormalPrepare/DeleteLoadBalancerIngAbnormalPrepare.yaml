@@ -1,0 +1,75 @@
+deleteLoadBalancerAbnormal006: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteLoadBalancerAbnormal006}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'Delete ing, instanceId illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"InstanceId":"nlbtest-cldnlb01@abcdf"}'}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "NotFound",
+            "Message": "No such loadbalancer."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: null}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteLoadBalancerAbnormal005: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteLoadBalancerAbnormal005}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: Delete package month ing}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{}'}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "chargeType is month not allow delete"
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal006}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteLoadBalancerAbnormal007: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteLoadBalancerAbnormal007}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'Delete ing, instanceId illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"InstanceId":"abcd@abcd"}'}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "code": 459,
+            "message": "Namspace not found."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: null}
+  etcdExpectData: null
+  etcdPrepareData: null

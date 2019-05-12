@@ -1,0 +1,83 @@
+backendWeightNormalPrepare004: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: backendWeightNormalPrepare004}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: backend weight test of vpc_l4}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |-
+        [{
+            "InstanceId": "instanceId",
+            "Name": "testln1",
+            "ListenPort": 20,
+            "Protocol": "tcp",
+            "Balance": "leastconn",
+            "Clusters": [
+             {
+                    "TargetGroupId": "targetGroupId"
+             }]
+        }]
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        [
+                {
+                    "Name":"testln1",
+                    "ListenPort":20,
+                    "Protocol":"tcp",
+                    "Balance":"leastconn",
+                    "Clusters":[
+                        {
+                            "Name":"tg-test-03",
+                            "Monitor":{
+                                "Protocol":"tcp",
+                                "Rise":2,
+                                "Fall":2,
+                                "Url":"/",
+                                "Timeout":5000,
+                                "Period":5000
+                            },
+                        "Instances":[
+                            {
+                                "Address":"10.0.32.79",
+                                "Port":80,
+                                "Backup":0,
+                                "Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+                                "Weight":100,
+                                "Name":"instance0"
+                            },
+                            {
+                                "Address":"10.0.32.60",
+                                "Port":80,
+                                "Backup":0,
+                                "Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd",
+                                "Weight":100,
+                                "Name":"instance1"
+                            }
+                        ],
+                        }
+                    ]
+                }
+            ]
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: sameGroup,
+      value: false}
+    - {clazz: class java.lang.String, description: null, flag: N, name: updateTgBody,
+      value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0",
+        "Port":80, "TopAz":"cn-east-p1a", "Weight":33, "Address": "10.0.32.79"}, {"Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd",
+        "Name":"instance1", "Port":80, "TopAz":"cn-east-p1a", "Weight":99, "Address":"10.0.32.60"}],
+        "UseSamePort":1}'}
+  etcdExpectData: null
+  etcdPrepareData: null

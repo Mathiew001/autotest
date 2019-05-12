@@ -1,0 +1,292 @@
+createLoadBalancerNormal006: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLoadBalancerNormal006}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create package month vpc_mix ing}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: namespace,
+      value: nlbtest-cldnlb01}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: "{\n    \"Name\": \"qa-test-temp-1550169908395\",\n    \"Namespace\"\
+        : \"nlbtest-cldnlb01\",\n    \"Description\" : \"test cty\",\n    \"Type\"\
+        : \"vpc_mix\",\n    \"Network\": \"public\",\n    \"Standard\": {\n      \"\
+        ChargeType\": \"month\",\n      \"BandwidthLimit\": 1,\n      \"Size\": \"\
+        nlb.s1.micro\",\n      \"ChargeMode\": \"bandwidth\",\n      \"AutoRenewPeriod\"\
+        : 2, \n      \"Period\": 1\n    },\n    \"VpcId\": \"dff050d2-8a91-436b-8765-739f14cec762\"\
+        ,\n    \"TopAzInfos\": [\n        {\n            \"TopAz\": \"cn-east-p1a\"\
+        ,\n            \"SubNetId\": \"1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0\"\n  \
+        \      }\n    ],\n    \"SecurityGroups\": [\n        \"4e2218f4-2ccc-4e34-b1c9-f77e1791824f\"\
+        \n    ]}"
+    - {clazz: class java.lang.String, description: null, flag: N, name: hasOrderId,
+      value: 'False'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: orderBody,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Status": "CREATING",
+            "Network": "public",
+            "Description": "test cty",
+            "TopAzInfos": [
+                {
+                    "TopAz": "cn-east-p1a",
+                    "SubNetId": "1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"
+                }
+            ],
+            "VpcId": "dff050d2-8a91-436b-8765-739f14cec762",
+            "SecurityGroups": [
+                "4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+                "5a2777ee-b15f-41f1-8353-25c3592a14f4"
+            ],
+            "Namespace": "nlbtest-cldnlb01",
+            "Standard": {
+                "ChargeMode": "bandwidth",
+                "ChargeType": "RESERVED",
+                "BandwidthLimit": 1,
+                "Size": "nlb.s1.micro",
+                "AutoRenewPeriod": 2
+            }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: isDeleted,
+      value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLoadBalancerNormal005: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLoadBalancerNormal005}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create bandwidth vpc_mix ing}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: namespace,
+      value: nlbtest-cldnlb01}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {
+            "Name": "qa-test-temp-1550169908372",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test cty",
+            "Type": "vpc_mix",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "hour",
+              "BandwidthLimit": 1,
+              "Size": "nlb.s1.micro",
+              "ChargeMode": "bandwidth"
+            },
+            "VpcId": "dff050d2-8a91-436b-8765-739f14cec762",
+            "TopAzInfos": [
+                {
+                    "TopAz": "cn-east-p1a",
+                    "SubNetId": "1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"
+                }
+            ],
+            "SecurityGroups": [
+                "4e2218f4-2ccc-4e34-b1c9-f77e1791824f"
+            ]}
+    - {clazz: class java.lang.String, description: null, flag: N, name: hasOrderId,
+      value: 'False'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: orderBody,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Status": "CREATING",
+            "Network": "public",
+            "Description": "test cty",
+            "TopAzInfos": [
+                {
+                    "TopAz": "cn-east-p1a",
+                    "SubNetId": "1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"
+                }
+            ],
+            "VpcId": "dff050d2-8a91-436b-8765-739f14cec762",
+            "SecurityGroups": [
+                "4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+                "5a2777ee-b15f-41f1-8353-25c3592a14f4"
+            ],
+            "Namespace": "nlbtest-cldnlb01",
+            "Standard": {
+                "ChargeMode": "bandwidth",
+                "ChargeType": "AMOUNT",
+                "BandwidthLimit": 1,
+                "Size": "nlb.s1.micro",
+                "AutoRenewPeriod": 0
+            }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: isDeleted,
+      value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLoadBalancerNormal004: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create netflow vpc_mix ing}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: namespace,
+      value: nlbtest-cldnlb01}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {
+            "Name": "qa-test-temp-1550169908441",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test cty",
+            "Type": "vpc_mix",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "hour",
+              "BandwidthLimit": 1,
+              "Size": "nlb.s1.micro",
+              "ChargeMode": "netflow"
+            },
+            "VpcId": "dff050d2-8a91-436b-8765-739f14cec762",
+            "TopAzInfos": [
+                {
+                    "TopAz": "cn-east-p1a",
+                    "SubNetId": "1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"
+                }
+            ],
+            "SecurityGroups": [
+                "4e2218f4-2ccc-4e34-b1c9-f77e1791824f"
+            ]}
+    - {clazz: class java.lang.String, description: null, flag: N, name: hasOrderId,
+      value: 'False'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: orderBody,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Status": "CREATING",
+            "Network": "public",
+            "Description": "test cty",
+            "TopAzInfos": [
+                {
+                    "TopAz": "cn-east-p1a",
+                    "SubNetId": "1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"
+                }
+            ],
+            "VpcId": "dff050d2-8a91-436b-8765-739f14cec762",
+            "SecurityGroups": [
+                "4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+                "5a2777ee-b15f-41f1-8353-25c3592a14f4"
+            ],
+            "Namespace": "nlbtest-cldnlb01",
+            "Standard": {
+                "ChargeMode": "netflow",
+                "ChargeType": "AMOUNT",
+                "BandwidthLimit": 1,
+                "Size": "nlb.s1.micro",
+                "AutoRenewPeriod": 0
+            }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: isDeleted,
+      value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLoadBalancerNormal008: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLoadBalancerNormal008}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create default securityGroups ing}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: namespace,
+      value: nlbtest-cldnlb01}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {
+            "Name": "qa-test-temp-1550169908419",
+            "Namespace": "nlbtest-cldnlb01",
+            "Description" : "test cty",
+            "Type": "vpc_mix",
+            "Network": "public",
+            "Standard": {
+              "ChargeType": "hour",
+              "BandwidthLimit": 1,
+                "Size": "nlb.s1.micro",
+              "ChargeMode": "netflow"
+            },
+            "VpcId": "dff050d2-8a91-436b-8765-739f14cec762",
+            "TopAzInfos": [
+                {
+                    "TopAz": "cn-east-p1a",
+                    "SubNetId": "1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"
+                }
+            ]
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: hasOrderId,
+      value: 'False'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: orderBody,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Status": "CREATING",
+            "Network": "public",
+            "Description": "test cty",
+            "TopAzInfos": [
+                {
+                    "TopAz": "cn-east-p1a",
+                    "SubNetId": "1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"
+                }
+            ],
+            "VpcId": "dff050d2-8a91-436b-8765-739f14cec762",
+            "SecurityGroups": [
+                "5a2777ee-b15f-41f1-8353-25c3592a14f4"
+            ],
+            "Namespace": "nlbtest-cldnlb01",
+            "Standard": {
+                "ChargeMode": "netflow",
+                "ChargeType": "AMOUNT",
+                "BandwidthLimit": 1,
+                "Size": "nlb.s1.micro",
+                "AutoRenewPeriod": 0
+            }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: isDeleted,
+      value: true}
+  etcdExpectData: null
+  etcdPrepareData: null

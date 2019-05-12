@@ -1,0 +1,60 @@
+getLoadBalancersIngNormal001: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getLoadBalancersIngNormal001}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'get lb list, mix limit=1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 34493fd33b874583ac7b24c1f60138fd}
+    - {clazz: class java.lang.String, description: null, flag: N, name: limit, value: '1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: offset, value: ''}
+  etcdExpectData: null
+  etcdPrepareData: null
+getLoadBalancersIngNormal002: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getLoadBalancersIngNormal002}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'get lb list, mix limit=2, offset=0'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 34493fd33b874583ac7b24c1f60138fd}
+    - {clazz: class java.lang.String, description: null, flag: N, name: limit, value: '1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: offset, value: '0'}
+  etcdExpectData: null
+  etcdPrepareData: null
+getLoadBalancersIngNormal003: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getLoadBalancersIngNormal003}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'get lb list, mix limit=2, offset=1'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 34493fd33b874583ac7b24c1f60138fd}
+    - {clazz: class java.lang.String, description: null, flag: N, name: limit, value: '2'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: offset, value: '1'}
+  etcdExpectData: null
+  etcdPrepareData: null
+getLoadBalancersIngNormal005: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getLoadBalancersIngNormal005}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'get lb list, mix limit=""'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 34493fd33b874583ac7b24c1f60138fd}
+    - {clazz: class java.lang.String, description: null, flag: N, name: limit, value: ''}
+    - {clazz: class java.lang.String, description: null, flag: N, name: offset, value: ''}
+  etcdExpectData: null
+  etcdPrepareData: null

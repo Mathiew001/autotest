@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="nlb" verbose="1" parallel="tests" thread-count="5">
+
+    <test name="online-nlb-mix-test">
+        <parameter name="case-label" value="mix" />
+        <classes>
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CreateLoadBalancerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.DeleteLoadBalancerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CreateLoadBalancerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CheckLoadBalancerParamsNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CheckLoadBalancerParamsAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancersNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancersAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.CreateTargetGroupNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.CreateTargetGroupAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.UpdateTargetGroupNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.UpdateTargetGroupAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.DeleteTargetGroupAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.RegistTGInstanceNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.DeregistTGInstanceNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.CreateLbListenerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.CreateLbListenerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.UpdateLbListenerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.UpdateLbListenerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.DeleteLbListenerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerSpecAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.RenewOrderAbnormalTest" />
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerSpecNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.RenewOrderNormalTest" />-->
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.ssl.GetCertificatesNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.slighttest.KsslNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateArrearageStatusNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.SatisfyRunningConditionNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.AddServerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.GetLoadBalancerCountsNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateUserQuotaNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.DeregisterTGInstanceByTenantNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateLoadBalancerQuotaNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.SearchLoadBalancerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.SearchIpNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.GetSysInfoNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateConfigNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.slighttest.DeleteProtectionNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.slighttest.UrlFlowNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.slighttest.BackendWeightNormalTest" />
+        </classes>
+    </test>
+
+    <test name="online-nlb-vpcmix-test">
+        <parameter name="case-label" value="vpc_mix" />
+        <classes>
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CreateLoadBalancerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.DeleteLoadBalancerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CreateLoadBalancerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CheckLoadBalancerParamsNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CheckLoadBalancerParamsAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancersNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancersAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.CreateTargetGroupNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.CreateTargetGroupAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.UpdateTargetGroupNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.UpdateTargetGroupAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.DeleteTargetGroupAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.RegistTGInstanceNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.DeregistTGInstanceNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.CreateLbListenerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.CreateLbListenerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.UpdateLbListenerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.UpdateLbListenerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.DeleteLbListenerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerSpecAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.RenewOrderAbnormalTest" />
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerSpecNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.RenewOrderNormalTest" />-->
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.ssl.GetCertificatesNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.slighttest.KsslNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateArrearageStatusNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.SatisfyRunningConditionNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.AddServerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.GetLoadBalancerCountsNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateUserQuotaNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.DeregisterTGInstanceByTenantNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateLoadBalancerQuotaNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.SearchLoadBalancerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.SearchIpNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.GetSysInfoNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateConfigNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.slighttest.DeleteProtectionNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.slighttest.UrlFlowNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.slighttest.BackendWeightNormalTest" />
+        </classes>
+    </test>
+
+    <test name="online-nlb-dns-test">
+        <parameter name="case-label" value="dns" />
+        <classes>
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CreateLoadBalancerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.DeleteLoadBalancerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CreateLoadBalancerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CheckLoadBalancerParamsNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CheckLoadBalancerParamsAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancersNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancersAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.CreateTargetGroupNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.CreateTargetGroupAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.UpdateTargetGroupNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.UpdateTargetGroupAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.DeleteTargetGroupAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.RegistTGInstanceNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.DeregistTGInstanceNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.CreateLbListenerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.CreateLbListenerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.UpdateLbListenerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.UpdateLbListenerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.DeleteLbListenerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerSpecAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.RenewOrderAbnormalTest" />
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerSpecNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.RenewOrderNormalTest" />-->
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.ssl.GetCertificatesNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.slighttest.KsslNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateArrearageStatusNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.SatisfyRunningConditionNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.AddServerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.GetLoadBalancerCountsNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateUserQuotaNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.DeregisterTGInstanceByTenantNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateLoadBalancerQuotaNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.SearchLoadBalancerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.SearchIpNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.GetSysInfoNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateConfigNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.slighttest.DeleteProtectionNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.slighttest.UrlFlowNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.slighttest.BackendWeightNormalTest" />
+        </classes>
+    </test>
+
+    <!--<test name="online-nlb-vpcl4-test">-->
+        <!--<parameter name="case-label" value="vpc_l4"/>-->
+        <!--<classes>-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CreateLoadBalancerNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.DeleteLoadBalancerAbnormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CreateLoadBalancerAbnormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CheckLoadBalancerParamsNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CheckLoadBalancerParamsAbnormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancersNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancersAbnormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancerAbnormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancerNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerAbnormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.CreateTargetGroupNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.CreateTargetGroupAbnormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.UpdateTargetGroupNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.UpdateTargetGroupAbnormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.DeleteTargetGroupAbnormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.RegistTGInstanceNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.DeregistTGInstanceNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.CreateLbListenerNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.CreateLbListenerAbnormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.UpdateLbListenerAbnormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.UpdateLbListenerNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.DeleteLbListenerAbnormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerSpecAbnormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.RenewOrderAbnormalTest" />-->
+            <!--&lt;!&ndash;<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerSpecNormalTest" />&ndash;&gt;-->
+            <!--&lt;!&ndash;<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.RenewOrderNormalTest" />&ndash;&gt;-->
+            <!--&lt;!&ndash;<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.ssl.GetCertificatesNormalTest" />&ndash;&gt;-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.slighttest.KsslNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateArrearageStatusNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.SatisfyRunningConditionNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.AddServerNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.GetLoadBalancerCountsNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateUserQuotaNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.DeregisterTGInstanceByTenantNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateLoadBalancerQuotaNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.SearchLoadBalancerNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.SearchIpNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.GetSysInfoNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateConfigNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.slighttest.DeleteProtectionNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.slighttest.UrlFlowNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.slighttest.BackendWeightNormalTest" />-->
+        <!--</classes>-->
+    <!--</test>-->
+
+    <test name="online-nlb-1.8mix-test">
+        <parameter name="case-label" value="ha1.8mix"/>
+        <classes>
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CreateLoadBalancerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.DeleteLoadBalancerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CreateLoadBalancerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CheckLoadBalancerParamsNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CheckLoadBalancerParamsAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancersNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancersAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.CreateTargetGroupNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.CreateTargetGroupAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.UpdateTargetGroupNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.UpdateTargetGroupAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.DeleteTargetGroupAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.RegistTGInstanceNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.DeregistTGInstanceNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.CreateLbListenerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.CreateLbListenerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.UpdateLbListenerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.UpdateLbListenerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.DeleteLbListenerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerSpecAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.RenewOrderAbnormalTest" />
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerSpecNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.RenewOrderNormalTest" />-->
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.ssl.GetCertificatesNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.slighttest.KsslNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateArrearageStatusNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.SatisfyRunningConditionNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.AddServerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.GetLoadBalancerCountsNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateUserQuotaNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.DeregisterTGInstanceByTenantNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateLoadBalancerQuotaNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.SearchLoadBalancerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.SearchIpNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.GetSysInfoNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateConfigNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.slighttest.DeleteProtectionNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.slighttest.UrlFlowNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.slighttest.BackendWeightNormalTest" />
+        </classes>
+    </test>
+
+    <test name="online-nlb-1.8vpc-test">
+        <parameter name="case-label" value="ha1.8vpc"/>
+        <classes>
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CreateLoadBalancerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.DeleteLoadBalancerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CreateLoadBalancerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CheckLoadBalancerParamsNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.CheckLoadBalancerParamsAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancersNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancersAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.GetLoadBalancerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.CreateTargetGroupNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.CreateTargetGroupAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.UpdateTargetGroupNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.UpdateTargetGroupAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.DeleteTargetGroupAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.RegistTGInstanceNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.targetgroup.DeregistTGInstanceNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.CreateLbListenerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.CreateLbListenerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.UpdateLbListenerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.UpdateLbListenerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.listener.DeleteLbListenerAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerSpecAbnormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.RenewOrderAbnormalTest" />
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.UpdateLoadBalancerSpecNormalTest" />-->
+            <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.loadbalancer.RenewOrderNormalTest" />-->
+            <class name="com.netease.cloudqa.nlb.api.test.apitest.classicalopenapi.ssl.GetCertificatesNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.slighttest.KsslNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateArrearageStatusNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.SatisfyRunningConditionNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.AddServerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.GetLoadBalancerCountsNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateUserQuotaNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.DeregisterTGInstanceByTenantNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateLoadBalancerQuotaNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.SearchLoadBalancerNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.SearchIpNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.GetSysInfoNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.adminapitest.classicaladminapi.UpdateConfigNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.slighttest.DeleteProtectionNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.slighttest.UrlFlowNormalTest" />
+            <class name="com.netease.cloudqa.nlb.api.test.slighttest.BackendWeightNormalTest" />
+        </classes>
+    </test>
+
+</suite>

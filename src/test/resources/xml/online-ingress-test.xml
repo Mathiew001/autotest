@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ing" verbose="1">
+	<!--<parameter name="env" value="ci"/>-->
+        <test name="online-prepare">
+                <packages>
+                        <package name="com.netease.cloudqa.nlb.api.test.prepare.classicalopenapi.loadbalancer.*"/>
+                        <package name="com.netease.cloudqa.nlb.api.test.prepare.classicalopenapi.listener.*"/>
+                        <package name="com.netease.cloudqa.nlb.api.test.prepare.classicalopenapi.targetgroup.*"/>
+                        <package name="com.netease.cloudqa.nlb.api.test.prepare.ingressopenapi.loadbalancer.*"/>
+                        <package name="com.netease.cloudqa.nlb.api.test.prepare.ingressopenapi.listener.*"/>
+                        <package name="com.netease.cloudqa.nlb.api.test.prepare.classicalopenapi.ssl.*"/>
+                        <package name="com.netease.cloudqa.nlb.api.test.prepare.slighttest.*"/>
+                        <package name="com.netease.cloudqa.nlb.api.test.prepare.classicaladminapi.*"/>
+                        <package name="com.netease.cloudqa.nlb.api.test.prepare.ingressadminapi.*"/>
+                </packages>
+        </test>
+        <test name="online-ingress-test">
+                <classes>
+                        <class name="com.netease.cloudqa.nlb.api.test.apitest.ingressopenapi.loadbalancer.CreateLoadBalancerIngNormalTest" />
+                        <class name="com.netease.cloudqa.nlb.api.test.apitest.ingressopenapi.loadbalancer.CheckLoadBalancerParamsIngNormalTest" />
+                        <class name="com.netease.cloudqa.nlb.api.test.apitest.ingressopenapi.loadbalancer.CheckLoadBalancerParamsIngAbnormalTest" />
+                        <class name="com.netease.cloudqa.nlb.api.test.apitest.ingressopenapi.loadbalancer.CreateLoadBalancerIngAbnormalTest" />
+                        <class name="com.netease.cloudqa.nlb.api.test.apitest.ingressopenapi.loadbalancer.GetLoadBalancerIngAbnormalTest" />
+                        <class name="com.netease.cloudqa.nlb.api.test.apitest.ingressopenapi.loadbalancer.GetLoadBalancerIngNormalTest" />
+                        <class name="com.netease.cloudqa.nlb.api.test.apitest.ingressopenapi.loadbalancer.GetLoadBalancersIngNormalTest" />
+                        <class name="com.netease.cloudqa.nlb.api.test.apitest.ingressopenapi.loadbalancer.GetLoadBalancersIngAbnormalTest" />
+                        <class name="com.netease.cloudqa.nlb.api.test.apitest.ingressopenapi.listener.CreateLbListenerIngNormalTest" />
+                        <class name="com.netease.cloudqa.nlb.api.test.apitest.ingressopenapi.listener.CreateLbListenerIngAbnormalTest" />
+                        <class name="com.netease.cloudqa.nlb.api.test.apitest.ingressopenapi.listener.UpdateLbListenerIngAbnormalTest" />
+                        <class name="com.netease.cloudqa.nlb.api.test.apitest.ingressopenapi.listener.UpdateLbListenerIngNormalTest" />
+                        <!--<class name="com.netease.cloudqa.nlb.api.test.apitest.ingressopenapi.listener.DeleteLbListenerIngAbnormalTest" />-->
+                        <class name="com.netease.cloudqa.nlb.api.test.apitest.ingressopenapi.loadbalancer.UpdateLoadBalancerSpecIngAbnormalTest" />
+                        <class name="com.netease.cloudqa.nlb.api.test.apitest.ingressopenapi.loadbalancer.RenewOrderIngAbnormalTest" />
+                        <class name="com.netease.cloudqa.nlb.api.test.apitest.ingressopenapi.loadbalancer.UpdateLoadBalancerSpecIngNormalTest" />
+                        <class name="com.netease.cloudqa.nlb.api.test.apitest.ingressopenapi.loadbalancer.RenewOrderIngNormalTest" />
+                        <class name="com.netease.cloudqa.nlb.api.test.apitest.ingressopenapi.loadbalancer.UpdateLoadBalancerIngAbnormalTest" />
+                        <class name="com.netease.cloudqa.nlb.api.test.apitest.ingressopenapi.loadbalancer.UpdateLoadBalancerIngNormalTest" />
+                        <class name="com.netease.cloudqa.nlb.api.test.adminapitest.ingressadminapi.UpdateArrearageStatusIngNormalTest" />
+                        <class name="com.netease.cloudqa.nlb.api.test.adminapitest.ingressadminapi.SatisfyRunningConditionIngNormalTest" />
+                </classes>
+        </test>
+</suite>

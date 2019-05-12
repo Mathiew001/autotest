@@ -1,0 +1,48 @@
+deleteTargetGroupNormal002: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteTargetGroupNormal002}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: delete target group with 2 instances of vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Name":"tg-test","Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0", "Port":8080, "TopAz":"cn-east-1a", "Weight":100, "Address":
+        "10.0.32.79"}, {"Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd", "Name":"instance1",
+        "Port":8080, "TopAz":"cn-east-1a", "Weight":100, "Address":"10.0.32.60"}],
+        "UseSamePort":1}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Name":"tg-test",
+        "Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0",
+        "Port":8080, "Address": "10.0.32.79"}, {"Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd",
+        "Name":"instance1", "Port":8080, "Address":"10.0.32.60"}], "UseSamePort":1}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteTargetGroupNormal003: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteTargetGroupNormal003}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: delete target group with 2 instances of dns+vip}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Name":"tg-test","Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0", "Port":8080, "TopAz":"cn-east-1a", "Weight":100, "Address":
+        "10.0.32.79"}, {"Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd", "Name":"instance1",
+        "Port":8080, "TopAz":"cn-east-1a", "Weight":100, "Address":"10.0.32.60"}],
+        "UseSamePort":1}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Name":"tg-test",
+        "Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0",
+        "Port":8080, "Address": "10.0.32.79"}, {"Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd",
+        "Name":"instance1", "Port":8080, "Address":"10.0.32.60"}], "UseSamePort":1}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+  etcdExpectData: null
+  etcdPrepareData: null

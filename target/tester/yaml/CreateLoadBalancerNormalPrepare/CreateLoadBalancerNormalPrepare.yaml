@@ -1,0 +1,1195 @@
+createLoadBalancer010: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLoadBalancer010}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create public default securitygroups vpc_mix lb}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Name":"qa-temp-1550169909616",
+        "Description":"test cty", "Type":"vpc_mix", "Network":"public", "Standard":{"ChargeMode":"netflow",
+        "ChargeType":"hour", "BandwidthLimit":1}, "VpcId":"dff050d2-8a91-436b-8765-739f14cec762",
+        "TopAzInfos":[{"TopAz":"cn-east-p1a", "SubNetId":"1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"}]}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: hasOrderId,
+      value: 'False'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: orderBody,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Name":"qa-temp-1550169909616",
+        "Description":"test cty", "Type":"vpc_mix", "Network":"public", "Standard":{"ChargeMode":"netflow",
+        "ChargeType":"AMOUNT", "BandwidthLimit":1, "AutoRenewPeriod":0, "Size":"nlb.s1.micro"},
+        "Listeners":[], "InstanceStatus":"UNKNOWN", "Status":"CREATING", "SubStatus":"WORKING",
+        "VpcId":"dff050d2-8a91-436b-8765-739f14cec762", "TargetGroups":[], "TopAzInfos":[{"TopAz":"cn-east-p1a",
+        "SubNetId":"1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"}], "SecurityGroups":["d5ec7189-84b3-499e-b82b-c9021ad91042"]}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: isDeleted,
+      value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLoadBalancer021: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: idc_vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLoadBalancer021}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create public netflow of idc vpc_mix lb}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {
+            "SecurityGroups":[
+                "4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+                "c83230c7-da65-4364-9013-006ea8312c99"
+            ],
+            "Type":"vpc_mix",
+            "TopAzInfos":[
+                {
+                    "SubNetId":"1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0",
+                    "TopAz":"cn-east-p1a"
+                }
+            ],
+            "Description":"abcd",
+            "VpcId":"dff050d2-8a91-436b-8765-739f14cec762",
+            "Network":"idc",
+            "Standard":{
+                "ChargeMode":"netflow",
+                "ChargeType":"hour",
+                "Size":"nlb.s1.micro",
+                "BandwidthLimit":1
+            },
+            "Name":"qa-temp-1550169909664idc"
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: hasOrderId,
+      value: 'False'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: orderBody,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Name":"qa-temp-1550169909664idc",
+        "Description":"abcd", "Type":"vpc_mix", "Network":"idc", "Standard":{"ChargeMode":"netflow",
+        "ChargeType":"AMOUNT", "BandwidthLimit":1, "AutoRenewPeriod":0, "Size":"nlb.s1.micro"},
+        "Listeners":[], "InstanceStatus":"UNKNOWN", "Status":"CREATING", "SubStatus":"WORKING",
+        "VpcId":"dff050d2-8a91-436b-8765-739f14cec762", "TargetGroups":[], "TopAzInfos":[{"TopAz":"cn-east-p1a",
+        "SubNetId":"1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"}], "SecurityGroups":["4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+        "c83230c7-da65-4364-9013-006ea8312c99", "d5ec7189-84b3-499e-b82b-c9021ad91042"]}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: isDeleted,
+      value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLoadBalancer022: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData:
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: C, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.String, description: null, flag: C, name: name, value: qa-temp-1550169909710}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: network,
+        value: public}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: description,
+        value: abcd}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: status,
+        value: WORKING}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: substatus,
+        value: WORKING}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: instanceNum,
+        value: 0}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: listenerLimit,
+        value: 10}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: type, value: vpc_l4}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: mode, value: DR}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: scale,
+        value: 0}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tag, value: ordinary}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: k8sEnv,
+        value: ''}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: vmType,
+        value: kvm}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: vpcId, value: dff050d2-8a91-436b-8765-739f14cec762}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_vip
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: listenerLimit,
+        value: 10}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: mode, value: DR}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: bandwidthLimit,
+        value: 1}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: chargeMode,
+        value: netflow}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: ipLimitSwitch,
+        value: 'OFF'}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: tGroupLimit,
+        value: 20}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: tGroupInstanceLimit,
+        value: 50}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: chargeType,
+        value: hour}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: size, value: nlb.s1.micro}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_vip_config
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: status,
+        value: USED}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: type, value: vpc_public}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_address
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: subNetId,
+        value: 1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0}
+      - {clazz: class java.lang.String, description: null, flag: R, name: topAz, value: '^pubt[1-2]$'}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_top_az
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLoadBalancer022}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create public netflow vpc_l4 lb}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: "{\n    \"SecurityGroups\":[\n        \"4e2218f4-2ccc-4e34-b1c9-f77e1791824f\"\
+        ,\n        \"c83230c7-da65-4364-9013-006ea8312c99\"\n    ],\n    \"Type\"\
+        :\"vpc_l4\",\n    \"TopAzInfos\":[\n        {\n            \"SubNetId\":\"\
+        1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0\",\n            \"TopAz\":\"cn-east-p1a\"\
+        \n        }\n    ],\n    \"Description\":\"abcd\",\n    \"VpcId\":\"dff050d2-8a91-436b-8765-739f14cec762\"\
+        ,\n    \"Network\":\"public\",\n    \"Standard\":{\n        \"ChargeMode\"\
+        :\"netflow\",\n        \"ChargeType\":\"hour\",\n        \"Size\":\"nlb.s1.micro\"\
+        ,\n        \"BandwidthLimit\":1\n    },\n    \"Name\":\"qa-temp-1550169909710\"\
+        , \n    \"ResourcePool\":\"null\"\n}"
+    - {clazz: class java.lang.String, description: null, flag: N, name: hasOrderId,
+      value: 'False'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: orderBody,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Name":"qa-temp-1550169909710",
+        "Description":"abcd", "Type":"vpc_l4", "Network":"public", "Standard":{"ChargeMode":"netflow",
+        "ChargeType":"AMOUNT", "BandwidthLimit":1, "AutoRenewPeriod":0, "Size":"nlb.s1.micro"},
+        "Listeners":[], "InstanceStatus":"UNKNOWN", "Status":"CREATING", "SubStatus":"WORKING",
+        "VpcId":"dff050d2-8a91-436b-8765-739f14cec762", "TargetGroups":[], "TopAzInfos":[{"TopAz":"cn-east-p1a",
+        "SubNetId":"1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"}]}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: isDeleted,
+      value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLoadBalancer101: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: ha1.8vpc
+  dbExpectData:
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: C, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.String, description: null, flag: C, name: name, value: qa-temp-1550169909731}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: network,
+        value: public}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: description,
+        value: abcd}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: status,
+        value: WORKING}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: substatus,
+        value: WORKING}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: instanceNum,
+        value: 0}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: listenerLimit,
+        value: 10}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: type, value: vpc_mix}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: mode, value: DR}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: scale,
+        value: 1}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tag, value: ordinary}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: k8sEnv,
+        value: ''}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: vmType,
+        value: kvm}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: vpcId, value: dff050d2-8a91-436b-8765-739f14cec762}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_vip
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: listenerLimit,
+        value: 10}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: mode, value: DR}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: bandwidthLimit,
+        value: 1}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: chargeMode,
+        value: bandwidth}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: ipLimitSwitch,
+        value: 'OFF'}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: tGroupLimit,
+        value: 20}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: tGroupInstanceLimit,
+        value: 50}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: chargeType,
+        value: hour}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: size, value: nlb.s1.micro}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_vip_config
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: agentStatus,
+        value: ONLINE}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: serverStatus,
+        value: ACTIVE}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: version,
+        value: '1.8'}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_cloud_server
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: status,
+        value: USED}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: type, value: vpc_public}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_address
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: subNetId,
+        value: 1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0}
+      - {clazz: class java.lang.String, description: null, flag: R, name: topAz, value: '^pubt[1-2]$'}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_top_az
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLoadBalancer101}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create public bandwidth vpc_mix lb of ha1.8}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {
+            "SecurityGroups":[
+                "4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+                "c83230c7-da65-4364-9013-006ea8312c99"
+            ],
+            "Type":"vpc_mix",
+            "Attrs":{
+                "Version": "2018-12-06",
+                "StopTimeout": 20000,
+                "UseSSLAcc": 1
+            },
+            "TopAzInfos":[
+                {
+                    "SubNetId":"1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0",
+                    "TopAz":"cn-east-p1a"
+                }
+            ],
+            "Description":"abcd",
+            "VpcId":"dff050d2-8a91-436b-8765-739f14cec762",
+            "Network":"public",
+            "Standard":{
+                "ChargeMode":"bandwidth",
+                "ChargeType":"hour",
+                "Size":"nlb.s1.micro",
+                "BandwidthLimit":1
+            },
+            "Name":"qa-temp-1550169909731"
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: hasOrderId,
+      value: 'False'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: orderBody,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |+
+        {
+            "TenantId":"0b2cc5a931a444438c19e3e80b77468d",
+            "Name":"qa-temp-1550169909731",
+            "Network":"public",
+            "Description":"abcd",
+            "Status":"CREATING",
+            "SubStatus":"WORKING",
+            "InstanceStatus":"UNKNOWN",
+            "Type":"vpc_mix",
+            "VpcId":"dff050d2-8a91-436b-8765-739f14cec762",
+            "VpcIps":[
+
+            ],
+            "Attrs":{
+                "DeletionProtectionEnabled":false,
+                "UseSSLAcc":1,
+                "Version":"2018-12-06",
+                "StopTimeout":20000
+            },
+            "Listeners":[
+
+            ],
+            "Standard":{
+                "ChargeMode":"bandwidth",
+                "ChargeType":"AMOUNT",
+                "BandwidthLimit":1,
+                "Size":"nlb.s1.micro",
+                "AutoRenewPeriod":0
+            },
+            "Limit":{
+                "ListenerLimit":10,
+                "TGroupLimit":20,
+                "TGroupInstanceLimit":50,
+                "DomainLimit":5,
+                "PathLimit":30,
+                "MaxBandwidth":1000
+            },
+            "TargetGroups":[
+
+            ],
+            "TopAzInfos":[
+                {
+                    "TopAz":"cn-east-p1a",
+                    "SubNetId":"1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"
+                }
+            ],
+            "SecurityGroups":[
+                "d5ec7189-84b3-499e-b82b-c9021ad91042",
+                "4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+                "c83230c7-da65-4364-9013-006ea8312c99"
+            ]
+        }
+
+    - {clazz: class java.lang.String, description: null, flag: N, name: isDeleted,
+      value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLoadBalancer004: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData:
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: C, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.String, description: null, flag: C, name: name, value: qa-temp-1550169909641}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: network,
+        value: public}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: description,
+        value: abcd}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: status,
+        value: WORKING}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: substatus,
+        value: WORKING}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: instanceNum,
+        value: 0}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: listenerLimit,
+        value: 10}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: type, value: vpc_mix}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: mode, value: DR}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: scale,
+        value: 1}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tag, value: ordinary}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: k8sEnv,
+        value: ''}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: vmType,
+        value: kvm}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: vpcId, value: dff050d2-8a91-436b-8765-739f14cec762}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_vip
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: listenerLimit,
+        value: 10}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: mode, value: DR}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: bandwidthLimit,
+        value: 1}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: chargeMode,
+        value: netflow}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: ipLimitSwitch,
+        value: 'OFF'}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: tGroupLimit,
+        value: 20}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: tGroupInstanceLimit,
+        value: 50}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: chargeType,
+        value: hour}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: size, value: nlb.s1.micro}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_vip_config
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: agentStatus,
+        value: ONLINE}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: serverStatus,
+        value: ACTIVE}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: version,
+        value: '1.6'}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_cloud_server
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: status,
+        value: USED}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: type, value: vpc_public}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_address
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: subNetId,
+        value: 1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0}
+      - {clazz: class java.lang.String, description: null, flag: R, name: topAz, value: '^pubt[1-2]$'}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_top_az
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLoadBalancer004}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create public netflow vpc_mix lb}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {
+            "SecurityGroups":[
+                "4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+                "c83230c7-da65-4364-9013-006ea8312c99"
+            ],
+            "Type":"vpc_mix",
+            "TopAzInfos":[
+                {
+                    "SubNetId":"1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0",
+                    "TopAz":"cn-east-p1a"
+                }
+            ],
+            "Description":"abcd",
+            "VpcId":"dff050d2-8a91-436b-8765-739f14cec762",
+            "Network":"public",
+            "Standard":{
+                "ChargeMode":"netflow",
+                "ChargeType":"hour",
+                "Size":"nlb.s1.micro",
+                "BandwidthLimit":1
+            },
+            "Name":"qa-temp-1550169909641"
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: hasOrderId,
+      value: 'False'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: orderBody,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Name":"qa-temp-1550169909641",
+        "Description":"abcd", "Type":"vpc_mix", "Network":"public", "Standard":{"ChargeMode":"netflow",
+        "ChargeType":"AMOUNT", "BandwidthLimit":1, "AutoRenewPeriod":0, "Size":"nlb.s1.micro"},
+        "Listeners":[], "InstanceStatus":"UNKNOWN", "Status":"CREATING", "SubStatus":"WORKING",
+        "VpcId":"dff050d2-8a91-436b-8765-739f14cec762", "TargetGroups":[], "TopAzInfos":[{"TopAz":"cn-east-p1a",
+        "SubNetId":"1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"}], "SecurityGroups":["4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+        "c83230c7-da65-4364-9013-006ea8312c99", "d5ec7189-84b3-499e-b82b-c9021ad91042"]}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: isDeleted,
+      value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLoadBalancer005: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData:
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: C, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.String, description: null, flag: C, name: name, value: qa-temp-1550169909568}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: network,
+        value: public}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: description,
+        value: abcd}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: status,
+        value: WORKING}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: substatus,
+        value: WORKING}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: instanceNum,
+        value: 0}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: listenerLimit,
+        value: 10}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: type, value: vpc_mix}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: mode, value: DR}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: scale,
+        value: 1}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tag, value: ordinary}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: k8sEnv,
+        value: ''}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: vmType,
+        value: kvm}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: vpcId, value: dff050d2-8a91-436b-8765-739f14cec762}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_vip
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: listenerLimit,
+        value: 10}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: mode, value: DR}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: bandwidthLimit,
+        value: 1}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: chargeMode,
+        value: bandwidth}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: ipLimitSwitch,
+        value: 'OFF'}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: tGroupLimit,
+        value: 20}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: tGroupInstanceLimit,
+        value: 50}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: chargeType,
+        value: hour}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: size, value: nlb.s1.micro}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_vip_config
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: agentStatus,
+        value: ONLINE}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: serverStatus,
+        value: ACTIVE}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: version,
+        value: '1.6'}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_cloud_server
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: status,
+        value: USED}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: type, value: vpc_public}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_address
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: subNetId,
+        value: 1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0}
+      - {clazz: class java.lang.String, description: null, flag: R, name: topAz, value: '^pubt[1-2]$'}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_top_az
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLoadBalancer005}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create public bandwidth vpc_mix lb}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {
+            "SecurityGroups":[
+                "4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+                "c83230c7-da65-4364-9013-006ea8312c99"
+            ],
+            "Type":"vpc_mix",
+            "TopAzInfos":[
+                {
+                    "SubNetId":"1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0",
+                    "TopAz":"cn-east-p1a"
+                }
+            ],
+            "Description":"abcd",
+            "VpcId":"dff050d2-8a91-436b-8765-739f14cec762",
+            "Network":"public",
+            "Standard":{
+                "ChargeMode":"bandwidth",
+                "ChargeType":"hour",
+                "Size":"nlb.s1.micro",
+                "BandwidthLimit":1
+            },
+            "Name":"qa-temp-1550169909568"
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: hasOrderId,
+      value: 'False'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: orderBody,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Name":"qa-temp-1550169909568",
+        "Description":"abcd", "Type":"vpc_mix", "Network":"public", "Standard":{"ChargeMode":"bandwidth",
+        "ChargeType":"AMOUNT", "BandwidthLimit":1, "AutoRenewPeriod":0, "Size":"nlb.s1.micro"},
+        "Listeners":[], "InstanceStatus":"UNKNOWN", "Status":"CREATING", "SubStatus":"WORKING",
+        "VpcId":"dff050d2-8a91-436b-8765-739f14cec762", "TargetGroups":[], "TopAzInfos":[{"TopAz":"cn-east-p1a",
+        "SubNetId":"1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"}], "SecurityGroups":["4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+        "c83230c7-da65-4364-9013-006ea8312c99", "d5ec7189-84b3-499e-b82b-c9021ad91042"]}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: isDeleted,
+      value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLoadBalancer006: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData:
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: C, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.String, description: null, flag: C, name: name, value: qa-temp-1550169909592}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: network,
+        value: public}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: description,
+        value: abcd}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: status,
+        value: WORKING}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: substatus,
+        value: WORKING}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: instanceNum,
+        value: 0}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: listenerLimit,
+        value: 10}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: type, value: vpc_mix}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: mode, value: DR}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: scale,
+        value: 1}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tag, value: ordinary}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: k8sEnv,
+        value: ''}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: vmType,
+        value: kvm}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: vpcId, value: dff050d2-8a91-436b-8765-739f14cec762}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_vip
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: listenerLimit,
+        value: 10}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: mode, value: DR}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: bandwidthLimit,
+        value: 1}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: chargeMode,
+        value: bandwidth}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: ipLimitSwitch,
+        value: 'OFF'}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: tGroupLimit,
+        value: 20}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: tGroupInstanceLimit,
+        value: 50}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: chargeType,
+        value: month}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: size, value: nlb.s1.micro}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_vip_config
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: agentStatus,
+        value: ONLINE}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: serverStatus,
+        value: ACTIVE}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: version,
+        value: '1.6'}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_cloud_server
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: status,
+        value: USED}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: type, value: vpc_public}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_address
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: subNetId,
+        value: 1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0}
+      - {clazz: class java.lang.String, description: null, flag: R, name: topAz, value: '^pubt[1-2]$'}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_top_az
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLoadBalancer006}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create public package month vpc_mix lb}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {
+            "SecurityGroups":[
+                "4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+                "c83230c7-da65-4364-9013-006ea8312c99"
+            ],
+            "Type":"vpc_mix",
+            "TopAzInfos":[
+                {
+                    "SubNetId":"1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0",
+                    "TopAz":"cn-east-p1a"
+                }
+            ],
+            "Description":"abcd",
+            "VpcId":"dff050d2-8a91-436b-8765-739f14cec762",
+            "Network":"public",
+            "Standard":{
+                "ChargeMode":"bandwidth",
+                "ChargeType":"month",
+                "Size":"nlb.s1.micro",
+                "Period":1,
+                "BandwidthLimit":1
+            },
+            "Name":"qa-temp-1550169909592"
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: hasOrderId,
+      value: 'False'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: orderBody,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Name":"qa-temp-1550169909592",
+        "Description":"abcd", "Type":"vpc_mix", "Network":"public", "Standard":{"ChargeMode":"bandwidth",
+        "ChargeType":"RESERVED", "BandwidthLimit":1, "AutoRenewPeriod":0, "Size":"nlb.s1.micro"},
+        "Listeners":[], "InstanceStatus":"UNKNOWN", "Status":"CREATING", "SubStatus":"WORKING",
+        "VpcId":"dff050d2-8a91-436b-8765-739f14cec762", "TargetGroups":[], "TopAzInfos":[{"TopAz":"cn-east-p1a",
+        "SubNetId":"1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"}], "SecurityGroups":["4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+        "c83230c7-da65-4364-9013-006ea8312c99", "d5ec7189-84b3-499e-b82b-c9021ad91042"]}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: isDeleted,
+      value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLoadBalancer007: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData:
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: C, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.String, description: null, flag: C, name: name, value: qa-temp-1550169909686}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: network,
+        value: private}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: description,
+        value: abcd}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: status,
+        value: WORKING}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: substatus,
+        value: WORKING}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: instanceNum,
+        value: 0}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: listenerLimit,
+        value: 10}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: type, value: vpc_mix}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: mode, value: DR}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: scale,
+        value: 1}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tag, value: ordinary}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: k8sEnv,
+        value: ''}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: vmType,
+        value: kvm}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: vpcId, value: dff050d2-8a91-436b-8765-739f14cec762}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_vip
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: listenerLimit,
+        value: 10}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: mode, value: DR}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: bandwidthLimit,
+        value: 1}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: chargeMode,
+        value: netflow}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: ipLimitSwitch,
+        value: 'OFF'}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: tGroupLimit,
+        value: 20}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: tGroupInstanceLimit,
+        value: 50}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: chargeType,
+        value: hour}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: size, value: nlb.s1.micro}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_vip_config
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: agentStatus,
+        value: ONLINE}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: serverStatus,
+        value: ACTIVE}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: version,
+        value: '1.6'}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_cloud_server
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: type, value: A}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: service,
+        value: nlbadmin}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_dns_rrset
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: subNetId,
+        value: 1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0}
+      - {clazz: class java.lang.String, description: null, flag: R, name: topAz, value: '^pubt[1-2]$'}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_top_az
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLoadBalancer007}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create private netflow dns lb}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {
+            "SecurityGroups":[
+                "4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+                "c83230c7-da65-4364-9013-006ea8312c99"
+            ],
+            "Type":"vpc_mix",
+            "TopAzInfos":[
+                {
+                    "SubNetId":"1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0",
+                    "TopAz":"cn-east-p1a"
+                }
+            ],
+            "Description":"abcd",
+            "VpcId":"dff050d2-8a91-436b-8765-739f14cec762",
+            "Network":"private",
+            "Standard":{
+                "ChargeMode":"netflow",
+                "ChargeType":"hour",
+                "Size":"nlb.s1.micro",
+                "BandwidthLimit":1
+            },
+            "Name":"qa-temp-1550169909686"
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: hasOrderId,
+      value: 'False'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: orderBody,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Name":"qa-temp-1550169909686",
+        "Description":"abcd", "Type":"vpc_mix", "Network":"private", "Standard":{"ChargeMode":"netflow",
+        "ChargeType":"AMOUNT", "BandwidthLimit":1, "AutoRenewPeriod":0, "Size":"nlb.s1.micro"},
+        "Listeners":[], "InstanceStatus":"UNKNOWN", "Status":"CREATING", "SubStatus":"WORKING",
+        "VpcId":"dff050d2-8a91-436b-8765-739f14cec762", "TargetGroups":[], "TopAzInfos":[{"TopAz":"cn-east-p1a",
+        "SubNetId":"1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"}], "SecurityGroups":["4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+        "c83230c7-da65-4364-9013-006ea8312c99", "d5ec7189-84b3-499e-b82b-c9021ad91042"]}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: isDeleted,
+      value: false}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLoadBalancer018: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData:
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: C, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.String, description: null, flag: C, name: name, value: qa-temp-1550169909752}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: network,
+        value: public}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: description,
+        value: abcd}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: status,
+        value: WORKING}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: substatus,
+        value: WORKING}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: instanceNum,
+        value: 0}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: listenerLimit,
+        value: 10}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: type, value: vpc_l4}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: mode, value: DR}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: scale,
+        value: 0}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tag, value: ordinary}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: k8sEnv,
+        value: ''}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: vmType,
+        value: kvm}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: vpcId, value: dff050d2-8a91-436b-8765-739f14cec762}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_vip
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: listenerLimit,
+        value: 10}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: mode, value: DR}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: bandwidthLimit,
+        value: 1}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: chargeMode,
+        value: bandwidth}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: ipLimitSwitch,
+        value: 'OFF'}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: tGroupLimit,
+        value: 20}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: tGroupInstanceLimit,
+        value: 50}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: chargeType,
+        value: hour}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: size, value: nlb.s1.small}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_vip_config
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: status,
+        value: USED}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: type, value: vpc_public}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_address
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: tenantId,
+        value: 0b2cc5a931a444438c19e3e80b77468d}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: subNetId,
+        value: 1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0}
+      - {clazz: class java.lang.String, description: null, flag: R, name: topAz, value: '^pubt[1-2]$'}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_top_az
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLoadBalancer018}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create public bandwidth vpc_l4 lb}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {
+            "SecurityGroups":[
+                "4e2218f4-2ccc-4e34-b1c9-f77e1791824f",
+                "c83230c7-da65-4364-9013-006ea8312c99"
+            ],
+            "Type":"vpc_l4",
+            "TopAzInfos":[
+                {
+                    "SubNetId":"1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0",
+                    "TopAz":"cn-east-p1a"
+                }
+            ],
+            "Description":"abcd",
+            "VpcId":"dff050d2-8a91-436b-8765-739f14cec762",
+            "Network":"public",
+            "Standard":{
+                "ChargeMode":"bandwidth",
+                "ChargeType":"hour",
+                "Size":"nlb.s1.small",
+                "BandwidthLimit":1
+            },
+            "Name":"qa-temp-1550169909752"
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: hasOrderId,
+      value: 'False'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: orderBody,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Name":"qa-temp-1550169909752",
+        "Description":"abcd", "Type":"vpc_l4", "Network":"public", "Standard":{"ChargeMode":"bandwidth",
+        "ChargeType":"AMOUNT", "BandwidthLimit":1, "AutoRenewPeriod":0, "Size":"nlb.s1.small"},
+        "Listeners":[], "InstanceStatus":"UNKNOWN", "Status":"CREATING", "SubStatus":"WORKING",
+        "VpcId":"dff050d2-8a91-436b-8765-739f14cec762", "TargetGroups":[], "TopAzInfos":[{"TopAz":"cn-east-p1a",
+        "SubNetId":"1dd1367d-c96a-4d88-b5ec-a6d3d49fcce0"}]}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: isDeleted,
+      value: false}
+  etcdExpectData: null
+  etcdPrepareData: null

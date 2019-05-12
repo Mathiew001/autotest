@@ -1,0 +1,694 @@
+deregistTGInstanceNormal015: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deregistTGInstanceNormal015}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: accuracy deregister of vpc_l4}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: createBody
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.79\"\
+        ,\n            \"Port\":8080,\n            \"Id\":\"a574d1a0-5921-4637-bb38-0093cb5ae70b\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance0\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.79\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"a574d1a0-5921-4637-bb38-0093cb5ae70b\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance0\"\n     \
+        \   }, \n        {\n            \"Address\":\"10.0.32.60\",\n            \"\
+        Port\":8080,\n            \"Id\":\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance1\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.60\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance1\"\n     \
+        \   }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n       \
+        \ \"Rise\":5,\n        \"Fall\":5,\n        \"Url\":\"/index.html\",\n   \
+        \     \"Timeout\":5000,\n        \"Period\":5000\n,         \"Rstatus\":\"\
+        2xx,3xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: updateBody
+      value: "{\n    \"Instances\":[\n        {\n            \"Port\":8082,\n    \
+        \        \"Address\":\"10.0.32.79\"\n        }, \n        {\n            \"\
+        Port\":8082,\n            \"Address\":\"10.0.32.60\"\n        }\n    ],\n\
+        \    \"Monitor\":{\n        \"Protocol\":\"http\",\n        \"Rise\":6,\n\
+        \        \"Fall\":6,\n        \"Url\":\"/index1.html\",\n        \"Timeout\"\
+        :6000,\n        \"Period\":6000\n,         \"Rstatus\":\"2xx\"\n    }, \n\
+        \    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.79\"\
+        ,\n            \"Port\":8080,\n            \"Id\":\"a574d1a0-5921-4637-bb38-0093cb5ae70b\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance0\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.79\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"a574d1a0-5921-4637-bb38-0093cb5ae70b\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance0\"\n     \
+        \   }, \n        {\n            \"Address\":\"10.0.32.60\",\n            \"\
+        Port\":8080,\n            \"Id\":\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance1\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.60\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance1\"\n     \
+        \   }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n       \
+        \ \"Rise\":5,\n        \"Fall\":5,\n        \"Url\":\"/index.html\",\n   \
+        \     \"Timeout\":5000,\n        \"Period\":5000\n,         \"Rstatus\":\"\
+        2xx,3xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+  etcdExpectData: null
+  etcdPrepareData: null
+deregistTGInstanceNormal005: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deregistTGInstanceNormal005}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: accuracy deregister of vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: createBody
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.79\"\
+        ,\n            \"Port\":8080,\n            \"Id\":\"a574d1a0-5921-4637-bb38-0093cb5ae70b\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance0\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.79\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"a574d1a0-5921-4637-bb38-0093cb5ae70b\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance0\"\n     \
+        \   }, \n        {\n            \"Address\":\"10.0.32.60\",\n            \"\
+        Port\":8080,\n            \"Id\":\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance1\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.60\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance1\"\n     \
+        \   }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n       \
+        \ \"Rise\":5,\n        \"Fall\":5,\n        \"Url\":\"/index.html\",\n   \
+        \     \"Timeout\":5000,\n        \"Period\":5000\n,         \"Rstatus\":\"\
+        2xx,3xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: updateBody
+      value: "{\n    \"Instances\":[\n        {\n            \"Port\":8080,\n    \
+        \        \"Address\":\"10.0.32.79\"\n        }, \n        {\n            \"\
+        Port\":8080,\n            \"Address\":\"10.0.32.60\"\n        }\n    ],\n\
+        \    \"Monitor\":{\n        \"Protocol\":\"http\",\n        \"Rise\":6,\n\
+        \        \"Fall\":6,\n        \"Url\":\"/index1.html\",\n        \"Timeout\"\
+        :6000,\n        \"Period\":6000\n,         \"Rstatus\":\"2xx\"\n    }, \n\
+        \    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.79\"\
+        ,\n            \"Port\":8081,\n            \"Id\":\"a574d1a0-5921-4637-bb38-0093cb5ae70b\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance0\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.60\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance1\"\n     \
+        \   }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n       \
+        \ \"Rise\":5,\n        \"Fall\":5,\n        \"Url\":\"/index.html\",\n   \
+        \     \"Timeout\":5000,\n        \"Period\":5000\n,         \"Rstatus\":\"\
+        2xx,3xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+  etcdExpectData: null
+  etcdPrepareData: null
+deregistTGInstanceNormal016: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deregistTGInstanceNormal016}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: blur deregister of vpc_l4}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: createBody
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.79\"\
+        ,\n            \"Port\":8080,\n            \"Id\":\"a574d1a0-5921-4637-bb38-0093cb5ae70b\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance0\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.79\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"a574d1a0-5921-4637-bb38-0093cb5ae70b\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance0\"\n     \
+        \   }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n       \
+        \ \"Rise\":5,\n        \"Fall\":5,\n        \"Url\":\"/index.html\",\n   \
+        \     \"Timeout\":5000,\n        \"Period\":5000\n,         \"Rstatus\":\"\
+        2xx,3xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: updateBody
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.60\"\
+        \n        }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n \
+        \       \"Rise\":6,\n        \"Fall\":6,\n        \"Url\":\"/index1.html\"\
+        ,\n        \"Timeout\":6000,\n        \"Period\":6000\n,         \"Rstatus\"\
+        :\"2xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.79\"\
+        ,\n            \"Port\":8080,\n            \"Id\":\"a574d1a0-5921-4637-bb38-0093cb5ae70b\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance0\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.79\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"a574d1a0-5921-4637-bb38-0093cb5ae70b\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance0\"\n     \
+        \   }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n       \
+        \ \"Rise\":5,\n        \"Fall\":5,\n        \"Url\":\"/index.html\",\n   \
+        \     \"Timeout\":5000,\n        \"Period\":5000\n,         \"Rstatus\":\"\
+        2xx,3xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+  etcdExpectData: null
+  etcdPrepareData: null
+deregistTGInstanceNormal013: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deregistTGInstanceNormal013}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: accuracy deregister of vpc_l4}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: createBody
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.79\"\
+        ,\n            \"Port\":8080,\n            \"Id\":\"a574d1a0-5921-4637-bb38-0093cb5ae70b\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance0\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.79\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"a574d1a0-5921-4637-bb38-0093cb5ae70b\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance0\"\n     \
+        \   }, \n        {\n            \"Address\":\"10.0.32.60\",\n            \"\
+        Port\":8080,\n            \"Id\":\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance1\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.60\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance1\"\n     \
+        \   }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n       \
+        \ \"Rise\":5,\n        \"Fall\":5,\n        \"Url\":\"/index.html\",\n   \
+        \     \"Timeout\":5000,\n        \"Period\":5000\n,         \"Rstatus\":\"\
+        2xx,3xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: updateBody
+      value: "{\n    \"Instances\":[\n        {\n            \"Port\":8080,\n    \
+        \        \"Address\":\"10.0.32.79\"\n        }, \n        {\n            \"\
+        Port\":8080,\n            \"Address\":\"10.0.32.60\"\n        }\n    ],\n\
+        \    \"Monitor\":{\n        \"Protocol\":\"http\",\n        \"Rise\":6,\n\
+        \        \"Fall\":6,\n        \"Url\":\"/index1.html\",\n        \"Timeout\"\
+        :6000,\n        \"Period\":6000\n,         \"Rstatus\":\"2xx\"\n    }, \n\
+        \    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.79\"\
+        ,\n            \"Port\":8081,\n            \"Id\":\"a574d1a0-5921-4637-bb38-0093cb5ae70b\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance0\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.60\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance1\"\n     \
+        \   }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n       \
+        \ \"Rise\":5,\n        \"Fall\":5,\n        \"Url\":\"/index.html\",\n   \
+        \     \"Timeout\":5000,\n        \"Period\":5000\n,         \"Rstatus\":\"\
+        2xx,3xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+  etcdExpectData: null
+  etcdPrepareData: null
+deregistTGInstanceNormal011: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deregistTGInstanceNormal011}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: accuracy deregister of dns}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: createBody
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.79\"\
+        ,\n            \"Port\":8080,\n            \"Id\":\"a574d1a0-5921-4637-bb38-0093cb5ae70b\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance0\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.79\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"a574d1a0-5921-4637-bb38-0093cb5ae70b\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance0\"\n     \
+        \   }, \n        {\n            \"Address\":\"10.0.32.60\",\n            \"\
+        Port\":8080,\n            \"Id\":\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance1\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.60\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance1\"\n     \
+        \   }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n       \
+        \ \"Rise\":5,\n        \"Fall\":5,\n        \"Url\":\"/index.html\",\n   \
+        \     \"Timeout\":5000,\n        \"Period\":5000\n,         \"Rstatus\":\"\
+        2xx,3xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: updateBody
+      value: "{\n    \"Instances\":[\n        {\n            \"Port\":8082,\n    \
+        \        \"Address\":\"10.0.32.79\"\n        }, \n        {\n            \"\
+        Port\":8082,\n            \"Address\":\"10.0.32.60\"\n        }\n    ],\n\
+        \    \"Monitor\":{\n        \"Protocol\":\"http\",\n        \"Rise\":6,\n\
+        \        \"Fall\":6,\n        \"Url\":\"/index1.html\",\n        \"Timeout\"\
+        :6000,\n        \"Period\":6000\n,         \"Rstatus\":\"2xx\"\n    }, \n\
+        \    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.79\"\
+        ,\n            \"Port\":8080,\n            \"Id\":\"a574d1a0-5921-4637-bb38-0093cb5ae70b\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance0\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.79\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"a574d1a0-5921-4637-bb38-0093cb5ae70b\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance0\"\n     \
+        \   }, \n        {\n            \"Address\":\"10.0.32.60\",\n            \"\
+        Port\":8080,\n            \"Id\":\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance1\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.60\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance1\"\n     \
+        \   }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n       \
+        \ \"Rise\":5,\n        \"Fall\":5,\n        \"Url\":\"/index.html\",\n   \
+        \     \"Timeout\":5000,\n        \"Period\":5000\n,         \"Rstatus\":\"\
+        2xx,3xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+  etcdExpectData: null
+  etcdPrepareData: null
+deregistTGInstanceNormal012: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deregistTGInstanceNormal012}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: blur deregister of dns}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: createBody
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.79\"\
+        ,\n            \"Port\":8080,\n            \"Id\":\"a574d1a0-5921-4637-bb38-0093cb5ae70b\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance0\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.79\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"a574d1a0-5921-4637-bb38-0093cb5ae70b\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance0\"\n     \
+        \   }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n       \
+        \ \"Rise\":5,\n        \"Fall\":5,\n        \"Url\":\"/index.html\",\n   \
+        \     \"Timeout\":5000,\n        \"Period\":5000\n,         \"Rstatus\":\"\
+        2xx,3xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: updateBody
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.60\"\
+        \n        }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n \
+        \       \"Rise\":6,\n        \"Fall\":6,\n        \"Url\":\"/index1.html\"\
+        ,\n        \"Timeout\":6000,\n        \"Period\":6000\n,         \"Rstatus\"\
+        :\"2xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.79\"\
+        ,\n            \"Port\":8080,\n            \"Id\":\"a574d1a0-5921-4637-bb38-0093cb5ae70b\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance0\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.79\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"a574d1a0-5921-4637-bb38-0093cb5ae70b\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance0\"\n     \
+        \   }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n       \
+        \ \"Rise\":5,\n        \"Fall\":5,\n        \"Url\":\"/index.html\",\n   \
+        \     \"Timeout\":5000,\n        \"Period\":5000\n,         \"Rstatus\":\"\
+        2xx,3xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+  etcdExpectData: null
+  etcdPrepareData: null
+deregistTGInstanceNormal020: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: idc_vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deregistTGInstanceNormal020}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: blur deregister of idc_vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: createBody
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.79\"\
+        ,\n            \"Port\":8080,\n            \"Id\":\"a574d1a0-5921-4637-bb38-0093cb5ae70b\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance0\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.79\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"a574d1a0-5921-4637-bb38-0093cb5ae70b\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance0\"\n     \
+        \   }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n       \
+        \ \"Rise\":5,\n        \"Fall\":5,\n        \"Url\":\"/index.html\",\n   \
+        \     \"Timeout\":5000,\n        \"Period\":5000\n,         \"Rstatus\":\"\
+        2xx,3xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: updateBody
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.60\"\
+        \n        }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n \
+        \       \"Rise\":6,\n        \"Fall\":6,\n        \"Url\":\"/index1.html\"\
+        ,\n        \"Timeout\":6000,\n        \"Period\":6000\n,         \"Rstatus\"\
+        :\"2xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.79\"\
+        ,\n            \"Port\":8080,\n            \"Id\":\"a574d1a0-5921-4637-bb38-0093cb5ae70b\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance0\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.79\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"a574d1a0-5921-4637-bb38-0093cb5ae70b\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance0\"\n     \
+        \   }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n       \
+        \ \"Rise\":5,\n        \"Fall\":5,\n        \"Url\":\"/index.html\",\n   \
+        \     \"Timeout\":5000,\n        \"Period\":5000\n,         \"Rstatus\":\"\
+        2xx,3xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer021}
+  etcdExpectData: null
+  etcdPrepareData: null
+deregistTGInstanceNormal019: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: idc_vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deregistTGInstanceNormal019}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: accuracy deregister of idc_vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: createBody
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.79\"\
+        ,\n            \"Port\":8080,\n            \"Id\":\"a574d1a0-5921-4637-bb38-0093cb5ae70b\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance0\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.79\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"a574d1a0-5921-4637-bb38-0093cb5ae70b\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance0\"\n     \
+        \   }, \n        {\n            \"Address\":\"10.0.32.60\",\n            \"\
+        Port\":8080,\n            \"Id\":\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance1\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.60\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance1\"\n     \
+        \   }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n       \
+        \ \"Rise\":5,\n        \"Fall\":5,\n        \"Url\":\"/index.html\",\n   \
+        \     \"Timeout\":5000,\n        \"Period\":5000\n,         \"Rstatus\":\"\
+        2xx,3xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: updateBody
+      value: "{\n    \"Instances\":[\n        {\n            \"Port\":8082,\n    \
+        \        \"Address\":\"10.0.32.79\"\n        }, \n        {\n            \"\
+        Port\":8082,\n            \"Address\":\"10.0.32.60\"\n        }\n    ],\n\
+        \    \"Monitor\":{\n        \"Protocol\":\"http\",\n        \"Rise\":5,\n\
+        \        \"Fall\":5,\n        \"Url\":\"/index.html\",\n        \"Timeout\"\
+        :5000,\n        \"Period\":5000\n,         \"Rstatus\":\"2xx,3xx\"\n    },\
+        \ \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.79\"\
+        ,\n            \"Port\":8080,\n            \"Id\":\"a574d1a0-5921-4637-bb38-0093cb5ae70b\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance0\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.79\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"a574d1a0-5921-4637-bb38-0093cb5ae70b\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance0\"\n     \
+        \   }, \n        {\n            \"Address\":\"10.0.32.60\",\n            \"\
+        Port\":8080,\n            \"Id\":\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance1\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.60\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance1\"\n     \
+        \   }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n       \
+        \ \"Rise\":5,\n        \"Fall\":5,\n        \"Url\":\"/index.html\",\n   \
+        \     \"Timeout\":5000,\n        \"Period\":5000\n,         \"Rstatus\":\"\
+        2xx,3xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer021}
+  etcdExpectData: null
+  etcdPrepareData: null
+deregistTGInstanceNormal009: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deregistTGInstanceNormal009}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: accuracy deregister of dns}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: createBody
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.79\"\
+        ,\n            \"Port\":8080,\n            \"Id\":\"a574d1a0-5921-4637-bb38-0093cb5ae70b\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance0\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.79\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"a574d1a0-5921-4637-bb38-0093cb5ae70b\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance0\"\n     \
+        \   }, \n        {\n            \"Address\":\"10.0.32.60\",\n            \"\
+        Port\":8080,\n            \"Id\":\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance1\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.60\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance1\"\n     \
+        \   }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n       \
+        \ \"Rise\":5,\n        \"Fall\":5,\n        \"Url\":\"/index.html\",\n   \
+        \     \"Timeout\":5000,\n        \"Period\":5000\n,         \"Rstatus\":\"\
+        2xx,3xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: updateBody
+      value: "{\n    \"Instances\":[\n        {\n            \"Port\":8080,\n    \
+        \        \"Address\":\"10.0.32.79\"\n        }, \n        {\n            \"\
+        Port\":8080,\n            \"Address\":\"10.0.32.60\"\n        }\n    ],\n\
+        \    \"Monitor\":{\n        \"Protocol\":\"http\",\n        \"Rise\":6,\n\
+        \        \"Fall\":6,\n        \"Url\":\"/index1.html\",\n        \"Timeout\"\
+        :6000,\n        \"Period\":6000\n,         \"Rstatus\":\"2xx\"\n    }, \n\
+        \    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.79\"\
+        ,\n            \"Port\":8081,\n            \"Id\":\"a574d1a0-5921-4637-bb38-0093cb5ae70b\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance0\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.60\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance1\"\n     \
+        \   }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n       \
+        \ \"Rise\":5,\n        \"Fall\":5,\n        \"Url\":\"/index.html\",\n   \
+        \     \"Timeout\":5000,\n        \"Period\":5000\n,         \"Rstatus\":\"\
+        2xx,3xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+  etcdExpectData: null
+  etcdPrepareData: null
+deregistTGInstanceNormal017: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: idc_vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deregistTGInstanceNormal017}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: accuracy deregister of idc_vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: createBody
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.79\"\
+        ,\n            \"Port\":8080,\n            \"Id\":\"a574d1a0-5921-4637-bb38-0093cb5ae70b\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance0\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.79\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"a574d1a0-5921-4637-bb38-0093cb5ae70b\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance0\"\n     \
+        \   }, \n        {\n            \"Address\":\"10.0.32.60\",\n            \"\
+        Port\":8080,\n            \"Id\":\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance1\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.60\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance1\"\n     \
+        \   }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n       \
+        \ \"Rise\":5,\n        \"Fall\":5,\n        \"Url\":\"/index.html\",\n   \
+        \     \"Timeout\":5000,\n        \"Period\":5000\n,         \"Rstatus\":\"\
+        2xx,3xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: updateBody
+      value: "{\n    \"Instances\":[\n        {\n            \"Port\":8080,\n    \
+        \        \"Address\":\"10.0.32.79\"\n        }, \n        {\n            \"\
+        Port\":8080,\n            \"Address\":\"10.0.32.60\"\n        }\n    ],\n\
+        \    \"Monitor\":{\n        \"Protocol\":\"http\",\n        \"Rise\":6,\n\
+        \        \"Fall\":6,\n        \"Url\":\"/index1.html\",\n        \"Timeout\"\
+        :6000,\n        \"Period\":6000\n,         \"Rstatus\":\"2xx\"\n    }, \n\
+        \    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.79\"\
+        ,\n            \"Port\":8081,\n            \"Id\":\"a574d1a0-5921-4637-bb38-0093cb5ae70b\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance0\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.60\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance1\"\n     \
+        \   }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n       \
+        \ \"Rise\":5,\n        \"Fall\":5,\n        \"Url\":\"/index.html\",\n   \
+        \     \"Timeout\":5000,\n        \"Period\":5000\n,         \"Rstatus\":\"\
+        2xx,3xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer021}
+  etcdExpectData: null
+  etcdPrepareData: null
+deregistTGInstanceNormal007: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deregistTGInstanceNormal007}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: accuracy deregister of vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: createBody
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.79\"\
+        ,\n            \"Port\":8080,\n            \"Id\":\"a574d1a0-5921-4637-bb38-0093cb5ae70b\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance0\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.79\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"a574d1a0-5921-4637-bb38-0093cb5ae70b\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance0\"\n     \
+        \   }, \n        {\n            \"Address\":\"10.0.32.60\",\n            \"\
+        Port\":8080,\n            \"Id\":\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance1\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.60\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance1\"\n     \
+        \   }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n       \
+        \ \"Rise\":5,\n        \"Fall\":5,\n        \"Url\":\"/index.html\",\n   \
+        \     \"Timeout\":5000,\n        \"Period\":5000\n,         \"Rstatus\":\"\
+        2xx,3xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: updateBody
+      value: "{\n    \"Instances\":[\n        {\n            \"Port\":8082,\n    \
+        \        \"Address\":\"10.0.32.79\"\n        }, \n        {\n            \"\
+        Port\":8082,\n            \"Address\":\"10.0.32.60\"\n        }\n    ],\n\
+        \    \"Monitor\":{\n        \"Protocol\":\"http\",\n        \"Rise\":6,\n\
+        \        \"Fall\":6,\n        \"Url\":\"/index1.html\",\n        \"Timeout\"\
+        :6000,\n        \"Period\":6000\n,         \"Rstatus\":\"2xx\"\n    }, \n\
+        \    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: "{\n    \"Instances\":[\n        {\n            \"Address\":\"10.0.32.79\"\
+        ,\n            \"Port\":8080,\n            \"Id\":\"a574d1a0-5921-4637-bb38-0093cb5ae70b\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance0\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.79\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"a574d1a0-5921-4637-bb38-0093cb5ae70b\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance0\"\n     \
+        \   }, \n        {\n            \"Address\":\"10.0.32.60\",\n            \"\
+        Port\":8080,\n            \"Id\":\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\"\
+        ,\n            \"TopAz\":\"cn-east-p1a\",\n            \"Weight\":100,\n \
+        \           \"Name\":\"instance1\"\n        }, \n        {\n            \"\
+        Address\":\"10.0.32.60\",\n            \"Port\":8081,\n            \"Id\"\
+        :\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\",\n            \"TopAz\":\"cn-east-p1a\"\
+        ,\n            \"Weight\":100,\n            \"Name\":\"instance1\"\n     \
+        \   }\n    ],\n    \"Monitor\":{\n        \"Protocol\":\"http\",\n       \
+        \ \"Rise\":5,\n        \"Fall\":5,\n        \"Url\":\"/index.html\",\n   \
+        \     \"Timeout\":5000,\n        \"Period\":5000\n,         \"Rstatus\":\"\
+        2xx,3xx\"\n    }, \n    \"UseSamePort\":0,\n    \"Name\":\"tg-test\"\n}"
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+  etcdExpectData: null
+  etcdPrepareData: null

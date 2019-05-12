@@ -1,0 +1,190 @@
+checkLoadBalancerParamsAbnormal008: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsAbnormal008}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: check lb with illegal bandwidthLimit}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Type":"mix","Description":"test
+        cty","Network":"public","Standard":{"ChargeMode":"netflow","ChargeType":"hour","BandwidthLimit":-1},"Name":"qa-temp-1550169911069"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Location":"bandwidthLimit", "Message":"invalid bandwidthLimit! bandwidthLimit
+        should be between not null and between 0 and 1000!"}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsAbnormal007: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsAbnormal007}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: check lb with illegal chargeMode}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Type":"mix","Description":"test
+        cty","Network":"public","Standard":{"ChargeMode":"abcd","ChargeType":"hour","BandwidthLimit":1},"Name":"qa-temp-1550169911049"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Location":"chargeMode", "Message":"invalid chargeMode! chargeMode should
+        be bandwidth or netflow!"}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsAbnormal006: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsAbnormal006}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: check lb with illegal chargeType}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Type":"mix","Description":"test
+        cty","Network":"public","Standard":{"ChargeMode":"bandwidth","ChargeType":"abcd","BandwidthLimit":1},"Name":"qa-temp-1550169911025"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Location":"chargeType", "Message":"invalid chargeType! chargeType should
+        be hour|month|year!"}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsAbnormal005: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsAbnormal005}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: check lb with illegal network}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Type":"mix","Description":"test
+        cty","Network":"abcd","Standard":{"ChargeMode":"bandwidth","ChargeType":"hour","BandwidthLimit":1},"Name":"qa-temp-1550169911002"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Location":"network", "Message":"invalid network type!"}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsAbnormal004: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLoadBalancerAbnormal004}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: check lb with illegal type}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Type":"abcd","Description":"test
+        cty","Network":"public","Standard":{"ChargeMode":"bandwidth","ChargeType":"hour","BandwidthLimit":1},"Name":"qa-temp-1550169910982"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Location":"type", "Message":"invalid loadbalancer type!"}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsAbnormal002: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsAbnormal002}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: check lb with illegal name}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Type":"mix","Description":"test
+        cty","Network":"public","Standard":{"ChargeMode":"bandwidth","ChargeType":"hour","BandwidthLimit":1},"Name":"abcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxya"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Location":"name", "Message":"invalid vip name format!"}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsAbnormal013: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsAbnormal013}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: check lb with illegal subnet}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"SecurityGroups":["4e2218f4-2ccc-4e34-b1c9-f77e1791824f","c83230c7-da65-4364-9013-006ea8312c99"],"Type":"vpc_mix","TopAzInfos":[{"SubNetId":"abcd","TopAz":"cn-east-p1a"}],"Description":"test
+        cty","VpcId":"dff050d2-8a91-436b-8765-739f14cec762","Network":"public","Standard":{"ChargeMode":"bandwidth","ChargeType":"month","BandwidthLimit":1},"Name":"qa-temp-1550169911157"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"NotFound",
+        "Message":"subnet not found"}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsAbnormal001: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsAbnormal001}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: check lb with empty name}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Type":"mix","Description":"test
+        cty","Network":"public","Standard":{"ChargeMode":"bandwidth","ChargeType":"hour","BandwidthLimit":1},"Name":""}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Location":"name", "Message":"invalid vip name format!"}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsAbnormal012: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsAbnormal012}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: check lb with illegal autoRenewPeriod}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Type":"mix","Description":"test
+        cty","Network":"public","Standard":{"AutoRenewPeriod":-1,"ChargeMode":"bandwidth","ChargeType":"hour","Period":1,"BandwidthLimit":1},"Name":"qa-temp-1550169911134"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest","Location":"autoRenewPeriod","Message":"invalid
+        autoRenewPeriod! autoRenewPeriod should be greater than 0 !"}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsAbnormal011: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsAbnormal011}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: check lb with illegal period}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Type":"mix","Description":"test
+        cty","Network":"public","Standard":{"AutoRenewPeriod":0,"ChargeMode":"bandwidth","ChargeType":"hour","Period":0,"BandwidthLimit":1},"Name":"qa-temp-1550169911114"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Location":"period", "Message":"invalid period! period should be greater than
+        1!"}'}
+  etcdExpectData: null
+  etcdPrepareData: null
+checkLoadBalancerParamsAbnormal010: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: checkLoadBalancerParamsAbnormal010}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: check lb with illegal description}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Type":"mix","Description":"abcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxy1","Network":"public","Standard":{"ChargeMode":"bandwidth","ChargeType":"hour","BandwidthLimit":1},"Name":"qa-temp-1550169911091"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Location":"description", "Message":"description length too long!"}'}
+  etcdExpectData: null
+  etcdPrepareData: null

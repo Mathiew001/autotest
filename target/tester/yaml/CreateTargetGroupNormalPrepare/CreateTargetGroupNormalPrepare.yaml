@@ -1,0 +1,1001 @@
+createTargetGroupNormal006: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData:
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.Boolean, description: null, flag: BOOLEAN, name: useSamePort,
+        value: false}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: name, value: tg-test}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_tgroup
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: rise,
+        value: 5}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: fall,
+        value: 5}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: period,
+        value: 5000}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: timeout,
+        value: 5000}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: url, value: /}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: protocol,
+        value: tcp}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: port,
+        value: 0}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_tgroup_monitor
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createTargetGroupNormal006}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create null tg of vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Name":"tg-test", "Instances":[],             "Monitor":{
+                        "Protocol":"tcp",
+                        "Rise":5,
+                        "Fall":5,
+                        "Timeout":5000,
+                        "Period":5000
+                    }
+        }
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+                    "Name":"tg-test",
+                    "UseSamePort":0,
+                    "Instances":[],
+                    "Monitor":{
+                        "Protocol":"tcp",
+                        "Rise":5,
+                        "Fall":5,
+                        "Timeout":5000,
+                        "Period":5000
+                    }
+                }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+  etcdExpectData: null
+  etcdPrepareData: null
+createTargetGroupNormal017: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createTargetGroupNormal017}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create null tg of vpc_l4}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Name":"tg-test", "Instances":[],             "Monitor":{
+                        "Protocol":"tcp",
+                        "Rise":5,
+                        "Fall":5,
+                        "Timeout":5000,
+                        "Period":5000
+                    }
+        }
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+                    "Name":"tg-test",
+                    "UseSamePort":0,
+                    "Instances":[],
+                    "Monitor":{
+                        "Protocol":"tcp",
+                        "Rise":5,
+                        "Fall":5,
+                        "Timeout":5000,
+                        "Period":5000
+                    }
+                }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+  etcdExpectData: null
+  etcdPrepareData: null
+createTargetGroupNormal005: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData:
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.Boolean, description: null, flag: BOOLEAN, name: useSamePort,
+        value: true}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: name, value: tg-test}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_tgroup
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: rise,
+        value: 2}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: fall,
+        value: 3}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: period,
+        value: 5000}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: timeout,
+        value: 2000}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: url, value: /}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: protocol,
+        value: tcp}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: port,
+        value: 0}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_tgroup_monitor
+  - columns:
+    - colName: tgroup_server_1
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: name, value: instance0}
+      - {clazz: class java.lang.String, description: null, flag: C, name: address,
+        value: 10.0.32.79}
+      - {clazz: class java.lang.Integer, description: null, flag: C, name: port, value: 8080}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: weight,
+        value: 100}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: topaz, value: pubt2}
+      primaryKeys: null
+      selectKeys: null
+    - colName: tgroup_server_2
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: name, value: instance1}
+      - {clazz: class java.lang.String, description: null, flag: C, name: address,
+        value: 10.0.32.60}
+      - {clazz: class java.lang.Integer, description: null, flag: C, name: port, value: 8080}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: weight,
+        value: 80}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: topaz, value: pubt2}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_tgroup_server
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createTargetGroupNormal005}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create tg with 2 rs same port of vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Name":"tg-test",
+        "Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0",
+        "Port":8080, "TopAz":"cn-east-p1a", "Weight":100, "Address": "10.0.32.79"},
+        {"Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd", "Name":"instance1", "Port":8080,
+        "TopAz":"cn-east-p1a", "Weight":80, "Address":"10.0.32.60"}], "UseSamePort":1}'}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+                    "Name":"tg-test",
+                    "UseSamePort":1,
+                    "Instances":[
+                        {
+                            "Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+                            "Name":"instance0",
+                            "Address":"10.0.32.79",
+                            "Port":8080,
+                            "Status":"UNKNOWN",
+                            "TopAz":"cn-east-p1a",
+                            "Weight":100,
+                            "Backup":0
+                        },
+                        {
+                            "Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd",
+                            "Name":"instance1",
+                            "Address":"10.0.32.60",
+                            "Port":8080,
+                            "Status":"UNKNOWN",
+                            "TopAz":"cn-east-p1a",
+                            "Weight":80,
+                            "Backup":0
+                        }
+                    ],
+                    "Monitor":{
+                        "Protocol":"tcp",
+                        "Rise":2,
+                        "Fall":3,
+                        "Url":"/",
+                        "Timeout":2000,
+                        "Period":5000
+                    }
+                }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+  etcdExpectData: null
+  etcdPrepareData: null
+createTargetGroupNormal016: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createTargetGroupNormal016}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create tg with 2 rs same port of vpc_l4}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Name":"tg-test",
+        "Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0",
+        "Port":8080, "TopAz":"cn-east-p1a", "Weight":100, "Address": "10.0.32.79"},
+        {"Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd", "Name":"instance1", "Port":8080,
+        "TopAz":"cn-east-p1a", "Weight":80, "Address":"10.0.32.60"}], "UseSamePort":1}'}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+                    "Name":"tg-test",
+                    "UseSamePort":1,
+                    "Instances":[
+                        {
+                            "Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+                            "Name":"instance0",
+                            "Address":"10.0.32.79",
+                            "Port":8080,
+                            "Status":"UNKNOWN",
+                            "TopAz":"cn-east-p1a",
+                            "Weight":100,
+                            "Backup":0
+                        },
+                        {
+                            "Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd",
+                            "Name":"instance1",
+                            "Address":"10.0.32.60",
+                            "Port":8080,
+                            "Status":"UNKNOWN",
+                            "TopAz":"cn-east-p1a",
+                            "Weight":80,
+                            "Backup":0
+                        }
+                    ],
+                    "Monitor":{
+                        "Protocol":"tcp",
+                        "Rise":2,
+                        "Fall":3,
+                        "Url":"/",
+                        "Timeout":2000,
+                        "Period":5000
+                    }
+                }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+  etcdExpectData: null
+  etcdPrepareData: null
+createTargetGroupNormal008: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData:
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.Boolean, description: null, flag: BOOLEAN, name: useSamePort,
+        value: true}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: name, value: tg-test}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_tgroup
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: rise,
+        value: 2}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: fall,
+        value: 3}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: period,
+        value: 5000}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: timeout,
+        value: 2000}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: url, value: /}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: protocol,
+        value: tcp}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: port,
+        value: 0}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_tgroup_monitor
+  - columns:
+    - colName: tgroup_server_1
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: name, value: instance0}
+      - {clazz: class java.lang.String, description: null, flag: C, name: address,
+        value: 10.0.32.79}
+      - {clazz: class java.lang.Integer, description: null, flag: C, name: port, value: 8080}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: weight,
+        value: 100}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: topaz, value: pubt2}
+      primaryKeys: null
+      selectKeys: null
+    - colName: tgroup_server_2
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: name, value: instance1}
+      - {clazz: class java.lang.String, description: null, flag: C, name: address,
+        value: 10.0.32.60}
+      - {clazz: class java.lang.Integer, description: null, flag: C, name: port, value: 8080}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: weight,
+        value: 80}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: topaz, value: pubt2}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_tgroup_server
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createTargetGroupNormal008}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create tg with 2 rs same port of dns+vip}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Name":"tg-test",
+        "Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0",
+        "Port":8080, "TopAz":"cn-east-p1a", "Weight":100, "Address": "10.0.32.79"},
+        {"Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd", "Name":"instance1", "Port":8080,
+        "TopAz":"cn-east-p1a", "Weight":80, "Address":"10.0.32.60"}], "UseSamePort":1}'}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+                    "Name":"tg-test",
+                    "UseSamePort":1,
+                    "Instances":[
+                        {
+                            "Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+                            "Name":"instance0",
+                            "Address":"10.0.32.79",
+                            "Port":8080,
+                            "Status":"UNKNOWN",
+                            "TopAz":"cn-east-p1a",
+                            "Weight":100,
+                            "Backup":0
+                        },
+                        {
+                            "Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd",
+                            "Name":"instance1",
+                            "Address":"10.0.32.60",
+                            "Port":8080,
+                            "Status":"UNKNOWN",
+                            "TopAz":"cn-east-p1a",
+                            "Weight":80,
+                            "Backup":0
+                        }
+                    ],
+                    "Monitor":{
+                        "Protocol":"tcp",
+                        "Rise":2,
+                        "Fall":3,
+                        "Url":"/",
+                        "Timeout":2000,
+                        "Period":5000
+                    }
+                }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+  etcdExpectData: null
+  etcdPrepareData: null
+createTargetGroupNormal007: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData:
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.Boolean, description: null, flag: BOOLEAN, name: useSamePort,
+        value: false}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: name, value: tg-test}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_tgroup
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: rise,
+        value: 5}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: fall,
+        value: 5}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: period,
+        value: 6000}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: timeout,
+        value: 6000}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: url, value: /index.html}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: rstatus,
+        value: '2xx,3xx'}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: protocol,
+        value: http}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: port,
+        value: 0}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_tgroup_monitor
+  - columns:
+    - colName: tgroup_server_1
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: name, value: instance0}
+      - {clazz: class java.lang.String, description: null, flag: C, name: address,
+        value: 10.0.32.79}
+      - {clazz: class java.lang.Integer, description: null, flag: C, name: port, value: 8080}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: weight,
+        value: 100}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: topaz, value: pubt2}
+      primaryKeys: null
+      selectKeys: null
+    - colName: tgroup_server_2
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: name, value: instance1}
+      - {clazz: class java.lang.String, description: null, flag: C, name: address,
+        value: 10.0.32.60}
+      - {clazz: class java.lang.Integer, description: null, flag: C, name: port, value: 8081}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: weight,
+        value: 80}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: topaz, value: pubt2}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_tgroup_server
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createTargetGroupNormal007}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create tg with 2 rs diff port of dns+vip}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Name":"tg-test", "Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0", "Port":8080, "TopAz":"cn-east-p1a", "Weight":100, "Address": "10.0.32.79"}, {"Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd", "Name":"instance1", "Port":8081, "TopAz":"cn-east-p1a", "Weight":80, "Address":"10.0.32.60"}], "UseSamePort":0,             "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: "{\n            \"Name\":\"tg-test\",\n            \"UseSamePort\":0,\n\
+        \            \"Instances\":[\n                {\n                    \"Id\"\
+        :\"a574d1a0-5921-4637-bb38-0093cb5ae70b\",\n                    \"Name\":\"\
+        instance0\",\n                    \"Address\":\"10.0.32.79\",\n          \
+        \          \"Port\":8080,\n                    \"Status\":\"UNKNOWN\",\n \
+        \                   \"TopAz\":\"cn-east-p1a\",\n                    \"Weight\"\
+        :100,\n                    \"Backup\":0\n                },\n            \
+        \    {\n                    \"Id\":\"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd\"\
+        ,\n                    \"Name\":\"instance1\",\n                    \"Address\"\
+        :\"10.0.32.60\",\n                    \"Port\":8081,\n                   \
+        \ \"Status\":\"UNKNOWN\",\n                    \"TopAz\":\"cn-east-p1a\",\n\
+        \                    \"Weight\":80,\n                    \"Backup\":0\n  \
+        \              }\n            ], \n            \"Monitor\":{\n           \
+        \     \"Protocol\":\"http\",\n                \"Rise\":5,\n              \
+        \  \"Fall\":5,\n                \"Url\":\"/index.html\",\n               \
+        \ \"Timeout\":6000,\n                \"Period\":6000\n,                 \"\
+        Rstatus\":\"2xx,3xx\"\n            }\n        }"
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+  etcdExpectData: null
+  etcdPrepareData: null
+createTargetGroupNormal013: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: idc_vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createTargetGroupNormal013}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create null tg of idc_vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Name":"tg-test", "Instances":[],             "Monitor":{
+                        "Protocol":"tcp",
+                        "Rise":5,
+                        "Fall":5,
+                        "Timeout":5000,
+                        "Period":5000
+                    }
+        }
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+                    "Name":"tg-test",
+                    "UseSamePort":0,
+                    "Instances":[],
+                    "Monitor":{
+                        "Protocol":"tcp",
+                        "Rise":5,
+                        "Fall":5,
+                        "Timeout":5000,
+                        "Period":5000
+                    }
+                }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer021}
+  etcdExpectData: null
+  etcdPrepareData: null
+createTargetGroupNormal012: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: idc_vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createTargetGroupNormal012}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create tg with 2 rs same port of idc_vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Name":"tg-test",
+        "Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0",
+        "Port":8080, "TopAz":"cn-east-p1a", "Weight":100, "Address": "10.0.32.79"},
+        {"Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd", "Name":"instance1", "Port":8080,
+        "TopAz":"cn-east-p1a", "Weight":80, "Address":"10.0.32.60"}], "UseSamePort":1}'}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+                    "Name":"tg-test",
+                    "UseSamePort":1,
+                    "Instances":[
+                        {
+                            "Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+                            "Name":"instance0",
+                            "Address":"10.0.32.79",
+                            "Port":8080,
+                            "Status":"UNKNOWN",
+                            "TopAz":"cn-east-p1a",
+                            "Weight":100,
+                            "Backup":0
+                        },
+                        {
+                            "Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd",
+                            "Name":"instance1",
+                            "Address":"10.0.32.60",
+                            "Port":8080,
+                            "Status":"UNKNOWN",
+                            "TopAz":"cn-east-p1a",
+                            "Weight":80,
+                            "Backup":0
+                        }
+                    ],
+                    "Monitor":{
+                        "Protocol":"tcp",
+                        "Rise":2,
+                        "Fall":3,
+                        "Url":"/",
+                        "Timeout":2000,
+                        "Period":5000
+                    }
+                }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer021}
+  etcdExpectData: null
+  etcdPrepareData: null
+createTargetGroupNormal004: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData:
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.Boolean, description: null, flag: BOOLEAN, name: useSamePort,
+        value: false}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: name, value: tg-test}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_tgroup
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: rise,
+        value: 5}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: fall,
+        value: 5}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: period,
+        value: 6000}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: timeout,
+        value: 6000}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: url, value: /index.html}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: rstatus,
+        value: '2xx,3xx'}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: protocol,
+        value: http}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: port,
+        value: 0}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_tgroup_monitor
+  - columns:
+    - colName: tgroup_server_1
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: name, value: instance0}
+      - {clazz: class java.lang.String, description: null, flag: C, name: address,
+        value: 10.0.32.79}
+      - {clazz: class java.lang.Integer, description: null, flag: C, name: port, value: 8080}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: weight,
+        value: 100}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: topaz, value: pubt2}
+      primaryKeys: null
+      selectKeys: null
+    - colName: tgroup_server_2
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.String, description: null, flag: Y, name: name, value: instance1}
+      - {clazz: class java.lang.String, description: null, flag: C, name: address,
+        value: 10.0.32.60}
+      - {clazz: class java.lang.Integer, description: null, flag: C, name: port, value: 8081}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: weight,
+        value: 80}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: topaz, value: pubt2}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_tgroup_server
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createTargetGroupNormal004}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create tg with 2 rs diff port of vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Name":"tg-test", "Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0", "Port":8080, "TopAz":"cn-east-p1a", "Weight":100, "Address": "10.0.32.79"}, {"Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd", "Name":"instance1", "Port":8081, "TopAz":"cn-east-p1a", "Weight":80, "Address":"10.0.32.60"}], "UseSamePort":0,             "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+                    "Name":"tg-test",
+                    "UseSamePort":0,
+                    "Instances":[
+                        {
+                            "Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+                            "Name":"instance0",
+                            "Address":"10.0.32.79",
+                            "Port":8080,
+                            "Status":"UNKNOWN",
+                            "TopAz":"cn-east-p1a",
+                            "Weight":100,
+                            "Backup":0
+                        },
+                        {
+                            "Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd",
+                            "Name":"instance1",
+                            "Address":"10.0.32.60",
+                            "Port":8081,
+                            "Status":"UNKNOWN",
+                            "TopAz":"cn-east-p1a",
+                            "Weight":80,
+                            "Backup":0
+                        }
+                    ],
+                    "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+                }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+  etcdExpectData: null
+  etcdPrepareData: null
+createTargetGroupNormal015: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createTargetGroupNormal015}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create tg with 2 rs diff port of vpc_l4}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Name":"tg-test", "Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0", "Port":8080, "TopAz":"cn-east-p1a", "Weight":100, "Address": "10.0.32.79"}, {"Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd", "Name":"instance1", "Port":8081, "TopAz":"cn-east-p1a", "Weight":80, "Address":"10.0.32.60"}], "UseSamePort":0,             "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+                    "Name":"tg-test",
+                    "UseSamePort":0,
+                    "Instances":[
+                        {
+                            "Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+                            "Name":"instance0",
+                            "Address":"10.0.32.79",
+                            "Port":8080,
+                            "Status":"UNKNOWN",
+                            "TopAz":"cn-east-p1a",
+                            "Weight":100,
+                            "Backup":0
+                        },
+                        {
+                            "Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd",
+                            "Name":"instance1",
+                            "Address":"10.0.32.60",
+                            "Port":8081,
+                            "Status":"UNKNOWN",
+                            "TopAz":"cn-east-p1a",
+                            "Weight":80,
+                            "Backup":0
+                        }
+                    ],
+                    "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+                }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+  etcdExpectData: null
+  etcdPrepareData: null
+createTargetGroupNormal011: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: idc_vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createTargetGroupNormal011}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create tg with 2 rs diff port of idc_vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Name":"tg-test", "Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0", "Port":8080, "TopAz":"cn-east-p1a", "Weight":100, "Address": "10.0.32.79"}, {"Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd", "Name":"instance1", "Port":8081, "TopAz":"cn-east-p1a", "Weight":80, "Address":"10.0.32.60"}], "UseSamePort":0,             "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+                    "Name":"tg-test",
+                    "UseSamePort":0,
+                    "Instances":[
+                        {
+                            "Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+                            "Name":"instance0",
+                            "Address":"10.0.32.79",
+                            "Port":8080,
+                            "Status":"UNKNOWN",
+                            "TopAz":"cn-east-p1a",
+                            "Weight":100,
+                            "Backup":0
+                        },
+                        {
+                            "Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd",
+                            "Name":"instance1",
+                            "Address":"10.0.32.60",
+                            "Port":8081,
+                            "Status":"UNKNOWN",
+                            "TopAz":"cn-east-p1a",
+                            "Weight":80,
+                            "Backup":0
+                        }
+                    ],
+                    "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+                }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer021}
+  etcdExpectData: null
+  etcdPrepareData: null
+createTargetGroupNormal009: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData:
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.Boolean, description: null, flag: BOOLEAN, name: useSamePort,
+        value: false}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: name, value: tg-test}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_tgroup
+  - columns:
+    - colName: null
+      deleted: false
+      importLines: null
+      lines:
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: rise,
+        value: 5}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: fall,
+        value: 5}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: period,
+        value: 5000}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: timeout,
+        value: 5000}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: url, value: /}
+      - {clazz: class java.lang.String, description: null, flag: Y, name: protocol,
+        value: tcp}
+      - {clazz: class java.lang.Integer, description: null, flag: INT, name: port,
+        value: 0}
+      primaryKeys: null
+      selectKeys: null
+    tableClass: null
+    tableName: lb_tgroup_monitor
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createTargetGroupNormal009}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: create null tg of dns+vip}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Name":"tg-test", "Instances":[],             "Monitor":{
+                        "Protocol":"tcp",
+                        "Rise":5,
+                        "Fall":5,
+                        "Timeout":5000,
+                        "Period":5000
+                    }
+        }
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+                    "Name":"tg-test",
+                    "UseSamePort":0,
+                    "Instances":[],
+                    "Monitor":{
+                        "Protocol":"tcp",
+                        "Rise":5,
+                        "Fall":5,
+                        "Timeout":5000,
+                        "Period":5000
+                    }
+                }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+  etcdExpectData: null
+  etcdPrepareData: null

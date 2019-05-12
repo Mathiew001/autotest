@@ -1,0 +1,11 @@
+connectionAccessNormalPrepare001: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: connectionAccessNormalPrepare001}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: test all listener connection access}
+  etcdExpectData: null
+  etcdPrepareData: null

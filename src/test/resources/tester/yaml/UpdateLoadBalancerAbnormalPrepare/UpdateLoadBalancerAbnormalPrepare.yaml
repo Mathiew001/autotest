@@ -1,0 +1,70 @@
+updateLoadBalancerAbnormal003: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: null
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerNormal003}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update stoptimeout of -1 of vpc_mix lb}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: updateBody
+      value: |-
+        {
+            "InstanceId": "instanceId",
+            "Attrs": {
+                "StopTimeout": -1
+            }
+        }
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code":"BadRequest",
+            "Message":"unsupported stopTimeout"
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerAbnormal004: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: ha1.8vpc
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerNormal004}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update acc of 1 of ha1.8vpc lb}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: updateBody
+      value: |-
+        {
+            "InstanceId": "instanceId",
+            "Attrs": {
+                "UseSSLAcc": 0
+            }
+        }
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code":"BadRequest",
+            "Message":"unsupported useSSLAcc"
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer101}
+  etcdExpectData: null
+  etcdPrepareData: null

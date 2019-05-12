@@ -1,0 +1,1973 @@
+createLbListenerAbnormal046: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal046}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, http listenerPort illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |
+        [{
+            "Name": "testln1",
+            "ListenPort": 79,
+            "Protocol": "http",
+            "Balance": "leastconn",
+            "Clusters": [
+                {
+                    "ServerName": "test.com",
+                    "Path": "/a",
+                    "ServiceName": "null",
+                    "ServicePort": 80,
+                    "Policy": {
+                        "Mode": "insert",
+                        "Expire": 30000
+                    },
+                    "Monitor": {
+                      "Period": 6000,
+                      "Timeout": 6000,
+                      "Rise": 6,
+                      "Fall": 6,
+                      "Protocol": "tcp"
+                    }
+                },
+                {
+                    "ServerName": "test.com",
+                    "Path": "/b",
+                    "ServiceName": "null",
+                    "ServicePort": 80,
+                    "Policy": {
+                        "Mode": "rewrite",
+                        "CookieName": "asfsd"
+                    },
+                    "Monitor": {
+                      "Period": 5000,
+                      "Timeout": 5000,
+                      "Rise": 5,
+                      "Fall": 5,
+                      "Protocol": "http",
+                      "Url": "/index.html",
+                      "Rstatus": "2xx,3xx"
+                    }
+                }
+            ],
+            "Gzip": 0,
+            "TraceVip": 0,
+            "ForwardPort": 0
+        }]
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid listener port."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal068: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal068}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, CookieName illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"/a\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"rewrite\",\n      \
+        \          \"CookieName\": \"$abcd#123\"\n            },\n            \"Monitor\"\
+        : {\n              \"Period\": 6000,\n              \"Timeout\": 6000,\n \
+        \             \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"http\",\n              \"Url\": \"/index.html\",\n              \"Rstatus\"\
+        : \"2xx,3xx\" \n            }\n        },\n        {\n            \"ServerName\"\
+        : \"*\",\n            \"ServicePort\": 80,\n            \"ServiceName\": \"\
+        null\",\n            \"Path\": \"/b\",\n            \"Policy\": {\n      \
+        \          \"Mode\": \"insert\",\n                \"Expire\": 30000\n    \
+        \        },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"tcp\"\n            }\n  \
+        \      }\n    ],\n    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid cookieName."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal047: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal047}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, duplicated name'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"leastconn\",\n    \"Clusters\": [\n      \
+        \  {\n            \"ServerName\": \"test.com\",\n            \"Path\": \"\
+        /a\",\n            \"ServiceName\": \"null\",\n            \"ServicePort\"\
+        : 80,\n            \"Policy\": {\n                \"Mode\": \"insert\",\n\
+        \                \"Expire\": 30000\n            },\n            \"Monitor\"\
+        : {\n              \"Period\": 6000,\n              \"Timeout\": 6000,\n \
+        \             \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"tcp\"\n            }\n        },\n        {\n            \"ServerName\"\
+        : \"test.com\",\n            \"Path\": \"/b\",\n            \"ServiceName\"\
+        : \"null\",\n            \"ServicePort\": 80,\n            \"Policy\": {\n\
+        \                \"Mode\": \"rewrite\",\n                \"CookieName\": \"\
+        asfsd\"\n            },\n            \"Monitor\": {\n              \"Period\"\
+        : 5000,\n              \"Timeout\": 5000,\n              \"Rise\": 5,\n  \
+        \            \"Fall\": 5,\n              \"Protocol\": \"http\",\n       \
+        \       \"Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\"\n\
+        \            }\n        }\n    ],\n    \"Gzip\": 0,\n    \"TraceVip\": 0,\n\
+        \    \"ForwardPort\": 0\n}, \n{\n    \"Name\": \"testln1\",\n    \"ListenPort\"\
+        : 1025,\n    \"Protocol\": \"http\",\n    \"Balance\": \"leastconn\",\n  \
+        \  \"Clusters\": [\n        {\n            \"ServerName\": \"test.com\",\n\
+        \            \"Path\": \"/a\",\n            \"ServiceName\": \"null\",\n \
+        \           \"ServicePort\": 80,\n            \"Policy\": {\n            \
+        \    \"Mode\": \"insert\",\n                \"Expire\": 30000\n          \
+        \  },\n            \"Monitor\": {\n              \"Period\": 6000,\n     \
+        \         \"Timeout\": 6000,\n              \"Rise\": 6,\n              \"\
+        Fall\": 6,\n              \"Protocol\": \"tcp\"\n            }\n        },\n\
+        \        {\n            \"ServerName\": \"test.com\",\n            \"Path\"\
+        : \"/b\",\n            \"ServiceName\": \"null\",\n            \"ServicePort\"\
+        : 80,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n\
+        \                \"CookieName\": \"asfsd\"\n            },\n            \"\
+        Monitor\": {\n              \"Period\": 5000,\n              \"Timeout\":\
+        \ 5000,\n              \"Rise\": 5,\n              \"Fall\": 5,\n        \
+        \      \"Protocol\": \"http\",\n              \"Url\": \"/index.html\",\n\
+        \              \"Rstatus\": \"2xx,3xx\"\n            }\n        }\n    ],\n\
+        \    \"Gzip\": 0,\n    \"TraceVip\": 0,\n    \"ForwardPort\": 0\n}]\n"
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"Conflict","Message":"Duplicate
+        listener."}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal069: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal069}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, CookieName illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"/a\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"rewrite\",\n      \
+        \          \"CookieName\": \"abcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxy1\"\
+        ,\n            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        },\n        {\n            \"ServerName\": \"*\",\n     \
+        \       \"ServicePort\": 80,\n            \"ServiceName\": \"null\",\n   \
+        \         \"Path\": \"/b\",\n            \"Policy\": {\n                \"\
+        Mode\": \"insert\",\n                \"Expire\": 30000\n            },\n \
+        \           \"Monitor\": {\n              \"Period\": 6000,\n            \
+        \  \"Timeout\": 6000,\n              \"Rise\": 6,\n              \"Fall\"\
+        : 6,\n              \"Protocol\": \"tcp\"\n            }\n        }\n    ],\n\
+        \    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid policy."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal048: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal048}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, duplicated port'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"leastconn\",\n    \"Clusters\": [\n      \
+        \  {\n            \"ServerName\": \"test.com\",\n            \"Path\": \"\
+        /a\",\n            \"ServiceName\": \"null\",\n            \"ServicePort\"\
+        : 80,\n            \"Policy\": {\n                \"Mode\": \"insert\",\n\
+        \                \"Expire\": 30000\n            },\n            \"Monitor\"\
+        : {\n              \"Period\": 6000,\n              \"Timeout\": 6000,\n \
+        \             \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"tcp\"\n            }\n        },\n        {\n            \"ServerName\"\
+        : \"test.com\",\n            \"Path\": \"/b\",\n            \"ServiceName\"\
+        : \"null\",\n            \"ServicePort\": 80,\n            \"Policy\": {\n\
+        \                \"Mode\": \"rewrite\",\n                \"CookieName\": \"\
+        asfsd\"\n            },\n            \"Monitor\": {\n              \"Period\"\
+        : 5000,\n              \"Timeout\": 5000,\n              \"Rise\": 5,\n  \
+        \            \"Fall\": 5,\n              \"Protocol\": \"http\",\n       \
+        \       \"Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\"\n\
+        \            }\n        }\n    ],\n    \"Gzip\": 0,\n    \"TraceVip\": 0,\n\
+        \    \"ForwardPort\": 0\n}, \n{\n    \"Name\": \"testln2\",\n    \"ListenPort\"\
+        : 80,\n    \"Protocol\": \"http\",\n    \"Balance\": \"leastconn\",\n    \"\
+        Clusters\": [\n        {\n            \"ServerName\": \"test.com\",\n    \
+        \        \"Path\": \"/a\",\n            \"ServiceName\": \"null\",\n     \
+        \       \"ServicePort\": 80,\n            \"Policy\": {\n                \"\
+        Mode\": \"insert\",\n                \"Expire\": 30000\n            },\n \
+        \           \"Monitor\": {\n              \"Period\": 6000,\n            \
+        \  \"Timeout\": 6000,\n              \"Rise\": 6,\n              \"Fall\"\
+        : 6,\n              \"Protocol\": \"tcp\"\n            }\n        },\n   \
+        \     {\n            \"ServerName\": \"test.com\",\n            \"Path\":\
+        \ \"/b\",\n            \"ServiceName\": \"null\",\n            \"ServicePort\"\
+        : 80,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n\
+        \                \"CookieName\": \"asfsd\"\n            },\n            \"\
+        Monitor\": {\n              \"Period\": 5000,\n              \"Timeout\":\
+        \ 5000,\n              \"Rise\": 5,\n              \"Fall\": 5,\n        \
+        \      \"Protocol\": \"http\",\n              \"Url\": \"/index.html\",\n\
+        \              \"Rstatus\": \"2xx,3xx\"\n            }\n        }\n    ],\n\
+        \    \"Gzip\": 0,\n    \"TraceVip\": 0,\n    \"ForwardPort\": 0\n}]\n"
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"Conflict","Message":"Duplicate
+        listener."}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal049: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal049}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, no certId'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"Path\": \"/a\",\n\
+        \            \"ServiceName\": \"null\",\n            \"ServicePort\": 80,\n\
+        \            \"Policy\": {\n                \"Mode\": \"rewrite\",\n     \
+        \           \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        },\n        {\n            \"ServerName\": \"*\",\n     \
+        \       \"Path\": \"/b\",\n            \"ServiceName\": \"null\",\n      \
+        \      \"ServicePort\": 80,\n            \"Policy\": {\n                \"\
+        Mode\": \"insert\",\n                \"Expire\": 30000\n            },\n \
+        \           \"Monitor\": {\n              \"Period\": 6000,\n            \
+        \  \"Timeout\": 6000,\n              \"Rise\": 6,\n              \"Fall\"\
+        : 6,\n              \"Protocol\": \"tcp\"\n            }\n        }\n    ],\n\
+        \    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "CertId not found."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal064: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal064}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, tcp listenerPort illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |-
+        [{
+            "Name": "testln",
+            "ListenPort": 65536,
+            "Protocol": "tcp",
+            "Balance": "roundrobin",
+            "Clusters": [
+                {
+                    "ServiceName": "null",
+                    "ServicePort": 80,
+                    "Monitor": {
+                      "Period": 6000,
+                      "Timeout": 6000,
+                      "Rise": 6,
+                      "Fall": 6,
+                      "Protocol": "tcp"
+                    }
+                }
+            ],
+            "Timeout": 1000000
+        }]
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid listener port."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal043: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal043}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, protocol illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |
+        [{
+            "Name": "testln1",
+            "ListenPort": 8887,
+            "Protocol": "abcd",
+            "Balance": "leastconn",
+            "Clusters": [
+                {
+                    "ServerName": "test.com",
+                    "Path": "/a",
+                    "ServiceName": "null",
+                    "ServicePort": 80,
+                    "Policy": {
+                        "Mode": "insert",
+                        "Expire": 30000
+                    },
+                    "Monitor": {
+                      "Period": 6000,
+                      "Timeout": 6000,
+                      "Rise": 6,
+                      "Fall": 6,
+                      "Protocol": "tcp"
+                    }
+                },
+                {
+                    "ServerName": "test.com",
+                    "Path": "/b",
+                    "ServiceName": "null",
+                    "ServicePort": 80,
+                    "Policy": {
+                        "Mode": "rewrite",
+                        "CookieName": "asfsd"
+                    },
+                    "Monitor": {
+                      "Period": 5000,
+                      "Timeout": 5000,
+                      "Rise": 5,
+                      "Fall": 5,
+                      "Protocol": "http",
+                      "Url": "/index.html",
+                      "Rstatus": "2xx,3xx"
+                    }
+                }
+            ],
+            "Gzip": 0,
+            "TraceVip": 0,
+            "ForwardPort": 0
+        }]
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid listener protocol."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal065: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal065}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, name > 64'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz1234567812345\"\
+        ,\n    \"ListenPort\": 80,\n    \"Protocol\": \"http\",\n    \"Balance\":\
+        \ \"roundrobin\",\n    \"Clusters\": [\n        {\n            \"ServerName\"\
+        : \"*\",\n            \"ServicePort\": 80,\n            \"ServiceName\": \"\
+        null\",\n            \"Path\": \"/a\",\n            \"Policy\": {\n      \
+        \          \"Mode\": \"rewrite\",\n                \"CookieName\": \"asfsd\"\
+        ,\n                \"Expire\": 30000\n            },\n            \"Monitor\"\
+        : {\n              \"Period\": 6000,\n              \"Timeout\": 6000,\n \
+        \             \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"http\",\n              \"Url\": \"/index.html\",\n              \"Rstatus\"\
+        : \"2xx,3xx\" \n            }\n        },\n        {\n            \"ServerName\"\
+        : \"*\",\n            \"ServicePort\": 80,\n            \"ServiceName\": \"\
+        null\",\n            \"Path\": \"/b\",\n            \"Policy\": {\n      \
+        \          \"Mode\": \"insert\",\n                \"Expire\": 30000\n    \
+        \        },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"tcp\"\n            }\n  \
+        \      }\n    ],\n    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid parameter type or length of name > 64."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal044: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal044}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, protocol empty'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |
+        [{
+            "Name": "testln1",
+            "ListenPort": 8887,
+            "Balance": "leastconn",
+            "Clusters": [
+                {
+                    "ServerName": "test.com",
+                    "Path": "/a",
+                    "ServiceName": "null",
+                    "ServicePort": 80,
+                    "Policy": {
+                        "Mode": "insert",
+                        "Expire": 30000
+                    },
+                    "Monitor": {
+                      "Period": 6000,
+                      "Timeout": 6000,
+                      "Rise": 6,
+                      "Fall": 6,
+                      "Protocol": "tcp"
+                    }
+                },
+                {
+                    "ServerName": "test.com",
+                    "Path": "/b",
+                    "ServiceName": "null",
+                    "ServicePort": 80,
+                    "Policy": {
+                        "Mode": "rewrite",
+                        "CookieName": "asfsd"
+                    },
+                    "Monitor": {
+                      "Period": 5000,
+                      "Timeout": 5000,
+                      "Rise": 5,
+                      "Fall": 5,
+                      "Protocol": "http",
+                      "Url": "/index.html",
+                      "Rstatus": "2xx,3xx"
+                    }
+                }
+            ],
+            "Gzip": 0,
+            "TraceVip": 0,
+            "ForwardPort": 0
+        }]
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid listener."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal066: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal066}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, expire illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"/a\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"insert\",\n       \
+        \         \"Expire\": -1\n            },\n            \"Monitor\": {\n   \
+        \           \"Period\": 6000,\n              \"Timeout\": 6000,\n        \
+        \      \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"http\",\n              \"Url\": \"/index.html\",\n              \"Rstatus\"\
+        : \"2xx,3xx\" \n            }\n        },\n        {\n            \"ServerName\"\
+        : \"*\",\n            \"ServicePort\": 80,\n            \"ServiceName\": \"\
+        null\",\n            \"Path\": \"/b\",\n            \"Policy\": {\n      \
+        \          \"Mode\": \"insert\",\n                \"Expire\": 30000\n    \
+        \        },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"tcp\"\n            }\n  \
+        \      }\n    ],\n    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid policy expire."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal045: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal045}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, http listenerPort illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |
+        [{
+            "Name": "testln1",
+            "ListenPort": 81,
+            "Protocol": "http",
+            "Balance": "leastconn",
+            "Clusters": [
+                {
+                    "ServerName": "test.com",
+                    "Path": "/a",
+                    "ServiceName": "null",
+                    "ServicePort": 80,
+                    "Policy": {
+                        "Mode": "insert",
+                        "Expire": 30000
+                    },
+                    "Monitor": {
+                      "Period": 6000,
+                      "Timeout": 6000,
+                      "Rise": 6,
+                      "Fall": 6,
+                      "Protocol": "tcp"
+                    }
+                },
+                {
+                    "ServerName": "test.com",
+                    "Path": "/b",
+                    "ServiceName": "null",
+                    "ServicePort": 80,
+                    "Policy": {
+                        "Mode": "rewrite",
+                        "CookieName": "asfsd"
+                    },
+                    "Monitor": {
+                      "Period": 5000,
+                      "Timeout": 5000,
+                      "Rise": 5,
+                      "Fall": 5,
+                      "Protocol": "http",
+                      "Url": "/index.html",
+                      "Rstatus": "2xx,3xx"
+                    }
+                }
+            ],
+            "Gzip": 0,
+            "TraceVip": 0,
+            "ForwardPort": 0
+        }]
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid listener port."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal067: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal067}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, expire illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"/a\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"insert\",\n       \
+        \         \"Expire\": 86401\n            },\n            \"Monitor\": {\n\
+        \              \"Period\": 6000,\n              \"Timeout\": 6000,\n     \
+        \         \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"http\",\n              \"Url\": \"/index.html\",\n              \"Rstatus\"\
+        : \"2xx,3xx\" \n            }\n        },\n        {\n            \"ServerName\"\
+        : \"*\",\n            \"ServicePort\": 80,\n            \"ServiceName\": \"\
+        null\",\n            \"Path\": \"/b\",\n            \"Policy\": {\n      \
+        \          \"Mode\": \"insert\",\n                \"Expire\": 30000\n    \
+        \        },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"tcp\"\n            }\n  \
+        \      }\n    ],\n    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid policy expire."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal071: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal071}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, illegal monitor url'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"/a\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"rewrite\",\n      \
+        \          \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Timeout\": 6000,\n\
+        \              \"Period\": 5000,\n              \"Rise\": 6,\n           \
+        \   \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/abcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxy123\"\
+        ,\n              \"Rstatus\": \"2xx,3xx\" \n            }\n        },\n  \
+        \      {\n            \"ServerName\": \"*\",\n            \"ServicePort\"\
+        : 80,\n            \"ServiceName\": \"null\",\n            \"Path\": \"/b\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"insert\",\n    \
+        \            \"Expire\": 30000\n            },\n            \"Monitor\": {\n\
+        \              \"Period\": 6000,\n              \"Timeout\": 6000,\n     \
+        \         \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"tcp\"\n            }\n        }\n    ],\n    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal050: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal050}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, certId illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln1\",\n    \"ListenPort\": 1025,\n    \"Protocol\"\
+        : \"https\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n    \
+        \    {\n            \"ServerName\": \"*\",\n            \"Path\": \"/a\",\n\
+        \            \"ServiceName\": \"null\",\n            \"ServicePort\": 80,\n\
+        \            \"CertId\": \"abcd\",\n            \"Policy\": {\n          \
+        \      \"Mode\": \"rewrite\",\n                \"CookieName\": \"asfsd\",\n\
+        \                \"Expire\": 30000\n            },\n            \"Monitor\"\
+        : {\n              \"Period\": 6000,\n              \"Timeout\": 6000,\n \
+        \             \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"http\",\n              \"Url\": \"/index.html\",\n              \"Rstatus\"\
+        : \"2xx,3xx\" \n            }\n        },\n        {\n            \"ServerName\"\
+        : \"*\",\n            \"Path\": \"/b\",\n            \"CertId\": \"abcd\"\
+        ,\n            \"ServiceName\": \"null\",\n            \"ServicePort\": 80,\n\
+        \            \"Policy\": {\n                \"Mode\": \"insert\",\n      \
+        \          \"Expire\": 30000\n            },\n            \"Monitor\": {\n\
+        \              \"Period\": 6000,\n              \"Timeout\": 6000,\n     \
+        \         \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"tcp\"\n            }\n        }\n    ],\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "NotFound",
+            "Message": "No such cert."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal072: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal072}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, illegal monitor rstatus'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"/a\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"rewrite\",\n      \
+        \          \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Timeout\": 6000,\n\
+        \              \"Period\": 5000,\n              \"Rise\": 6,\n           \
+        \   \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"abcd\" \n          \
+        \  }\n        },\n        {\n            \"ServerName\": \"*\",\n        \
+        \    \"ServicePort\": 80,\n            \"ServiceName\": \"null\",\n      \
+        \      \"Path\": \"/b\",\n            \"Policy\": {\n                \"Mode\"\
+        : \"insert\",\n                \"Expire\": 30000\n            },\n       \
+        \     \"Monitor\": {\n              \"Period\": 6000,\n              \"Timeout\"\
+        : 6000,\n              \"Rise\": 6,\n              \"Fall\": 6,\n        \
+        \      \"Protocol\": \"tcp\"\n            }\n        }\n    ],\n    \"Gzip\"\
+        : 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal051: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal051}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, duplicated path'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |
+        [{
+            "Name": "testln1",
+            "ListenPort": 8887,
+            "Protocol": "http",
+            "Balance": "leastconn",
+            "Clusters": [
+                {
+                    "ServerName": "test.com",
+                    "Path": "/a",
+                    "ServiceName": "null",
+                    "ServicePort": 80,
+                    "Policy": {
+                        "Mode": "insert",
+                        "Expire": 30000
+                    },
+                    "Monitor": {
+                      "Period": 6000,
+                      "Timeout": 6000,
+                      "Rise": 6,
+                      "Fall": 6,
+                      "Protocol": "tcp"
+                    }
+                },
+                {
+                    "ServerName": "test.com",
+                    "Path": "/a",
+                    "ServiceName": "null",
+                    "ServicePort": 80,
+                    "Policy": {
+                        "Mode": "rewrite",
+                        "CookieName": "asfsd"
+                    },
+                    "Monitor": {
+                      "Period": 5000,
+                      "Timeout": 5000,
+                      "Rise": 5,
+                      "Fall": 5,
+                      "Protocol": "http",
+                      "Url": "/index.html",
+                      "Rstatus": "2xx,3xx"
+                    }
+                }
+            ],
+            "Gzip": 0,
+            "TraceVip": 0,
+            "ForwardPort": 0
+        }]
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"Conflict","Message":"Duplicate
+        cluster."}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal073: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal073}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, illegal monitor rstatus'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"/a\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"rewrite\",\n      \
+        \          \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Timeout\": 6000,\n\
+        \              \"Period\": 5000,\n              \"Rise\": 6,\n           \
+        \   \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,abcd\" \n      \
+        \      }\n        },\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServicePort\": 80,\n            \"ServiceName\": \"null\",\n  \
+        \          \"Path\": \"/b\",\n            \"Policy\": {\n                \"\
+        Mode\": \"insert\",\n                \"Expire\": 30000\n            },\n \
+        \           \"Monitor\": {\n              \"Period\": 6000,\n            \
+        \  \"Timeout\": 6000,\n              \"Rise\": 6,\n              \"Fall\"\
+        : 6,\n              \"Protocol\": \"tcp\"\n            }\n        }\n    ],\n\
+        \    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal052: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal052}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, empty name'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |
+        [{
+            "Name": "",
+            "ListenPort": 8887,
+            "Protocol": "http",
+            "Balance": "leastconn",
+            "Clusters": [
+                {
+                    "ServerName": "test.com",
+                    "Path": "/a",
+                    "ServiceName": "null",
+                    "ServicePort": 80,
+                    "Policy": {
+                        "Mode": "insert",
+                        "Expire": 30000
+                    },
+                    "Monitor": {
+                      "Period": 6000,
+                      "Timeout": 6000,
+                      "Rise": 6,
+                      "Fall": 6,
+                      "Protocol": "tcp"
+                    }
+                },
+                {
+                    "ServerName": "test.com",
+                    "Path": "/b",
+                    "ServiceName": "null",
+                    "ServicePort": 80,
+                    "Policy": {
+                        "Mode": "rewrite",
+                        "CookieName": "asfsd"
+                    },
+                    "Monitor": {
+                      "Period": 5000,
+                      "Timeout": 5000,
+                      "Rise": 5,
+                      "Fall": 5,
+                      "Protocol": "http",
+                      "Url": "/index.html",
+                      "Rstatus": "2xx,3xx"
+                    }
+                }
+            ],
+            "Gzip": 0,
+            "TraceVip": 0,
+            "ForwardPort": 0
+        }]
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest","Message":"Invalid
+        listener."}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal074: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal074}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, illegal servername'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"abcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxy1234567891234\"\
+        ,\n            \"ServiceName\": \"null\",\n            \"ServicePort\": 80,\n\
+        \            \"Path\": \"/a\",\n            \"Policy\": {\n              \
+        \  \"Mode\": \"rewrite\",\n                \"CookieName\": \"asfsd\",\n  \
+        \              \"Expire\": 30000\n            },\n            \"Monitor\"\
+        : {\n              \"Timeout\": 6000,\n              \"Period\": 5000,\n \
+        \             \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"http\",\n              \"Url\": \"/index.html\",\n              \"Rstatus\"\
+        : \"2xx\" \n            }\n        },\n        {\n            \"ServerName\"\
+        : \"*\",\n            \"ServiceName\": \"null\",\n            \"ServicePort\"\
+        : 80,\n            \"Path\": \"/b\",\n            \"Policy\": {\n        \
+        \        \"Mode\": \"insert\",\n                \"Expire\": 30000\n      \
+        \      },\n            \"Monitor\": {\n              \"Period\": 6000,\n \
+        \             \"Timeout\": 6000,\n              \"Rise\": 6,\n           \
+        \   \"Fall\": 11,\n              \"Protocol\": \"tcp\"\n            }\n  \
+        \      }\n    ],\n    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid serverName."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal070: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal070}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, illegal monitor url'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"/a\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"rewrite\",\n      \
+        \          \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Timeout\": 6000,\n\
+        \              \"Period\": 5000,\n              \"Rise\": 6,\n           \
+        \   \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n        \
+        \    }\n        },\n        {\n            \"ServerName\": \"*\",\n      \
+        \      \"ServicePort\": 80,\n            \"ServiceName\": \"null\",\n    \
+        \        \"Path\": \"/b\",\n            \"Policy\": {\n                \"\
+        Mode\": \"insert\",\n                \"Expire\": 30000\n            },\n \
+        \           \"Monitor\": {\n              \"Period\": 6000,\n            \
+        \  \"Timeout\": 6000,\n              \"Rise\": 6,\n              \"Fall\"\
+        : 6,\n              \"Protocol\": \"tcp\"\n            }\n        }\n    ],\n\
+        \    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal057: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal057}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, illegal monitor timeout'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"/a\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"rewrite\",\n      \
+        \          \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Timeout\": 1999,\n\
+        \              \"Period\": 6000,\n              \"Rise\": 6,\n           \
+        \   \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        },\n        {\n            \"ServerName\": \"*\",\n     \
+        \       \"ServicePort\": 80,\n            \"ServiceName\": \"null\",\n   \
+        \         \"Path\": \"/b\",\n            \"Policy\": {\n                \"\
+        Mode\": \"insert\",\n                \"Expire\": 30000\n            },\n \
+        \           \"Monitor\": {\n              \"Period\": 6000,\n            \
+        \  \"Timeout\": 6000,\n              \"Rise\": 6,\n              \"Fall\"\
+        : 6,\n              \"Protocol\": \"tcp\"\n            }\n        }\n    ],\n\
+        \    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal079: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal079}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, illegal ForwardPort'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServiceName\": \"\
+        null\",\n            \"ServicePort\": 80,\n            \"Path\": \"/a\",\n\
+        \            \"Policy\": {\n                \"Mode\": \"rewrite\",\n     \
+        \           \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Timeout\": 6000,\n\
+        \              \"Period\": 5000,\n              \"Rise\": 6,\n           \
+        \   \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,abcd\" \n      \
+        \      }\n        },\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServiceName\": \"null\",\n            \"Path\": \"/b\",\n     \
+        \       \"Policy\": {\n                \"Mode\": \"insert\",\n           \
+        \     \"Expire\": 30000\n            },\n            \"Monitor\": {\n    \
+        \          \"Period\": 6000,\n              \"Timeout\": 6000,\n         \
+        \     \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"tcp\"\n            }\n        }\n    ],\n    \"ForwardPort\": -1\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal058: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal058}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, illegal monitor period'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"/a\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"rewrite\",\n      \
+        \          \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Timeout\": 6000,\n\
+        \              \"Period\": 4999,\n              \"Rise\": 6,\n           \
+        \   \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        },\n        {\n            \"ServerName\": \"*\",\n     \
+        \       \"ServicePort\": 80,\n            \"ServiceName\": \"null\",\n   \
+        \         \"Path\": \"/b\",\n            \"Policy\": {\n                \"\
+        Mode\": \"insert\",\n                \"Expire\": 30000\n            },\n \
+        \           \"Monitor\": {\n              \"Period\": 6000,\n            \
+        \  \"Timeout\": 6000,\n              \"Rise\": 6,\n              \"Fall\"\
+        : 6,\n              \"Protocol\": \"tcp\"\n            }\n        }\n    ],\n\
+        \    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal059: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal059}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, illegal monitor rise'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"/a\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"rewrite\",\n      \
+        \          \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Timeout\": 6000,\n\
+        \              \"Period\": 5000,\n              \"Rise\": 6,\n           \
+        \   \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        },\n        {\n            \"ServerName\": \"*\",\n     \
+        \       \"ServicePort\": 80,\n            \"ServiceName\": \"null\",\n   \
+        \         \"Path\": \"/b\",\n            \"Policy\": {\n                \"\
+        Mode\": \"insert\",\n                \"Expire\": 30000\n            },\n \
+        \           \"Monitor\": {\n              \"Period\": 6000,\n            \
+        \  \"Timeout\": 6000,\n              \"Rise\": 1,\n              \"Fall\"\
+        : 6,\n              \"Protocol\": \"tcp\"\n            }\n        }\n    ],\n\
+        \    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal053: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal053}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, illegal monitor'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"/a\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"rewrite\",\n      \
+        \          \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Timeout\": 6000,\n\
+        \              \"Rise\": 6,\n              \"Fall\": 6,\n              \"\
+        Protocol\": \"http\",\n              \"Url\": \"/index.html\",\n         \
+        \     \"Rstatus\": \"2xx,3xx\" \n            }\n        },\n        {\n  \
+        \          \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n    \
+        \        \"ServiceName\": \"null\",\n            \"Path\": \"/b\",\n     \
+        \       \"Policy\": {\n                \"Mode\": \"insert\",\n           \
+        \     \"Expire\": 30000\n            },\n            \"Monitor\": {\n    \
+        \          \"Period\": 6000,\n              \"Timeout\": 6000,\n         \
+        \     \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\"\
+        : \"tcp\"\n            }\n        }\n    ],\n    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal075: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal075}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, illegal path'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"abcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxy1231\"\
+        ,\n            \"Policy\": {\n                \"Mode\": \"rewrite\",\n   \
+        \             \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Timeout\": 6000,\n\
+        \              \"Period\": 5000,\n              \"Rise\": 6,\n           \
+        \   \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx\" \n           \
+        \ }\n        },\n        {\n            \"ServerName\": \"*\",\n         \
+        \   \"ServicePort\": 80,\n            \"ServiceName\": \"null\",\n       \
+        \     \"Path\": \"/b\",\n            \"Policy\": {\n                \"Mode\"\
+        : \"insert\",\n                \"Expire\": 30000\n            },\n       \
+        \     \"Monitor\": {\n              \"Period\": 6000,\n              \"Timeout\"\
+        : 6000,\n              \"Rise\": 6,\n              \"Fall\": 11,\n       \
+        \       \"Protocol\": \"tcp\"\n            }\n        }\n    ],\n    \"Gzip\"\
+        : 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid path."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal054: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal054}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, illegal monitor protocol'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"/a\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"rewrite\",\n      \
+        \          \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Timeout\": 6000,\n\
+        \              \"Period\": 6000,\n              \"Rise\": 6,\n           \
+        \   \"Fall\": 6,\n              \"Protocol\": \"abcd\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        },\n        {\n            \"ServerName\": \"*\",\n     \
+        \       \"ServicePort\": 80,\n            \"ServiceName\": \"null\",\n   \
+        \         \"Path\": \"/b\",\n            \"Policy\": {\n                \"\
+        Mode\": \"insert\",\n                \"Expire\": 30000\n            },\n \
+        \           \"Monitor\": {\n              \"Period\": 6000,\n            \
+        \  \"Timeout\": 6000,\n              \"Rise\": 6,\n              \"Fall\"\
+        : 6,\n              \"Protocol\": \"tcp\"\n            }\n        }\n    ],\n\
+        \    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal076: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal076}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, illegal Gzip'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"/a\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"rewrite\",\n      \
+        \          \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Timeout\": 6000,\n\
+        \              \"Period\": 5000,\n              \"Rise\": 6,\n           \
+        \   \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,abcd\" \n      \
+        \      }\n        },\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServicePort\": 80,\n            \"ServiceName\": \"null\",\n  \
+        \          \"Path\": \"/b\",\n            \"Policy\": {\n                \"\
+        Mode\": \"insert\",\n                \"Expire\": 30000\n            },\n \
+        \           \"Monitor\": {\n              \"Period\": 6000,\n            \
+        \  \"Timeout\": 6000,\n              \"Rise\": 6,\n              \"Fall\"\
+        : 6,\n              \"Protocol\": \"tcp\"\n            }\n        }\n    ],\n\
+        \    \"Gzip\": -1\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal055: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal055}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, illegal monitor period'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"/a\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"rewrite\",\n      \
+        \          \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Timeout\": 6000,\n\
+        \              \"Period\": 300001,\n              \"Rise\": 6,\n         \
+        \     \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        },\n        {\n            \"ServerName\": \"*\",\n     \
+        \       \"ServicePort\": 80,\n            \"ServiceName\": \"null\",\n   \
+        \         \"Path\": \"/b\",\n            \"Policy\": {\n                \"\
+        Mode\": \"insert\",\n                \"Expire\": 30000\n            },\n \
+        \           \"Monitor\": {\n              \"Period\": 6000,\n            \
+        \  \"Timeout\": 6000,\n              \"Rise\": 6,\n              \"Fall\"\
+        : 6,\n              \"Protocol\": \"tcp\"\n            }\n        }\n    ],\n\
+        \    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal077: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal077}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, illegal TraceVip'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"/a\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"rewrite\",\n      \
+        \          \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Timeout\": 6000,\n\
+        \              \"Period\": 5000,\n              \"Rise\": 6,\n           \
+        \   \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,abcd\" \n      \
+        \      }\n        },\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServicePort\": 80,\n            \"ServiceName\": \"null\",\n  \
+        \          \"Path\": \"/b\",\n            \"Policy\": {\n                \"\
+        Mode\": \"insert\",\n                \"Expire\": 30000\n            },\n \
+        \           \"Monitor\": {\n              \"Period\": 6000,\n            \
+        \  \"Timeout\": 6000,\n              \"Rise\": 6,\n              \"Fall\"\
+        : 6,\n              \"Protocol\": \"tcp\"\n            }\n        }\n    ],\n\
+        \    \"TraceVip\": -1\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal056: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal056}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, illegal monitor timeout'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"/a\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"rewrite\",\n      \
+        \          \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Timeout\": 60001,\n\
+        \              \"Period\": 6000,\n              \"Rise\": 6,\n           \
+        \   \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        },\n        {\n            \"ServerName\": \"*\",\n     \
+        \       \"ServicePort\": 80,\n            \"ServiceName\": \"null\",\n   \
+        \         \"Path\": \"/b\",\n            \"Policy\": {\n                \"\
+        Mode\": \"insert\",\n                \"Expire\": 30000\n            },\n \
+        \           \"Monitor\": {\n              \"Period\": 6000,\n            \
+        \  \"Timeout\": 6000,\n              \"Rise\": 6,\n              \"Fall\"\
+        : 6,\n              \"Protocol\": \"tcp\"\n            }\n        }\n    ],\n\
+        \    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal078: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal078}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, illegal TraceVip'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"/a\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"rewrite\",\n      \
+        \          \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Timeout\": 6000,\n\
+        \              \"Period\": 5000,\n              \"Rise\": 6,\n           \
+        \   \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,abcd\" \n      \
+        \      }\n        },\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServicePort\": 80,\n            \"ServiceName\": \"null\",\n  \
+        \          \"Path\": \"/b\",\n            \"Policy\": {\n                \"\
+        Mode\": \"insert\",\n                \"Expire\": 30000\n            },\n \
+        \           \"Monitor\": {\n              \"Period\": 6000,\n            \
+        \  \"Timeout\": 6000,\n              \"Rise\": 6,\n              \"Fall\"\
+        : 6,\n              \"Protocol\": \"tcp\"\n            }\n        }\n    ],\n\
+        \    \"TraceVip\": 2\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal060: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal060}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, illegal monitor rise'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"/a\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"rewrite\",\n      \
+        \          \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Timeout\": 6000,\n\
+        \              \"Period\": 5000,\n              \"Rise\": 6,\n           \
+        \   \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        },\n        {\n            \"ServerName\": \"*\",\n     \
+        \       \"ServicePort\": 80,\n            \"ServiceName\": \"null\",\n   \
+        \         \"Path\": \"/b\",\n            \"Policy\": {\n                \"\
+        Mode\": \"insert\",\n                \"Expire\": 30000\n            },\n \
+        \           \"Monitor\": {\n              \"Period\": 6000,\n            \
+        \  \"Timeout\": 6000,\n              \"Rise\": 11,\n              \"Fall\"\
+        : 6,\n              \"Protocol\": \"tcp\"\n            }\n        }\n    ],\n\
+        \    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal061: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal061}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, illegal monitor fall'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"/a\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"rewrite\",\n      \
+        \          \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Timeout\": 6000,\n\
+        \              \"Period\": 5000,\n              \"Rise\": 6,\n           \
+        \   \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        },\n        {\n            \"ServerName\": \"*\",\n     \
+        \       \"ServicePort\": 80,\n            \"ServiceName\": \"null\",\n   \
+        \         \"Path\": \"/b\",\n            \"Policy\": {\n                \"\
+        Mode\": \"insert\",\n                \"Expire\": 30000\n            },\n \
+        \           \"Monitor\": {\n              \"Period\": 6000,\n            \
+        \  \"Timeout\": 6000,\n              \"Rise\": 6,\n              \"Fall\"\
+        : 1,\n              \"Protocol\": \"tcp\"\n            }\n        }\n    ],\n\
+        \    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal062: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal062}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, illegal monitor fall'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"/a\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"rewrite\",\n      \
+        \          \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Timeout\": 6000,\n\
+        \              \"Period\": 5000,\n              \"Rise\": 6,\n           \
+        \   \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        },\n        {\n            \"ServerName\": \"*\",\n     \
+        \       \"ServicePort\": 80,\n            \"ServiceName\": \"null\",\n   \
+        \         \"Path\": \"/b\",\n            \"Policy\": {\n                \"\
+        Mode\": \"insert\",\n                \"Expire\": 30000\n            },\n \
+        \           \"Monitor\": {\n              \"Period\": 6000,\n            \
+        \  \"Timeout\": 6000,\n              \"Rise\": 6,\n              \"Fall\"\
+        : 11,\n              \"Protocol\": \"tcp\"\n            }\n        }\n   \
+        \ ],\n    \"Gzip\": 0\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal063: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal063}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, tcp listenerPort illegal'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: |-
+        [{
+            "Name": "testln",
+            "ListenPort": 1,
+            "Protocol": "tcp",
+            "Balance": "roundrobin",
+            "Clusters": [
+                {
+                    "ServiceName": "null",
+                    "ServicePort": 80,
+                    "Monitor": {
+                      "Period": 6000,
+                      "Timeout": 6000,
+                      "Rise": 6,
+                      "Fall": 6,
+                      "Protocol": "tcp"
+                    }
+                }
+            ],
+            "Timeout": 1000000
+        }]
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid listener port."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+createLbListenerAbnormal080: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createLbListenerAbnormal080}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'create lb listener, illegal ForwardPort'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: executeBody
+      value: "[{\n    \"Name\": \"testln\",\n    \"ListenPort\": 80,\n    \"Protocol\"\
+        : \"http\",\n    \"Balance\": \"roundrobin\",\n    \"Clusters\": [\n     \
+        \   {\n            \"ServerName\": \"*\",\n            \"ServicePort\": 80,\n\
+        \            \"ServiceName\": \"null\",\n            \"Path\": \"/a\",\n \
+        \           \"Policy\": {\n                \"Mode\": \"rewrite\",\n      \
+        \          \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n\
+        \            },\n            \"Monitor\": {\n              \"Timeout\": 6000,\n\
+        \              \"Period\": 5000,\n              \"Rise\": 6,\n           \
+        \   \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,abcd\" \n      \
+        \      }\n        },\n        {\n            \"ServerName\": \"*\",\n    \
+        \        \"ServicePort\": 80,\n            \"ServiceName\": \"null\",\n  \
+        \          \"Path\": \"/b\",\n            \"Policy\": {\n                \"\
+        Mode\": \"insert\",\n                \"Expire\": 30000\n            },\n \
+        \           \"Monitor\": {\n              \"Period\": 6000,\n            \
+        \  \"Timeout\": 6000,\n              \"Rise\": 6,\n              \"Fall\"\
+        : 6,\n              \"Protocol\": \"tcp\"\n            }\n        }\n    ],\n\
+        \    \"ForwardPort\": 2\n}]"
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "Invalid monitor."
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancerNormal004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null

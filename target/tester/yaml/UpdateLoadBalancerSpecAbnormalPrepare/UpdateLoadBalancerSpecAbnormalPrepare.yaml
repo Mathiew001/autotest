@@ -1,0 +1,248 @@
+updateLoadBalancerSpecNormal008: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerSpecNormal008}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb, illegal chargeMode of vpc_mix'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: updateBody,
+      value: '{"Standard":{"BandwidthLimit":1, "ChargeMode":"abcd", "ChargeType":"hour"}}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid chargeMode!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerSpecNormal019: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerSpecNormal019}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb, illegal bandwidthlimit of vpc_l4'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: updateBody,
+      value: '{"Standard":{"BandwidthLimit":1001, "ChargeMode":"netflow", "ChargeType":"hour"}}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid bandwidthLimit! bandwidthLimit should be between not null
+        and between 0 and 1000!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerSpecNormal007: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerSpecNormal007}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: netflow turn to package month of vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: updateBody,
+      value: '{"Standard":{"BandwidthLimit":1, "ChargeMode":"bandwidth", "ChargeType":"month",
+        "Period":1}}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"checkOrderDetail error"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerSpecNormal018: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerSpecNormal018}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb, illegal chargeType of vpc_l4'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: updateBody,
+      value: '{"Standard":{"BandwidthLimit":1, "ChargeMode":"netflow", "ChargeType":"abcd"}}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid chargeType! chargeType should be year|month|hour!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerSpecNormal009: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerSpecNormal009}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb, illegal chargeType of vpc_mix'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: updateBody,
+      value: '{"Standard":{"BandwidthLimit":1, "ChargeMode":"netflow", "ChargeType":"abcd"}}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid chargeType! chargeType should be year|month|hour!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerSpecNormal0017: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerSpecNormal017}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb, illegal chargeMode of vpc_l4'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: updateBody,
+      value: '{"Standard":{"BandwidthLimit":1, "ChargeMode":"abcd", "ChargeType":"hour"}}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid chargeMode!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerSpecNormal020: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerSpecNormal020}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb, illegal bandwidthlimit of vpc_l4'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: updateBody,
+      value: '{"Standard":{"BandwidthLimit":-1, "ChargeMode":"netflow", "ChargeType":"hour"}}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid bandwidthLimit! bandwidthLimit should be between not null
+        and between 0 and 1000!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerSpecNormal011: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerSpecNormal011}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb, illegal bandwidthlimit of vpc_mix'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: updateBody,
+      value: '{"Standard":{"BandwidthLimit":-1, "ChargeMode":"netflow", "ChargeType":"hour"}}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid bandwidthLimit! bandwidthLimit should be between not null
+        and between 0 and 1000!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerSpecNormal010: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerSpecNormal010}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb, illegal bandwidthlimit of vpc_mix'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: updateBody,
+      value: '{"Standard":{"BandwidthLimit":1001, "ChargeMode":"netflow", "ChargeType":"hour"}}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid bandwidthLimit! bandwidthLimit should be between not null
+        and between 0 and 1000!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerSpecNormal015: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerSpecNormal015}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb, illegal autoRenewPeriod'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: updateBody,
+      value: '{"Standard":{"AutoRenewPeriod":10}}'}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "{\"Code\":\"InvalidParameterValue\",\"Message\":\"The parameter AutoRenewPeriod cannot accept value 10\"}"
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer006}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerSpecNormal014: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerSpecNormal014}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update lb, illegal autoRenewPeriod'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: updateBody,
+      value: '{"Standard":{"AutoRenewPeriod":-1}}'}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: resMsg
+      value: |-
+        {
+            "Code": "BadRequest",
+            "Message": "{\"Code\":\"InvalidParameterValue\",\"Message\":\"The parameter AutoRenewPeriod cannot accept value -1\"}"
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer006}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerSpecNormal016: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerSpecNormal016}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: netflow turn to package month of vpc_l4}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: updateBody,
+      value: '{"Standard":{"BandwidthLimit":1, "ChargeMode":"bandwidth", "ChargeType":"month",
+        "Period":1}}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"checkOrderDetail error"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+  etcdExpectData: null
+  etcdPrepareData: null

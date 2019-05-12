@@ -1,0 +1,203 @@
+deleteLbListenerNormal008: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteLbListenerNormal008}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: delete lb tls listener}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: instanceId,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: prepareBody
+      value: "{\n    \"InstanceId\": \"null\",\n    \"Name\": \"testln1\",\n    \"\
+        ListenPort\": 20,\n    \"Protocol\": \"tls\",\n    \"Balance\": \"roundrobin\"\
+        ,\n    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n  \
+        \          \"Path\": \"/a\",\n            \"TargetGroupId\": \"null\",\n \
+        \           \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n      \
+        \      \"Monitor\": {\n              \"Period\": 6000,\n              \"Timeout\"\
+        : 6000,\n              \"Rise\": 6,\n              \"Fall\": 6,\n        \
+        \      \"Protocol\": \"http\",\n              \"Url\": \"/index.html\",\n\
+        \              \"Rstatus\": \"2xx,3xx\" \n            }\n        }\n    ],\n\
+        \    \"Timeout\": 1000000,\n    \"CipherSuiteId\": \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\
+        \n}"
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: PrepareMethodInvokerUtils.prepareListener}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteLbListenerNormal009: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteLbListenerNormal009}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: delete lb tcp listener of dns}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: instanceId,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: prepareBody
+      value: |-
+        {
+            "InstanceId": "null",
+            "Name": "testln1",
+            "ListenPort": 1025,
+            "Protocol": "tcp",
+            "Balance": "roundrobin",
+            "Clusters": [
+                {
+                    "TargetGroupId": "null",
+                    "Monitor": {
+                      "Period": 6000,
+                      "Timeout": 6000,
+                      "Rise": 6,
+                      "Fall": 6,
+                      "Protocol": "tcp"
+                    }
+                }
+            ]
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: PrepareMethodInvokerUtils.prepareListener}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteLbListenerNormal005: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteLbListenerNormal005}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: delete lb http listener}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: instanceId,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: prepareBody
+      value: |-
+        {
+            "InstanceId": "null",
+            "Name": "testln1",
+            "ListenPort": 1025,
+            "Protocol": "http",
+            "Balance": "roundrobin",
+            "Clusters": [
+                {
+                    "ServerName": "*",
+                    "Path": "/b",
+                    "TargetGroupId": "null",
+                    "Policy": {
+                        "Mode": "insert",
+                        "Expire": 30000
+                    },
+                    "Monitor": {
+                      "Period": 6000,
+                      "Timeout": 6000,
+                      "Rise": 6,
+                      "Fall": 6,
+                      "Protocol": "tcp"
+                    }
+                }
+            ],
+            "Gzip": 0
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: PrepareMethodInvokerUtils.prepareListener}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteLbListenerNormal006: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteLbListenerNormal006}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: delete lb tcp listener}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: instanceId,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: prepareBody
+      value: |-
+        {
+            "InstanceId": "null",
+            "Name": "testln1",
+            "ListenPort": 1025,
+            "Protocol": "tcp",
+            "Balance": "roundrobin",
+            "Clusters": [
+                {
+                    "TargetGroupId": "null",
+                    "Monitor": {
+                      "Period": 6000,
+                      "Timeout": 6000,
+                      "Rise": 6,
+                      "Fall": 6,
+                      "Protocol": "tcp"
+                    }
+                }
+            ]
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: PrepareMethodInvokerUtils.prepareListener}
+  etcdExpectData: null
+  etcdPrepareData: null
+deleteLbListenerNormal007: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteLbListenerNormal007}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: delete lb https listener}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: instanceId,
+      value: null}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: prepareBody
+      value: "{\n    \"InstanceId\": \"null\",\n    \"Name\": \"testln1\",\n    \"\
+        ListenPort\": 1025,\n    \"Protocol\": \"https\",\n    \"Balance\": \"roundrobin\"\
+        ,\n    \"Clusters\": [\n        {\n            \"ServerName\": \"*\",\n  \
+        \          \"Path\": \"/a\",\n            \"TargetGroupId\": \"null\",\n \
+        \           \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n      \
+        \      \"Policy\": {\n                \"Mode\": \"rewrite\",\n           \
+        \     \"CookieName\": \"asfsd\",\n                \"Expire\": 30000\n    \
+        \        },\n            \"Monitor\": {\n              \"Period\": 6000,\n\
+        \              \"Timeout\": 6000,\n              \"Rise\": 6,\n          \
+        \    \"Fall\": 6,\n              \"Protocol\": \"http\",\n              \"\
+        Url\": \"/index.html\",\n              \"Rstatus\": \"2xx,3xx\" \n       \
+        \     }\n        },\n        {\n            \"ServerName\": \"*\",\n     \
+        \       \"Path\": \"/b\",\n            \"TargetGroupId\": \"null\",\n    \
+        \        \"CertId\": \"9cd0b588-8f4c-4ce8-89bc-5b6823689bf2\",\n         \
+        \   \"Policy\": {\n                \"Mode\": \"insert\",\n               \
+        \ \"Expire\": 30000\n            },\n            \"Monitor\": {\n        \
+        \      \"Period\": 6000,\n              \"Timeout\": 6000,\n             \
+        \ \"Rise\": 6,\n              \"Fall\": 6,\n              \"Protocol\": \"\
+        tcp\"\n            }\n        }\n    ],\n    \"Gzip\": 0,\n    \"CipherSuiteId\"\
+        : \"749cb683-048e-4b76-ba62-7ba9a01a739c\"\n}"
+    - {clazz: class java.lang.String, description: null, flag: N, name: prepareMethod,
+      value: PrepareMethodInvokerUtils.prepareListener}
+  etcdExpectData: null
+  etcdPrepareData: null

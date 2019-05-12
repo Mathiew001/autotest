@@ -1,0 +1,136 @@
+updateLoadBalancerSpecNormal008: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerSpecNormal008}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update of package month vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Standard":{"BandwidthLimit":2,
+        "ChargeMode":"bandwidth", "ChargeType":"month"}}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: hasOrderId,
+      value: 'False'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: orderBody,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Standard":{"ChargeMode":"bandwidth",
+        "ChargeType":"RESERVED", "BandwidthLimit":2, "AutoRenewPeriod":0, "Size":
+        "nlb.s1.micro"}}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer006}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerSpecNormal022: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerSpecNormal022}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update standard of netflow vpc_l4}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Standard":{"BandwidthLimit":2}}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: hasOrderId,
+      value: 'False'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: orderBody,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Standard":{"ChargeMode":"netflow",
+        "ChargeType":"AMOUNT", "BandwidthLimit":2, "AutoRenewPeriod":0, "Size": "nlb.s1.micro"}}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerSpecNormal013: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: idc_vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerSpecNormal013}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update standard of netflow idc_vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Standard":{"BandwidthLimit":2,
+        "Size":"nlb.s1.small"}}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: hasOrderId,
+      value: 'False'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: orderBody,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Standard":{"ChargeMode":"netflow",
+        "ChargeType":"AMOUNT", "BandwidthLimit":2, "AutoRenewPeriod":0, "Size": "nlb.s1.small"}}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer021}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerSpecNormal004: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerSpecNormal004}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update standard of bandwidth vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Standard":{"BandwidthLimit":2}}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: hasOrderId,
+      value: 'False'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: orderBody,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Standard":{"ChargeMode":"bandwidth",
+        "ChargeType":"AMOUNT", "BandwidthLimit":2, "AutoRenewPeriod":0, "Size": "nlb.s1.micro"}}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer005}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerSpecNormal003: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerSpecNormal003}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update standard of netflow vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Standard":{"BandwidthLimit":2}}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: hasOrderId,
+      value: 'False'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: orderBody,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Standard":{"ChargeMode":"netflow",
+        "ChargeType":"AMOUNT", "BandwidthLimit":2, "AutoRenewPeriod":0, "Size": "nlb.s1.micro"}}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateLoadBalancerSpecNormal006: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateLoadBalancerSpecNormal006}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: turn to package month of vpc_mix}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Standard":{"BandwidthLimit":2,
+        "ChargeMode":"bandwidth", "ChargeType":"month", "Period":1}}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: hasOrderId,
+      value: 'False'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: orderBody,
+      value: null}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Standard":{"ChargeMode":"bandwidth",
+        "ChargeType":"RESERVED", "BandwidthLimit":2, "AutoRenewPeriod":0, "Size":"nlb.s1.micro"}}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer005}
+  etcdExpectData: null
+  etcdPrepareData: null

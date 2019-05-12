@@ -1,0 +1,2116 @@
+updateTargetGroupAbnormal038: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal038}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal weight'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0","Address": "10.0.32.79", "Weight":-1, "Port":8080}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"weight range is 1-100!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal039: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal039}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal port'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":65536}],
+        "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid instance port. range:1~65535!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal032: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal032}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, duplicated server+port'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0", "Port":8080, "Address": "10.0.32.79"}, {"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0", "Port":8080, "Address":"10.0.32.79"}, {"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0", "Port":8080, "Address":"10.0.32.79"}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"instance conflict!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal076: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal076}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->rstatus'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"abcd"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid status code!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal033: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createTargetGroupAbnormal033}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, no server id'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Name":"instance0",
+        "Port":8080, "Address": "10.0.32.79"}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"The instance parameter is incorrect!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal077: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal077}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->rstatus'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx, abcd"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid status code!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal030: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal030}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update tg with illegal targetGroupId}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"TargetGroupId":"123",
+        "Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0",
+        "Port":8080, "TopAz":"cn-east-1a", "Weight":100, "Address": "10.0.32.79"},
+        {"Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd", "Name":"instance1", "Port":8081,
+        "TopAz":"cn-east-1a", "Weight":80, "Address":"10.0.32.60"}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "NotFound", "Message": "Target group does not exist!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal074: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal074}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->timeout'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":1999,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid timeout!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal031: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal031}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update tg with empty instances}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{}]}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "BadRequest", "Message": "The instance parameter is incorrect!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal075: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal075}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->timeout'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":60001,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid timeout!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal036: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal036}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, no server address'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0", "Port":8080}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"The instance parameter is incorrect!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal037: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal037}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal weight'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0","Address": "10.0.32.79", "Weight":101, "Port":8080}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"weight range is 1-100!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal034: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal034}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, no server name'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Port":8080, "Address": "10.0.32.79"}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"The instance parameter is incorrect!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal078: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal078}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->url'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"abcd",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"url is invalid!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal035: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal035}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, no server port'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0","Address": "10.0.32.79"}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"The instance parameter is incorrect!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal079: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal079}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->url'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aa",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"url is invalid!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal083: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal083}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update tg with illegal targetGroupId}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"TargetGroupId":"123",
+        "Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0",
+        "Port":8080, "TopAz":"cn-east-1a", "Weight":100, "Address": "10.0.32.79"},
+        {"Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd", "Name":"instance1", "Port":8081,
+        "TopAz":"cn-east-1a", "Weight":80, "Address":"10.0.32.60"}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "NotFound", "Message": "Target group does not exist!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal040: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal040}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal port'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":-1}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid instance port. range:1~65535!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal084: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal084}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update tg with empty instances}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{}]}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "BadRequest", "Message": "The instance parameter is incorrect!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal081: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal081}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor empty'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"Health check parameter format is incorrect.!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal082: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal082}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor empty'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"Health check parameter format is incorrect.!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal029: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal029}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update tg with illegal instanceId}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"InstanceId":"abcd",
+        "Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0",
+        "Port":8080, "TopAz":"cn-east-1a", "Weight":100, "Address": "10.0.32.79"},
+        {"Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd", "Name":"instance1", "Port":8081,
+        "TopAz":"cn-east-1a", "Weight":80, "Address":"10.0.32.60"}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "NotFound", "Message": " Load balancer does not exist.!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal106: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal106}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->url'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"abcd",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"url is invalid!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal107: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal107}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->url'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aa",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"url is invalid!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal027: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupNormal027}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update tg with 3 rs same port}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0", "Port":8081, "TopAz":"cn-east-1a", "Weight":100, "Address":
+        "10.0.32.79"}, {"Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd", "Name":"instance1",
+        "Port":8082, "TopAz":"cn-east-1a", "Weight":100, "Address":"10.0.32.60"}],
+        "UseSamePort":1}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid samePort£¬instance port is not the same!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal104: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal104}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->rstatus'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"abcd"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid status code!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal028: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal028}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal usesameport'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0","Address": "10.0.32.79", "Weight":0, "Port":8080}], "UseSamePort":2}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid useSamePort!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal105: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal105}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->rstatus'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx, abcd"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid status code!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal108: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal108}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor empty'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"Health check parameter format is incorrect.!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal021: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal021}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, no server port'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0","Address": "10.0.32.79"}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"The instance parameter is incorrect!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal065: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal065}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->rstatus'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx, abcd"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid status code!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal022: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal022}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, no server address'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0", "Port":8080}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"The instance parameter is incorrect!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal066: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal066}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->url'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"abcd",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"url is invalid!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal063: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal063}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->timeout'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":60001,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid timeout!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal020: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal020}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, no server name'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Port":8080, "Address": "10.0.32.79"}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"The instance parameter is incorrect!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal064: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal064}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->rstatus'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"abcd"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid status code!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal025: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal025}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal port'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":65536}],
+        "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid instance port. range:1~65535!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal069: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal069}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->rise'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":11,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid rise or fall!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal102: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal102}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->timeout'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":1999,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid timeout!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal026: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal026}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal port'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":-1}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid instance port. range:1~65535!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal103: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal103}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->timeout'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":60001,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid timeout!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal023: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal023}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal weight'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0","Address": "10.0.32.79", "Weight":101, "Port":8080}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"weight range is 1-100!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal067: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal067}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->url'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aafsd/aa",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"url is invalid!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal100: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal100}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->period'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":300001
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid period!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal024: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal024}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal weight'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0","Address": "10.0.32.79", "Weight":-1, "Port":8080}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"weight range is 1-100!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal068: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal068}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->rise'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":1,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid rise or fall!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal101: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal101}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->period'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":4999
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid period!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal072: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal072}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->period'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":300001
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid period!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal073: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal073}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->period'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":4999
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid period!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal070: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal070}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->fall'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":1,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid rise or fall!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal071: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal071}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->fall'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":11,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid rise or fall!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal018: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal018}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, duplicated server+port'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0", "Port":8080, "Address": "10.0.32.79"}, {"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0", "Port":8080, "Address":"10.0.32.79"}, {"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0", "Port":8080, "Address":"10.0.32.79"}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"instance conflict!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal019: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createTargetGroupAbnormal019}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, no server id'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Name":"instance0",
+        "Port":8080, "Address": "10.0.32.79"}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"The instance parameter is incorrect!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal016: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal016}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update tg with illegal targetGroupId}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"TargetGroupId":"123",
+        "Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0",
+        "Port":8080, "TopAz":"cn-east-1a", "Weight":100, "Address": "10.0.32.79"},
+        {"Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd", "Name":"instance1", "Port":8081,
+        "TopAz":"cn-east-1a", "Weight":80, "Address":"10.0.32.60"}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "NotFound", "Message": "Target group does not exist!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal017: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal017}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update tg with empty instances}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{}]}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "BadRequest", "Message": "The instance parameter is incorrect!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal098: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal098}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->fall'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":1,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid rise or fall!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal099: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal099}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->fall'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":11,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid rise or fall!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal096: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal096}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->rise'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":1,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid rise or fall!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal097: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal097}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->rise'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":11,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid rise or fall!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal058: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal058}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->fall'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":1,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid rise or fall!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal015: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal015}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update tg with illegal instanceId}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"InstanceId":"abcd",
+        "Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0",
+        "Port":8080, "TopAz":"cn-east-1a", "Weight":100, "Address": "10.0.32.79"},
+        {"Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd", "Name":"instance1", "Port":8081,
+        "TopAz":"cn-east-1a", "Weight":80, "Address":"10.0.32.60"}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "NotFound", "Message": " Load balancer does not exist.!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal059: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal059}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->fall'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":11,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid rise or fall!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal056: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal056}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->rise'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":1,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid rise or fall!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal057: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal057}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->rise'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":11,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid rise or fall!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal061: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal061}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->period'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":4999
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid period!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal062: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal062}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->timeout'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":1999,
+                        "Period":6000
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid timeout!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal060: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal060}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal monitor-->period'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - clazz: class java.lang.String
+      description: null
+      flag: N
+      name: body
+      value: |-
+        {"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b", "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":8080}], "UseSamePort":1,            "Monitor":{
+                        "Protocol":"http",
+                        "Rise":5,
+                        "Fall":5,
+                        "Url":"/index.html",
+                        "Timeout":6000,
+                        "Period":300001
+        ,                 "Rstatus":"2xx,3xx"
+                    }
+        }
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid period!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer004}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal087: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal087}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, no server name'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Port":8080, "Address": "10.0.32.79"}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"The instance parameter is incorrect!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal088: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal088}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, no server port'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0","Address": "10.0.32.79"}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"The instance parameter is incorrect!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal041: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupNormal041}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update tg with 3 rs same port}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0", "Port":8081, "TopAz":"cn-east-1a", "Weight":100, "Address":
+        "10.0.32.79"}, {"Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd", "Name":"instance1",
+        "Port":8082, "TopAz":"cn-east-1a", "Weight":100, "Address":"10.0.32.60"}],
+        "UseSamePort":1}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid samePort£¬instance port is not the same!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal085: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal085}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, duplicated server+port'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0", "Port":8080, "Address": "10.0.32.79"}, {"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0", "Port":8080, "Address":"10.0.32.79"}, {"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0", "Port":8080, "Address":"10.0.32.79"}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"instance conflict!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal042: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: dns
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal042}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal usesameport'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0","Address": "10.0.32.79", "Weight":0, "Port":8080}], "UseSamePort":2}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid useSamePort!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer007}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal086: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: createTargetGroupAbnormal086}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, no server id'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Name":"instance0",
+        "Port":8080, "Address": "10.0.32.79"}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"The instance parameter is incorrect!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal089: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal089}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, no server address'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0", "Port":8080}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"The instance parameter is incorrect!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal090: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal090}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal weight'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0","Address": "10.0.32.79", "Weight":101, "Port":8080}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"weight range is 1-100!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal091: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal091}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal weight'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0","Address": "10.0.32.79", "Weight":-1, "Port":8080}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"weight range is 1-100!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal094: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupNormal094}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: update tg with 3 rs same port}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0", "Port":8081, "TopAz":"cn-east-1a", "Weight":100, "Address":
+        "10.0.32.79"}, {"Id":"b96cafcf-9148-42c9-9c05-9ab8eb10fbbd", "Name":"instance1",
+        "Port":8082, "TopAz":"cn-east-1a", "Weight":100, "Address":"10.0.32.60"}],
+        "UseSamePort":1}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid samePort£¬instance port is not the same!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal095: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal095}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal usesameport'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0","Address": "10.0.32.79", "Weight":0, "Port":8080}], "UseSamePort":2}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid useSamePort!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal092: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal092}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal port'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":65536}],
+        "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid instance port. range:1~65535!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null
+updateTargetGroupAbnormal093: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_l4
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: updateTargetGroupAbnormal093}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: 'update tg, illegal port'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: body, value: '{"Instances":[{"Id":"a574d1a0-5921-4637-bb38-0093cb5ae70b",
+        "Name":"instance0","Address": "10.0.32.79", "Weight":100, "Port":-1}], "UseSamePort":0}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":"BadRequest",
+        "Message":"invalid instance port. range:1~65535!"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer022}
+    - {clazz: class java.lang.Boolean, description: null, flag: N, name: isVpc, value: true}
+  etcdExpectData: null
+  etcdPrepareData: null

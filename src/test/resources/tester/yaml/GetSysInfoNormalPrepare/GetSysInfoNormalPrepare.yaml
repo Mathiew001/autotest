@@ -1,0 +1,13 @@
+getSysInfoNormalPrepare001: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: getSysInfoNormalPrepare001}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: get sys info}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+  etcdExpectData: null
+  etcdPrepareData: null

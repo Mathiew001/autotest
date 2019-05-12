@@ -1,0 +1,17 @@
+deleteLoadBalancerAbnormal003: !!com.netease.cloudqa.nlb.api.test.framework.common.runtime.impl.DataHolderImpl
+  caseLabel: vpc_mix
+  dbExpectData: null
+  dbPrepareData: null
+  driverData:
+    driverData:
+    - {clazz: class java.lang.String, description: null, flag: N, name: caseId, value: deleteLoadBalancerAbnormal003}
+    - {clazz: class java.lang.String, description: null, flag: N, name: description,
+      value: delete package month vpc_mix lb}
+    - {clazz: class java.lang.String, description: null, flag: N, name: tenantId,
+      value: 0b2cc5a931a444438c19e3e80b77468d}
+    - {clazz: class java.lang.String, description: null, flag: N, name: resMsg, value: '{"Code":
+        "Forbidden", "Message":"chargeType is month not allow delete"}'}
+    - {clazz: class java.lang.String, description: null, flag: N, name: loadBalanceCaseId,
+      value: createLoadBalancer006}
+  etcdExpectData: null
+  etcdPrepareData: null
